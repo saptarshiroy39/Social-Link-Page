@@ -27,6 +27,7 @@ import { Requestly } from "@/components/ui/svgs/requestly";
 import { Pandas } from "@/components/ui/svgs/pandas";
 import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
+import { Redstone } from "@/components/ui/svgs/redstone";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -51,6 +52,7 @@ export const DATA = {
         { name: "C++", icon: CPlusPlus },
         { name: "Python", icon: Python },
         { name: "Bash", icon: Bash },
+        { name: "Redstone", icon: Redstone },
       ],
     },
     {
