@@ -1,4 +1,4 @@
-# Social Link Page .
+# Social Link Page
 
 A simple and elegant social media link page to showcase all your online profiles in one place.
 
