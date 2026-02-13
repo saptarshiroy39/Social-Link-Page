@@ -13,15 +13,16 @@ export const contentType = "image/png";
 
 const getFontData = async () => {
     try {
-        const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL("../../public/fonts/CabinetGrotesk-Medium.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL("../../public/fonts/ClashDisplay-Semibold.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-        ]);
-        return { cabinetGrotesk, clashDisplay };
+        // Fetch Lexend font from Google Fonts
+        const lexendRegular = await fetch(
+            "https://fonts.gstatic.com/s/lexend/v21/wlpwgwvFAVdoq2_F94zlCfv0bz1WCzsX_LBte6KuGEo.woff"
+        ).then((res) => res.arrayBuffer());
+        
+        const lexendSemibold = await fetch(
+            "https://fonts.gstatic.com/s/lexend/v21/wlpwgwvFAVdoq2_F94zlCfv0bz1WC9MU_LBte6KuGEo.woff"
+        ).then((res) => res.arrayBuffer());
+        
+        return { lexendRegular, lexendSemibold };
     } catch (error) {
         console.error("Failed to load fonts:", error);
         return null;
@@ -83,7 +84,7 @@ const styles = {
         objectFit: "cover",
     },
     title: {
-        fontFamily: "Clash Display",
+        fontFamily: "Lexend",
         fontSize: "48px",
         fontWeight: "600",
         lineHeight: "1.1",
@@ -137,20 +138,14 @@ export default async function Image() {
                 fonts: fontData
                     ? [
                         {
-                            name: "Cabinet Grotesk",
-                            data: fontData.cabinetGrotesk,
+                            name: "Lexend",
+                            data: fontData.lexendRegular,
                             weight: 400,
                             style: "normal",
                         },
                         {
-                            name: "Cabinet Grotesk",
-                            data: fontData.cabinetGrotesk,
-                            weight: 700,
-                            style: "normal",
-                        },
-                        {
-                            name: "Clash Display",
-                            data: fontData.clashDisplay,
+                            name: "Lexend",
+                            data: fontData.lexendSemibold,
                             weight: 600,
                             style: "normal",
                         },
