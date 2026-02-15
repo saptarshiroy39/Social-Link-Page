@@ -21,7 +21,7 @@ export const DATA = {
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I'm a Software Developer focused on building [Full-Stack web apps, AI tools, and Automation systems](/#projects). I pursued a Bachelor's Degree in [Computer Science and Engineering](/#education) and competed in [10 Hackathons] for fun(/#hackathons). I work with [Python, FastAPI, Databases, and scalable backend services](/#skills) to create practical, user-centric products that solve real business problems and improve everyday workflows.",
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -153,7 +153,7 @@ export const DATA = {
     {
       school: "Buildspace",
       href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
+      degree: "s3, s4, s5",
       logoUrl: "/buildspace.jpg",
       start: "2023",
       end: "2024",
