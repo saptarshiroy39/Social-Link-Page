@@ -14,15 +14,23 @@ import { Csharp } from "@/components/ui/svgs/csharp";
 
 export const DATA = {
   name: "Saptarshi Roy",
+
   initials: "SR",
+
   url: "https://hirishi.in",
+
   location: "Kolkata, IN",
+
   locationLink: "https://www.google.com/maps/place/Kolkata,+West+Bengal,+India",
+
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
+
   summary:
     "I'm a Software Developer focused on building [Full-Stack web apps, AI tools, and Automation systems](/#projects). I pursued a Bachelor's Degree in [Computer Science and Engineering](/#education) and competed in [10 Hackathons] for fun(/#hackathons). I work with [Python, FastAPI, Databases, and scalable backend services](/#skills) to create practical, user-centric products that solve real business problems and improve everyday workflows.",
+
   avatarUrl: "/me.png",
+
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
@@ -36,6 +44,7 @@ export const DATA = {
     { name: "Java", icon: Java },
     { name: "C++", icon: Csharp },
   ],
+
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
   ],
@@ -57,6 +66,7 @@ export const DATA = {
 
         navbar: true,
       },
+
       X: {
         name: "X",
         url: "https://x.com/saptarshiroy39",
@@ -92,36 +102,12 @@ export const DATA = {
 
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, s5",
-      logoUrl: "/buildspace.jpg",
+      school: "Sister Nivedita University",
+      href: "https://www.snuniv.ac.in/",
+      degree: "Bachelor of Technology in Computer Science and Engineering",
+      logoUrl: "/snu.png",
       start: "2023",
-      end: "2024",
-    },
-    {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      end: "2027",
     },
   ],
   projects: [
