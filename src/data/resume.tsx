@@ -1,16 +1,20 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon } from "lucide-react";
-import { ReactLight } from "@/components/ui/svgs/reactLight";
-import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
-import { Typescript } from "@/components/ui/svgs/typescript";
-import { Nodejs } from "@/components/ui/svgs/nodejs";
+import { CIcon } from "@/components/ui/svgs/c";
+import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
 import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
-import { Postgresql } from "@/components/ui/svgs/postgresql";
+import { FastAPI } from "@/components/ui/svgs/fastapi";
+import { LangChain } from "@/components/ui/svgs/langchain";
+import { N8n } from "@/components/ui/svgs/n8n";
+import { MySQL } from "@/components/ui/svgs/mysql";
+import { Supabase } from "@/components/ui/svgs/supabase";
+import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Java } from "@/components/ui/svgs/java";
-import { Csharp } from "@/components/ui/svgs/csharp";
+import { Git } from "@/components/ui/svgs/git";
+import { GitHub } from "@/components/ui/svgs/github";
+import { Railway } from "@/components/ui/svgs/railway";
+import { Render } from "@/components/ui/svgs/render";
+import { Pinecone } from "@/components/ui/svgs/pinecone";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -32,17 +36,22 @@ export const DATA = {
   avatarUrl: "/me.png",
 
   skills: [
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
+    { name: "C", icon: CIcon },
+    { name: "C++", icon: CPlusPlus },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
+    { name: "Git", icon: Git },
+    { name: "GitHub", icon: GitHub },
     { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
-    { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
+    { name: "n8n", icon: N8n },
+    { name: "GCP", icon: GoogleCloud },
+    { name: "FastAPI", icon: FastAPI },
+    { name: "LangChain", icon: LangChain },
+    { name: "MySQL", icon: MySQL },
+    { name: "Supabase", icon: Supabase },
+    { name: "Pinecone", icon: Pinecone },
+    { name: "Railway", icon: Railway },
+    { name: "Render", icon: Render },
+
   ],
 
   navbar: [
@@ -110,6 +119,7 @@ export const DATA = {
       end: "2027",
     },
   ],
+
   projects: [
     {
       title: "Chat Collect",
