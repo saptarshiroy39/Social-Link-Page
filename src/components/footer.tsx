@@ -5,26 +5,31 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
-    function handleClink(url: string) {
+    function handleClick(url: string) {
         window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function playSound(src: string) {
+        const audio = new Audio(src);
+        audio.play().catch((err) => console.error("Error playing sound:", err));
     }
 
     return (
         <footer id="footer" className="w-full -mt-10" aria-label="Footer">
-            <p className="font-mono text-gray-200 text-center">
+            <p className="font-mono text-muted-foreground text-center">
                 &copy; {currentYear}{" "}
                 <Button
                     variant="link"
                     className="p-0 hover:cursor-pointer"
-                    onClick={() => handleClink("https://youtu.be/dQw4w9WgXcQ")}
+                    onClick={() => handleClick("https://youtu.be/dQw4w9WgXcQ")}
                 >
                     <u>SR</u>
                 </Button>
                 . All rights reserved
                 <Button
                     variant="link"
-                    className="p-0 hover:cursor-pointer"
-                    onClick={() => handleClink("https://youtube.com/shorts/TajAzT3CVJc")}
+                    className="px-2 py-0 hover:cursor-pointer min-w-[20px]"
+                    onClick={() => playSound("/faahhh.mp3")}
                 >
                     <u>.</u>
                 </Button>

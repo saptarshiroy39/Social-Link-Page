@@ -45,9 +45,7 @@ export default function Page() {
             <div className="flex gap-3 flex-wrap py-2">
               <a href="/resume.pdf" download>
                 <ShinyButton className="rounded-full bg-primary/5 dark:bg-primary/10 border-primary/20">
-                  <b>
                     Download CV
-                  </b>
                 </ShinyButton>
               </a>
               <Link href="#contact">
