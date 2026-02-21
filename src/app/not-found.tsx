@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home } from "lucide-react";
+import { IconHome } from "@tabler/icons-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +21,7 @@ export default function NotFound() {
                     <div className="flex flex-col sm:flex-row gap-3">
                         <Link href="/">
                             <Button variant="outline" className="gap-2 cursor-pointer">
-                                <Home className="h-4 w-4" />
+                                <IconHome className="h-4 w-4" />
                                 Go to Home
                             </Button>
                         </Link>

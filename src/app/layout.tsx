@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -44,10 +45,6 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     card: "summary_large_image",
   },
-  verification: {
-    google: "",
-    yandex: "",
-  },
 };
 
 export default function RootLayout({
@@ -79,6 +76,7 @@ export default function RootLayout({
             <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
               {children}
             </div>
+            <ScrollProgress />
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>

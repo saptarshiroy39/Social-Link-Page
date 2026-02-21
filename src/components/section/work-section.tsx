@@ -8,8 +8,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { DATA } from "@/data/resume";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { IconChevronDown, IconChevronRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
+import BlurFade from "@/components/magicui/blur-fade";
+
+const BLUR_FADE_DELAY = 0.04;
 
 function LogoImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
@@ -32,6 +35,20 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 
 export default function WorkSection() {
   return (
+    <section id="work">
+      <div className="flex min-h-0 flex-col gap-y-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <div className="flex flex-col gap-y-4 items-center justify-center">
+            <div className="flex items-center w-full">
+              <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
+              <div className="border bg-primary z-10 rounded-xl px-4 py-1">
+                <span className="text-background text-sm font-medium">Work Experience</span>
+              </div>
+              <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
+            </div>
+          </div>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 6}>
     <Accordion type="single" collapsible className="w-full grid gap-6">
       {DATA.work.map((work) => (
         <AccordionItem
@@ -47,7 +64,7 @@ export default function WorkSection() {
                   <div className="font-semibold leading-none flex items-center gap-2">
                     {work.company}
                     <span className="relative inline-flex items-center w-3.5 h-3.5">
-                      <ChevronRight
+                      <IconChevronRight
                         className={cn(
                           "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
                           "translate-x-0 opacity-0",
@@ -55,7 +72,7 @@ export default function WorkSection() {
                           "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0"
                         )}
                       />
-                      <ChevronDown
+                      <IconChevronDown
                         className={cn(
                           "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-200",
                           "opacity-0 rotate-0",
@@ -82,6 +99,9 @@ export default function WorkSection() {
         </AccordionItem>
       ))}
     </Accordion>
+        </BlurFade>
+      </div>
+    </section>
   );
 }
 

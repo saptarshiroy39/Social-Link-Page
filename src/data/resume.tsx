@@ -1,8 +1,15 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import {
+  IconHome,
+  IconInfoCircle,
+  IconSettings,
+  IconBulb,
+  IconMailOpened,
+} from "@tabler/icons-react";
 import { CIcon } from "@/components/ui/svgs/c";
 import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
 import { Python } from "@/components/ui/svgs/python";
+import { Bash } from "@/components/ui/svgs/bash";
 import { FastAPI } from "@/components/ui/svgs/fastapi";
 import { LangChain } from "@/components/ui/svgs/langchain";
 import { N8n } from "@/components/ui/svgs/n8n";
@@ -18,6 +25,7 @@ import { Pinecone } from "@/components/ui/svgs/pinecone";
 import { VSCode } from "@/components/ui/svgs/vscode";
 import { Requestly } from "@/components/ui/svgs/requestly";
 import { Linux } from "@/components/ui/svgs/linux";
+import { Pandas } from "@/components/ui/svgs/pandas";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -25,10 +33,6 @@ export const DATA = {
   initials: "SR",
 
   url: "https://hirishi.in",
-
-  location: "Kolkata, IN",
-
-  locationLink: "https://www.google.com/maps/place/Kolkata,+West+Bengal,+India",
 
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
@@ -45,6 +49,7 @@ export const DATA = {
         { name: "C", icon: CIcon },
         { name: "C++", icon: CPlusPlus },
         { name: "Python", icon: Python },
+        { name: "Bash", icon: Bash },
       ],
     },
     {
@@ -52,6 +57,7 @@ export const DATA = {
       items: [
         { name: "FastAPI", icon: FastAPI },
         { name: "LangChain", icon: LangChain },
+        { name: "Pandas", icon: Pandas },
       ],
     },
     {
@@ -90,11 +96,13 @@ export const DATA = {
   ],
 
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "#hero", icon: IconHome, label: "Home" },
+    { href: "#work", icon: IconInfoCircle, label: "About" },
+    { href: "#skills", icon: IconSettings, label: "Skills" },
+    { href: "#projects", icon: IconBulb, label: "Projects" },
+    { href: "#contact", icon: IconMailOpened, label: "Get in Touch" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
     social: {
       GitHub: {
         name: "GitHub",
@@ -119,13 +127,6 @@ export const DATA = {
         navbar: true,
       },
 
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-
-        navbar: false,
-      },
     },
   },
 
@@ -133,8 +134,6 @@ export const DATA = {
     {
       company: "Anabas Labs",
       href: "https://anabaslabs.com/",
-      badges: [],
-      location: "Remote",
       title: "Software Engineer",
       logoUrl: "/anabas-labs.png",
       start: "Jan 2026",
@@ -160,7 +159,6 @@ export const DATA = {
       title: "Arkiv",
       href: "https://arkiv.hirishi.in/",
       dates: "Dec 2025 - Present",
-      active: true,
       description:
         "Arkiv is an AI-powered document assistant (RAG) that lets you upload files and have accurate context-aware conversations about their content.",
       technologies: [
@@ -193,7 +191,6 @@ export const DATA = {
       title: "Luna AI",
       href: "https://github.com/saptarshiroy39/Luna-AI",
       dates: "Oct 2025 - Dec 2025",
-      active: true,
       description:
         "Luna AI is a multi-agent assistant that routes queries to specialized agents for research, coding, writing, and media generation through one unified interface.",
       technologies: [
