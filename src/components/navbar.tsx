@@ -1,97 +1,121 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/mode-toggle";
+import { AnimatedThemeToggler } from "@/components/magicui/animated-theme-toggler";
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
-  TooltipArrow,
   TooltipContent,
+  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 
+function useActiveSection() {
+  const [activeSection, setActiveSection] = useState("hero");
+
+  useEffect(() => {
+    const sectionIds = DATA.navbar.map((item) => item.href.replace("#", ""));
+    const observers: IntersectionObserver[] = [];
+    const visibleSections = new Map<string, number>();
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              visibleSections.set(id, entry.intersectionRatio);
+            } else {
+              visibleSections.delete(id);
+            }
+
+            if (visibleSections.size > 0) {
+              // Pick the section with the highest intersection ratio
+              let best = "";
+              let bestRatio = 0;
+              visibleSections.forEach((ratio, sectionId) => {
+                if (ratio > bestRatio) {
+                  best = sectionId;
+                  bestRatio = ratio;
+                }
+              });
+              setActiveSection(best);
+            }
+          });
+        },
+        { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: "-10% 0px -10% 0px" }
+      );
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  return activeSection;
+}
+
 export default function Navbar() {
+  const activeSection = useActiveSection();
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
-      <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
-        {DATA.navbar.map((item) => {
-          const isExternal = item.href.startsWith("http");
-          return (
-            <Tooltip key={item.href}>
-              <TooltipTrigger asChild>
-                <a
-                  href={item.href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                >
-                  <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-                    <item.icon className="size-full rounded-sm overflow-hidden object-contain" />
-                  </DockIcon>
-                </a>
-              </TooltipTrigger>
-              <TooltipContent
-                side="top"
-                sideOffset={8}
-                className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
-              >
-                <p>{item.label}</p>
-                <TooltipArrow className="fill-primary" />
-              </TooltipContent>
-            </Tooltip>
-          );
-        })}
-        <Separator
-          orientation="vertical"
-          className="h-2/3 m-auto w-px bg-border"
-        />
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social], index) => {
-            const isExternal = social.url.startsWith("http");
-            const IconComponent = social.icon;
+      <TooltipProvider>
+        <Dock direction="middle" className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
+          {DATA.navbar.map((item) => {
+            const sectionId = item.href.replace("#", "");
+            const isActive = activeSection === sectionId;
             return (
-              <Tooltip key={`social-${name}-${index}`}>
-                <TooltipTrigger asChild>
-                  <a
-                    href={social.url}
-                    target={isExternal ? "_blank" : undefined}
-                    rel={isExternal ? "noopener noreferrer" : undefined}
-                  >
-                    <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-                      <IconComponent className="size-full rounded-sm overflow-hidden object-contain" />
-                    </DockIcon>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent
-                  side="top"
-                  sideOffset={8}
-                  className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
-                >
-                  <p>{name}</p>
-                  <TooltipArrow className="fill-primary" />
-                </TooltipContent>
-              </Tooltip>
+              <DockIcon key={item.label}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={item.href}
+                      aria-label={item.label}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12 rounded-full transition-colors duration-200",
+                        isActive && "bg-primary/10 text-primary"
+                      )}
+                    >
+                      <item.icon className={cn("size-5", isActive && "stroke-[2.5]")} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
             );
           })}
-        <Separator
-          orientation="vertical"
-          className="h-2/3 m-auto w-px bg-border"
-        />
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-              <ModeToggle className="size-full cursor-pointer" />
-            </DockIcon>
-          </TooltipTrigger>
-          <TooltipContent
-            side="top"
-            sideOffset={8}
-            className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
-          >
-            <p>Theme</p>
-            <TooltipArrow className="fill-primary" />
-          </TooltipContent>
-        </Tooltip>
-      </Dock>
+          <Separator orientation="vertical" className="h-full" />
+          <DockIcon>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "size-12 rounded-full cursor-pointer"
+                  )}
+                >
+                  <AnimatedThemeToggler />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Theme</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+        </Dock>
+      </TooltipProvider>
     </div>
   );
 }

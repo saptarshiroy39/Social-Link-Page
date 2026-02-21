@@ -3,7 +3,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight } from "lucide-react";
+import { IconCornerRightUp } from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
@@ -31,7 +31,6 @@ interface Props {
   description: string;
   dates: string;
   tags: readonly string[];
-  link?: string;
   image?: string;
   video?: string;
   links?: readonly {
@@ -48,7 +47,6 @@ export function ProjectCard({
   description,
   dates,
   tags,
-  link,
   image,
   video,
   links,
@@ -118,7 +116,7 @@ export function ProjectCard({
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
           >
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
+            <IconCornerRightUp className="h-4 w-4" aria-hidden />
           </Link>
         </div>
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
