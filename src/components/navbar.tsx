@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -17,6 +17,7 @@ import { DATA } from "@/data/resume";
 
 function useActiveSection() {
   const [activeSection, setActiveSection] = useState("hero");
+  const activeSectionRef = useRef("hero");
 
   useEffect(() => {
     const sectionIds = DATA.navbar.map((item) => item.href.replace("#", ""));
@@ -47,6 +48,10 @@ function useActiveSection() {
                 }
               });
               setActiveSection(best);
+              if (activeSectionRef.current !== best) {
+                activeSectionRef.current = best;
+                history.replaceState(null, "", `#${best}`);
+              }
             }
           });
         },

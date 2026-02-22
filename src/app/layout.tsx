@@ -8,6 +8,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import ClickSpark from "@/components/reactbits/ClickSpark";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -61,6 +62,13 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
+          <ClickSpark
+            sparkColor="currentColor"
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
               <FlickeringGrid
@@ -79,6 +87,7 @@ export default function RootLayout({
             <ScrollProgress />
             <Navbar />
           </TooltipProvider>
+          </ClickSpark>
         </ThemeProvider>
       </body>
     </html>
