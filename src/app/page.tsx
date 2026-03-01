@@ -1,6 +1,8 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ShinyButton } from "@/components/magicui/shiny-button";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { DATA } from "@/data/resume";
 import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
@@ -8,6 +10,7 @@ import WorkSection from "@/components/section/work-section";
 import EducationSection from "@/components/section/education-section";
 import SkillsSection from "@/components/section/skills-section";
 import Markdown from "react-markdown";
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -37,6 +40,20 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 2}>
+            <div className="flex gap-3 flex-wrap py-2">
+              <a href="/resume.pdf" download>
+                <ShinyButton className="rounded-full bg-primary/5 dark:bg-primary/10 border-primary/20">
+                  Download CV
+                </ShinyButton>
+              </a>
+              <Link href="#contact">
+                <InteractiveHoverButton>
+                  Get in Touch
+                </InteractiveHoverButton>
+              </Link>
+            </div>
+          </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
               <Markdown>{DATA.summary}</Markdown>

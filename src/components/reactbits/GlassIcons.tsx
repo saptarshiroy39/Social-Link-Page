@@ -33,7 +33,7 @@ const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
   };
 
   return (
-    <div className={`grid gap-[5em] grid-cols-2 md:grid-cols-3 mx-auto py-[3em] overflow-visible ${className || ''}`}>
+    <div className={`grid gap-[1em] grid-cols-3 mx-auto py-[3em] overflow-visible ${className || ''}`}>
       {items.map((item, index) => {
         const Wrapper = item.href ? 'a' : 'button';
         const wrapperProps = item.href

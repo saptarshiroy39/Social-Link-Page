@@ -26,6 +26,7 @@ import { VSCode } from "@/components/ui/svgs/vscode";
 import { Requestly } from "@/components/ui/svgs/requestly";
 import { Linux } from "@/components/ui/svgs/linux";
 import { Pandas } from "@/components/ui/svgs/pandas";
+import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -91,6 +92,7 @@ export const DATA = {
         { name: "VS Code", icon: VSCode },
         { name: "Requestly", icon: Requestly },
         { name: "Linux", icon: Linux },
+        { name: "UptimeRobot", icon: UptimeRobot },
       ],
     },
   ],
