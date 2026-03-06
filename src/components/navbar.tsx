@@ -91,7 +91,7 @@ export default function Navbar() {
                         isActive && "bg-primary/10 text-primary"
                       )}
                     >
-                      <item.icon className={cn("size-5", isActive && "stroke-[2.5]")} />
+                      <item.icon className={cn("size-6", isActive && "stroke-[2.5]")} />
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>

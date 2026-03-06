@@ -22,11 +22,10 @@ import { GitHub } from "@/components/ui/svgs/github";
 import { Railway } from "@/components/ui/svgs/railway";
 import { Render } from "@/components/ui/svgs/render";
 import { Pinecone } from "@/components/ui/svgs/pinecone";
-import { VSCode } from "@/components/ui/svgs/vscode";
 import { Requestly } from "@/components/ui/svgs/requestly";
-import { Linux } from "@/components/ui/svgs/linux";
 import { Pandas } from "@/components/ui/svgs/pandas";
 import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
+import { HuggingFace } from "@/components/ui/svgs/huggingface";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -89,10 +88,9 @@ export const DATA = {
     {
       category: "Miscellaneous",
       items: [
-        { name: "VS Code", icon: VSCode },
         { name: "Requestly", icon: Requestly },
-        { name: "Linux", icon: Linux },
         { name: "UptimeRobot", icon: UptimeRobot },
+        { name: "Hugging Face", icon: HuggingFace },
       ],
     },
   ],
@@ -216,6 +214,59 @@ export const DATA = {
       ],
       image: "https://github.com/saptarshiroy39/Luna-AI/blob/master/Luna-AI.png?raw=true",
       video: "",
+    },
+    {
+      title: "Chrono Compiler",
+      href: "https://github.com/saptarshiroy39/Chrono-Compiler",
+      dates: "Jul 2025 - Jul 2025",
+      description:
+        "Chrono Compiler is an intelligent email digest that sends personalized hourly updates to your inbox. Get real-time weather, entertainment, and AI-curated news in one clean email.",
+      technologies: [
+        "n8n",
+        "Gemini API",
+        "Gmail SMTP",
+        "icanhazdadjoke API",
+        "Sheet API",
+        "OpenWeatherMap",
+        "Google News RSS",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/saptarshiroy39/Chrono-Compiler",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://raw.githubusercontent.com/saptarshiroy39/Chrono-Compiler/refs/heads/main/Chrono-Compiler.png",
+      video: "",
+    },
+        {
+      title: "Cipher",
+      href: "https://cipher.anabaslabs.com/",
+      dates: "Feb 2026 - Present",
+      description:
+        "Cipher is an all-in-one toolkit for Cipher Projectt",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "Typescript",
+        "TailwindCSS",
+        "ReactJS",
+        "NestJS",
+        "Render",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://cipher.anabaslabs.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/anabaslabs/cipher",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
     },
   ],
 
