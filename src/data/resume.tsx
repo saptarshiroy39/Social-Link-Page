@@ -156,6 +156,35 @@ export const DATA = {
 
   projects: [
     {
+      title: "Julius",
+      href: "https://github.com/saptarshiroy39/Julius",
+      dates: "Feb 2026 - Present",
+      description:
+        "Julius is an all-in-one toolkit for Cipher Project. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "Typescript",
+        "TailwindCSS",
+        "Next.js",
+        "Render",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://cipher.anabaslabs.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/saptarshiroy39/Julius",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/Julius.png",
+    },
+
+    {
       title: "Arkiv",
       href: "https://arkiv.hirishi.in/",
       dates: "Dec 2025 - Present",
@@ -184,9 +213,10 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://github.com/saptarshiroy39/Arkiv/blob/master/Arkiv.png?raw=true",
+      image: "/Arkiv.png",
       video: "",
     },
+
     {
       title: "Luna AI",
       href: "https://github.com/saptarshiroy39/Luna-AI",
@@ -212,9 +242,10 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://github.com/saptarshiroy39/Luna-AI/blob/master/Luna-AI.png?raw=true",
+      image: "/Luna-AI.png",
       video: "",
     },
+
     {
       title: "Chrono Compiler",
       href: "https://github.com/saptarshiroy39/Chrono-Compiler",
@@ -237,36 +268,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://raw.githubusercontent.com/saptarshiroy39/Chrono-Compiler/refs/heads/main/Chrono-Compiler.png",
+      image: "/Chrono-Compiler.png",
       video: "",
-    },
-        {
-      title: "Cipher",
-      href: "https://cipher.anabaslabs.com/",
-      dates: "Feb 2026 - Present",
-      description:
-        "Cipher is an all-in-one toolkit for Cipher Projectt",
-      technologies: [
-        "Python",
-        "FastAPI",
-        "Typescript",
-        "TailwindCSS",
-        "ReactJS",
-        "NestJS",
-        "Render",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://cipher.anabaslabs.com/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "GitHub",
-          href: "https://github.com/anabaslabs/cipher",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
     },
   ],
 

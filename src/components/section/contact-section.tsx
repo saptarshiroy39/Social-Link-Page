@@ -10,7 +10,7 @@ const socialItems = [
 
 export default function ContactSection() {
   return (
-    <div id="contact" className="border rounded-xl p-10 relative">
+    <div id="contact" className="border rounded-xl px-10 py-2 relative">
       <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
         <span className="text-background text-sm font-medium">Get in Touch</span>
       </div>

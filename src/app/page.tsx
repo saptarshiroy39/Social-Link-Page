@@ -11,6 +11,7 @@ import EducationSection from "@/components/section/education-section";
 import SkillsSection from "@/components/section/skills-section";
 import Markdown from "react-markdown";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -44,7 +45,9 @@ export default function Page() {
             <div className="flex gap-3 flex-wrap py-2">
               <a href="/resume.pdf" download>
                 <ShinyButton className="rounded-full bg-primary/5 dark:bg-primary/10 border-primary/20">
-                  Download CV
+                  <b>
+                    Download CV
+                  </b>
                 </ShinyButton>
               </a>
               <Link href="#contact">
@@ -70,6 +73,7 @@ export default function Page() {
       <BlurFade delay={BLUR_FADE_DELAY * 16}>
         <ContactSection />
       </BlurFade>
+      <Footer />
     </main>
   );
 }
