@@ -85,13 +85,22 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       aria-label={item.label}
+                      onClick={() => {
+                        const audio = new Audio("/teleport.ogg");
+                        audio.volume = 0.1;
+                        audio.play().catch((err) =>
+                          console.error("Error playing sound:", err)
+                        );
+                      }}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
                         "size-12 rounded-full transition-colors duration-200",
                         isActive && "bg-primary/10 text-primary"
                       )}
                     >
-                      <item.icon className={cn("size-6", isActive && "stroke-[2.5]")} />
+                      <item.icon
+                        className={cn("size-6", isActive && "stroke-[2.5]")}
+                      />
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>
