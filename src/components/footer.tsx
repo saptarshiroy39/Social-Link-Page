@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { DATA } from "@/data/resume";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -23,7 +24,7 @@ export default function Footer() {
                     className="p-0 hover:cursor-pointer"
                     onClick={() => handleClick("https://youtu.be/dQw4w9WgXcQ")}
                 >
-                    <u>SR</u>
+                    <u>{DATA.initials}</u>
                 </Button>
                 . All rights reserved
                 <Button
