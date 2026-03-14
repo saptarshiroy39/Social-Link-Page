@@ -103,7 +103,7 @@ html {
     background-color: transparent;
   }
 
-.prose pre {
+  .prose pre {
     @apply leading-relaxed bg-transparent! font-mono!;
   }
 
@@ -111,7 +111,8 @@ html {
     @apply m-0! mx-1! border rounded-md! px-1.5 py-0.5 bg-muted/60 dark:bg-muted/40 text-[13px]! font-mono text-foreground/90!;
   }
 
-  .prose code::before, .prose code::after {
+  .prose code::before,
+  .prose code::after {
     @apply content-none!;
   }
 
@@ -164,10 +165,7 @@ html {
     @apply pl-0!;
   }
 
-  .prose
-    :where(li.task-list-item > input[type="checkbox"]):not(
-      :where([class~="not-prose"] *)
-    ) {
+  .prose :where(li.task-list-item > input[type="checkbox"]):not( :where([class~="not-prose"] *)) {
     @apply mr-2 align-middle!;
   }
 
@@ -182,7 +180,7 @@ html {
     @apply px-6 py-4 align-middle m-0 whitespace-nowrap;
   }
 
-  .prose tr{
+  .prose tr {
     @apply hover:bg-accent/50! transition-colors! cursor-pointer! h-10!;
   }
 
@@ -205,7 +203,8 @@ html {
 
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

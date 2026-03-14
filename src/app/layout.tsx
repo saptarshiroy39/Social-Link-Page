@@ -58,7 +58,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
-          lexend.variable
+          lexend.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
@@ -69,24 +69,25 @@ export default function RootLayout({
             sparkCount={8}
             duration={400}
           >
-          <TooltipProvider delayDuration={0}>
-            <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
-              <FlickeringGrid
-                className="h-full w-full"
-                squareSize={2}
-                gridGap={2}
-                style={{
-                  maskImage: "linear-gradient(to bottom, black, transparent)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-                }}
-              />
-            </div>
-            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
-              {children}
-            </div>
-            <ScrollProgress />
-            <Navbar />
-          </TooltipProvider>
+            <TooltipProvider delayDuration={0}>
+              <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
+                <FlickeringGrid
+                  className="h-full w-full"
+                  squareSize={2}
+                  gridGap={2}
+                  style={{
+                    maskImage: "linear-gradient(to bottom, black, transparent)",
+                    WebkitMaskImage:
+                      "linear-gradient(to bottom, black, transparent)",
+                  }}
+                />
+              </div>
+              <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+                {children}
+              </div>
+              <ScrollProgress />
+              <Navbar />
+            </TooltipProvider>
           </ClickSpark>
         </ThemeProvider>
       </body>

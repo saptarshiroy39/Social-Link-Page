@@ -126,7 +126,6 @@ export const DATA = {
 
         navbar: true,
       },
-
     },
   },
 
@@ -156,11 +155,11 @@ export const DATA = {
 
   projects: [
     {
-      title: "Julius",
-      href: "https://github.com/saptarshiroy39/Julius",
+      title: "Cipher",
+      href: "https://github.com/saptarshiroy39/Cipher",
       dates: "Feb 2026 - Present",
       description:
-        "Julius is an all-in-one toolkit for Cipher Project. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
+        "Cipher is an all-in-one toolkit for Cipher Project. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
       technologies: [
         "Python",
         "FastAPI",
@@ -177,11 +176,11 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Julius",
+          href: "https://github.com/saptarshiroy39/Cipher",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Julius.png",
+      image: "/Cipher.png",
     },
 
     {
@@ -272,5 +271,4 @@ export const DATA = {
       video: "",
     },
   ],
-
 } as const;

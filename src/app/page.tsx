@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import EducationSection from "@/components/section/education-section";
 import SkillsSection from "@/components/section/skills-section";
+import GithubSection from "@/components/section/github-section";
 import Markdown from "react-markdown";
 import Link from "next/link";
 import Footer from "@/components/footer";
@@ -45,13 +46,11 @@ export default function Page() {
             <div className="flex gap-3 flex-wrap py-2">
               <a href="/resume.pdf" download>
                 <ShinyButton className="rounded-full bg-primary/5 dark:bg-primary/10 border-primary/20">
-                    Download CV
+                  Download CV
                 </ShinyButton>
               </a>
               <Link href="#contact">
-                <InteractiveHoverButton>
-                  Get in Touch
-                </InteractiveHoverButton>
+                <InteractiveHoverButton>Get in Touch</InteractiveHoverButton>
               </Link>
             </div>
           </BlurFade>
@@ -60,6 +59,7 @@ export default function Page() {
               <Markdown>{DATA.summary}</Markdown>
             </div>
           </BlurFade>
+          <GithubSection />
         </div>
       </section>
       <WorkSection />

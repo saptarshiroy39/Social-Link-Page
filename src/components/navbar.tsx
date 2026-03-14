@@ -38,7 +38,6 @@ function useActiveSection() {
             }
 
             if (visibleSections.size > 0) {
-              // Pick the section with the highest intersection ratio
               let best = "";
               let bestRatio = 0;
               visibleSections.forEach((ratio, sectionId) => {
@@ -88,9 +87,7 @@ export default function Navbar() {
                       onClick={() => {
                         const audio = new Audio("/teleport.ogg");
                         audio.volume = 0.1;
-                        audio.play().catch((err) =>
-                          console.error("Error playing sound:", err)
-                        );
+                        audio.play()
                       }}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
