@@ -22,7 +22,7 @@ export default function Footer() {
         <Button
           variant="link"
           className="p-0 hover:cursor-pointer"
-          onClick={() => handleClick("https://youtu.be/dQw4w9WgXcQ")}
+          onClick={() => playSound("/meow.mp3")}
         >
           <u>{DATA.initials}</u>
         </Button>
