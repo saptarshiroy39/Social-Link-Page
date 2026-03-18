@@ -21,6 +21,7 @@ import { Git } from "@/components/ui/svgs/git";
 import { GitHub } from "@/components/ui/svgs/github";
 import { Railway } from "@/components/ui/svgs/railway";
 import { Render } from "@/components/ui/svgs/render";
+import { Vercel } from "@/components/ui/svgs/vercel";
 import { Pinecone } from "@/components/ui/svgs/pinecone";
 import { Requestly } from "@/components/ui/svgs/requestly";
 import { Pandas } from "@/components/ui/svgs/pandas";
@@ -81,6 +82,7 @@ export const DATA = {
       category: "Cloud & Deployment",
       items: [
         { name: "GCP", icon: GoogleCloud },
+        { name: "Vercel", icon: Vercel },
         { name: "Railway", icon: Railway },
         { name: "Render", icon: Render },
       ],
@@ -156,22 +158,24 @@ export const DATA = {
   projects: [
     {
       title: "Cipher",
-      href: "https://github.com/saptarshiroy39/Cipher",
-      dates: "Feb 2026 - Present",
+      href: "https://cipher.hirishi.in/",
+      dates: "Feb 2026 - Feb 2026",
       description:
-        "Cipher is an all-in-one toolkit for Cipher Project. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
+        "Cipher is A complete toolkit for Cryptography. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
       technologies: [
         "Python",
         "FastAPI",
         "Typescript",
         "TailwindCSS",
         "Next.js",
-        "Render",
+        "UptimeRobot",
+        "Hugging Face",
+        "Vercel",
       ],
       links: [
         {
           type: "Website",
-          href: "https://cipher.anabaslabs.com/",
+          href: "https://cipher.hirishi.in/",
           icon: <Icons.globe className="size-3" />,
         },
         {

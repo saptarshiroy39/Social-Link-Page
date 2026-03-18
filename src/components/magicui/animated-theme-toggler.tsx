@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { flushSync } from "react-dom";
+import { useTheme } from "next-themes";
 
 import { cn } from "@/lib/utils";
 
@@ -17,6 +18,7 @@ export const AnimatedThemeToggler = ({
 }: AnimatedThemeTogglerProps) => {
   const [isDark, setIsDark] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     const updateTheme = () => {
@@ -33,8 +35,7 @@ export const AnimatedThemeToggler = ({
 
     return () => observer.disconnect();
   }, []);
-
-  const toggleTheme = useCallback(async () => {
+  const toggleTheme = async () => {
     if (!buttonRef.current) return;
 
     const audio = new Audio("/button.ogg");
@@ -45,8 +46,7 @@ export const AnimatedThemeToggler = ({
       flushSync(() => {
         const newTheme = !isDark;
         setIsDark(newTheme);
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", newTheme ? "dark" : "light");
+        setTheme(newTheme ? "dark" : "light");
       });
     }).ready;
 
@@ -72,7 +72,7 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       },
     );
-  }, [isDark, duration]);
+  };
 
   return (
     <button
