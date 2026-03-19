@@ -9,6 +9,7 @@ import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import ClickSpark from "@/components/reactbits/ClickSpark";
+import Figlet from "@/components/Figlet";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -23,6 +24,46 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "Saptarshi Roy",
+    "Saptarshi",
+    "Roy",
+    "saptarshiroy39",
+    "hirishi",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    "Portfolio",
+    "Projects",
+    "Python",
+    "FastAPI",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "TailwindCSS",
+    "C",
+    "C++",
+    "LangChain",
+    "Pandas",
+    "MySQL",
+    "Supabase",
+    "Pinecone",
+    "Git",
+    "GitHub",
+    "Docker",
+    "n8n",
+    "Google Cloud",
+    "GCP",
+    "Vercel",
+    "Render",
+    "AI Tools",
+    "Automation",
+    "Anabas Labs",
+  ],
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
@@ -45,6 +86,9 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+  },
+  alternates: {
+    canonical: DATA.url,
   },
 };
 
@@ -90,6 +134,7 @@ export default function RootLayout({
             </TooltipProvider>
           </ClickSpark>
         </ThemeProvider>
+        <Figlet />
       </body>
     </html>
   );
