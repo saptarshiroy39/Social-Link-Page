@@ -49,12 +49,16 @@ function useActiveSection() {
               setActiveSection(best);
               if (activeSectionRef.current !== best) {
                 activeSectionRef.current = best;
-                history.replaceState(null, "", `#${best}`);
+                history.replaceState(
+                  null,
+                  "",
+                  best === "hero" ? window.location.pathname : `#${best}`,
+                );
               }
             }
           });
         },
-        { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: "-10% 0px -10% 0px" }
+        { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: "-10% 0px -10% 0px" },
       );
 
       observer.observe(element);
@@ -73,7 +77,10 @@ export default function Navbar() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
       <TooltipProvider>
-        <Dock direction="middle" className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
+        <Dock
+          direction="middle"
+          className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
+        >
           {DATA.navbar.map((item) => {
             const sectionId = item.href.replace("#", "");
             const isActive = activeSection === sectionId;
@@ -87,12 +94,12 @@ export default function Navbar() {
                       onClick={() => {
                         const audio = new Audio("/teleport.ogg");
                         audio.volume = 0.1;
-                        audio.play()
+                        audio.play();
                       }}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
                         "size-12 rounded-full transition-colors duration-200",
-                        isActive && "bg-primary/10 text-primary"
+                        isActive && "bg-primary/10 text-primary",
                       )}
                     >
                       <item.icon
@@ -114,7 +121,7 @@ export default function Navbar() {
                 <div
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12 rounded-full cursor-pointer"
+                    "size-12 rounded-full cursor-pointer",
                   )}
                 >
                   <AnimatedThemeToggler />

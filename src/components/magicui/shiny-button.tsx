@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion, type MotionProps } from "motion/react";
-
 import { cn } from "@/lib/utils";
 
 const animationProps: MotionProps = {

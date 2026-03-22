@@ -10,7 +10,6 @@ import {
   useTransform,
 } from "motion/react";
 import type { MotionProps } from "motion/react";
-
 import { cn } from "@/lib/utils";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {

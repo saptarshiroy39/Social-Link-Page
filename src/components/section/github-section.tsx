@@ -1,4 +1,5 @@
 "use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
@@ -11,7 +12,6 @@ export default function GithubSection() {
   const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    // eslint-disable-next-line
     setMounted(true);
 
     const scrollToEnd = () => {

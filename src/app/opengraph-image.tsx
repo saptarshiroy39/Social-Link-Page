@@ -4,6 +4,7 @@ import { DATA } from "@/data/resume";
 export const runtime = "edge";
 
 export const alt = DATA.name;
+
 export const size = {
   width: 1200,
   height: 630,
@@ -12,7 +13,6 @@ export const contentType = "image/png";
 
 const getFontData = async () => {
   try {
-    // Fetch Lexend font from Google Fonts
     const lexendRegular = await fetch(
       "https://fonts.gstatic.com/s/lexend/v21/wlpwgwvFAVdoq2_F94zlCfv0bz1WCzsX_LBte6KuGEo.woff",
     ).then((res) => res.arrayBuffer());

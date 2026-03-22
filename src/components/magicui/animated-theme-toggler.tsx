@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { flushSync } from "react-dom";
 import { useTheme } from "next-themes";
-
 import { cn } from "@/lib/utils";
 
 interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"button"> {

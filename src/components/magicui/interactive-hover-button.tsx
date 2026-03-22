@@ -1,18 +1,28 @@
-import { IconArrowRight } from "@tabler/icons-react";
+"use client";
 
+import { IconArrowRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export function InteractiveHoverButton({
   children,
   className,
+  onClick,
   ...props
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const audio = new Audio("/teleport.ogg");
+    audio.volume = 0.1;
+    audio.play();
+    onClick?.(e);
+  };
+
   return (
     <button
       className={cn(
         "group bg-background relative w-auto cursor-pointer overflow-hidden rounded-full border py-2.5 px-6 text-center font-semibold",
         className,
       )}
+      onClick={handleClick}
       {...props}
     >
       <div className="flex items-center gap-2">

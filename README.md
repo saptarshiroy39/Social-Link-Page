@@ -1,14 +1,15 @@
 # Hi there, I'm Saptarshi 👋
 
 ## 💡 Technologies I Use:
-- ***Languages:*** `C` • `C++` • `Python` • `Bash`
-- ***Frameworks:*** `FastAPI` • `LangChain` • `Pandas`
-- ***Automation & Agents:*** `n8n`
-- ***Databases:*** `MySQL` • `Supabase` • `Pinecone`
-- ***Cloud:*** `GCP`
-- ***Deployment:*** `Railway` • `Render` • `Vercel`
-- ***DevOps:*** `Docker` • `Git` • `GitHub`
- 
-### 📫 ***How to Reach Me:*** <a href="https://hirishi.in/">`hirishi.in`</a>
 
-### 🔑 ***GPG Key ID:*** `394FAAE933C43B0A`
+- **_Languages:_** `C` • `C++` • `Python` • `Bash`
+- **_Frameworks:_** `FastAPI` • `LangChain` • `Pandas`
+- **_Automation & Agents:_** `n8n`
+- **_Databases:_** `MySQL` • `Supabase` • `Pinecone`
+- **_Cloud:_** `GCP`
+- **_Deployment:_** `Railway` • `Render` • `Vercel`
+- **_DevOps:_** `Docker` • `Git` • `GitHub`
+
+### 📫 **_How to Reach Me:_** <a href="https://hirishi.in/">`hirishi.in`</a>
+
+### 🔑 **_GPG Key ID:_** `394FAAE933C43B0A`
