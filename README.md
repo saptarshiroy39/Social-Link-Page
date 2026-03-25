@@ -1,6 +1,10 @@
-# Hi there, I'm Saptarshi 👋
+<h1 align="center">
+  <img src="./src/app/favicon.ico" alt="SR" width="64">
+    <br>
+  <b>Hi there, I'm Saptarshi 👋</b>
+</h1>
 
-## 💡 Technologies I Use:
+### ⚙️ **_Tech Stack_**
 
 - **_Languages:_** `C` • `C++` • `Python` • `Bash`
 - **_Frameworks:_** `FastAPI` • `LangChain` • `Pandas`
@@ -10,6 +14,6 @@
 - **_Deployment:_** `Railway` • `Render` • `Vercel`
 - **_DevOps:_** `Docker` • `Git` • `GitHub`
 
-### 📫 **_How to Reach Me:_** <a href="https://hirishi.in/">`hirishi.in`</a>
+### 🌐 **_Website:_** [`hirishi.in`](https://hirishi.in)
 
-### 🔑 **_GPG Key ID:_** `394FAAE933C43B0A`
+### 🔑 **_GPG Key:_** `394FAAE933C43B0A`
