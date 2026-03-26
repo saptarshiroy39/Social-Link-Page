@@ -70,7 +70,7 @@ export const DATA = {
       ],
     },
     {
-      category: "DevOps & Tools",
+      category: "DevOps & Automation",
       items: [
         { name: "Git", icon: Git },
         { name: "GitHub", icon: GitHub },

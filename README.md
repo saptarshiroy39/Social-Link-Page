@@ -7,12 +7,11 @@
 ### ⚙️ **_Tech Stack_**
 
 - **_Languages:_** `C` • `C++` • `Python` • `Bash`
-- **_Frameworks:_** `FastAPI` • `LangChain` • `Pandas`
-- **_Automation & Agents:_** `n8n`
+- **_Frameworks & Libraries:_** `FastAPI` • `LangChain` • `Pandas`
 - **_Databases:_** `MySQL` • `Supabase` • `Pinecone`
-- **_Cloud:_** `GCP`
-- **_Deployment:_** `Railway` • `Render` • `Vercel`
-- **_DevOps:_** `Docker` • `Git` • `GitHub`
+- **_DevOps & Automation:_** `Git` • `GitHub` • `Docker`•`n8n`
+- **_Cloud & Deployment:_** `GCP` • `Vercel` • `Railway` • `Render`
+- **_Miscellaneous:_** `Requestly` • `UptimeRobot` • `Hugging Face`
 
 ### 🌐 **_Website:_** [`hirishi.in`](https://hirishi.in)
 
