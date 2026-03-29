@@ -115,7 +115,7 @@ export const DATA = {
 
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/saptarshiroy39/",
+        url: "https://www.linkedin.com/in/saptarshiroy39",
         icon: Icons.linkedin,
 
         navbar: true,
@@ -134,20 +134,27 @@ export const DATA = {
   work: [
     {
       company: "Anabas Labs",
-      href: "https://anabaslabs.com/",
-      title: "Software Engineer",
+      href: "https://anabaslabs.com",
+      title: "Co-Founder & Developer",
       logoUrl: "/anabas-labs.png",
       start: "Jan 2026",
       end: "Present",
-      description:
-        "AnabasLabs is a software engineering studio building scalable web, mobile, and AI-powered systems for real-world use. We work with startups and businesses to turn complex problems into reliable, production-ready software that performs, grows, and actually gets used",
+    },
+
+    {
+      company: "XPMC (Employability.life)",
+      href: "https://verify.employability.life/verify?data=U2FsdGVkX1%2FM5SKLM9SGLpDBcfCLYci49QNPdWwzhSTUjJXHu2BAGxH1Q%2FohQeh%2F%2FjnVa0cOR3E8XKFdDIiDhgVw7dPUJ2jCUM5GyOw81Uk%3D",
+      title: "Digital Transformation Service Design (Training Program)",
+      logoUrl: "/xpmc.png",
+      start: "Nov 2025",
+      end: "Jan 2026",
     },
   ],
 
   education: [
     {
       school: "Sister Nivedita University",
-      href: "https://www.snuniv.ac.in/",
+      href: "https://www.snuniv.ac.in",
       degree: "Bachelor of Technology in Computer Science and Engineering",
       logoUrl: "/snu.png",
       start: "2023",
@@ -158,7 +165,7 @@ export const DATA = {
   projects: [
     {
       title: "Cipher",
-      href: "https://cipher.hirishi.in/",
+      href: "https://cipher.hirishi.in",
       dates: "Feb 2026 - Feb 2026",
       description:
         "Cipher is A complete toolkit for Cryptography. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
@@ -175,7 +182,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://cipher.hirishi.in/",
+          href: "https://cipher.hirishi.in",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -189,7 +196,7 @@ export const DATA = {
 
     {
       title: "Arkiv",
-      href: "https://arkiv.hirishi.in/",
+      href: "https://arkiv.hirishi.in",
       dates: "Dec 2025 - Present",
       description:
         "Arkiv is an AI-powered document assistant (RAG) that lets you upload files and have accurate context-aware conversations about their content.",
@@ -207,7 +214,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://arkiv.hirishi.in/",
+          href: "https://arkiv.hirishi.in",
           icon: <Icons.globe className="size-3" />,
         },
         {
