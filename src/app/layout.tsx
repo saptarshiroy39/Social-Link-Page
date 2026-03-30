@@ -136,6 +136,7 @@ export default function RootLayout({
           </ClickSpark>
         </ThemeProvider>
         <Figlet />
+        <Analytics />
       </body>
     </html>
   );
