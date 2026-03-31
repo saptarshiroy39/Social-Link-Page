@@ -1,17 +1,17 @@
+import Link from "next/link";
+import Markdown from "react-markdown";
+import { DATA } from "@/data/resume";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-import { DATA } from "@/data/resume";
 import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import EducationSection from "@/components/section/education-section";
 import SkillsSection from "@/components/section/skills-section";
 import GithubSection from "@/components/section/github-section";
-import Markdown from "react-markdown";
-import Link from "next/link";
 import Footer from "@/components/footer";
 
 const BLUR_FADE_DELAY = 0.04;

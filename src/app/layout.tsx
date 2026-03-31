@@ -1,16 +1,17 @@
-import { Analytics } from "@vercel/analytics/next"
+import type { Metadata } from "next";
+import { Lexend } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cn } from "@/lib/utils";
+import { DATA } from "@/data/resume";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
-import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import ClickSpark from "@/components/reactbits/ClickSpark";
 import Figlet from "@/components/Figlet";
+import "./globals.css";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -137,6 +138,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Figlet />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
