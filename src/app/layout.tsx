@@ -11,20 +11,16 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 
 const FlickeringGrid = dynamic(
-  () => import("@/components/magicui/flickering-grid").then((mod) => mod.FlickeringGrid),
-  { ssr: false }
+  () => import("@/components/magicui/flickering-grid").then((mod) => mod.FlickeringGrid)
 );
 
 const ScrollProgress = dynamic(
-  () => import("@/components/magicui/scroll-progress").then((mod) => mod.ScrollProgress),
-  { ssr: false }
+  () => import("@/components/magicui/scroll-progress").then((mod) => mod.ScrollProgress)
 );
 
-const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"), {
-  ssr: false,
-});
+const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"));
 
-const Figlet = dynamic(() => import("@/components/Figlet"), { ssr: false });
+const Figlet = dynamic(() => import("@/components/Figlet"));
 
 const lexend = Lexend({
   subsets: ["latin"],
