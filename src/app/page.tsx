@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Markdown from "react-markdown";
+import Image from "next/image";
 import { DATA } from "@/data/resume";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ShinyButton } from "@/components/magicui/shiny-button";
@@ -36,10 +36,9 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted relative overflow-hidden bg-muted">
+                <Image src={DATA.avatarUrl} alt={DATA.name} width={128} height={128} className="size-full object-cover" priority />
+              </div>
             </BlurFade>
           </div>
           <BlurFade delay={BLUR_FADE_DELAY * 2}>

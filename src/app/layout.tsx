@@ -7,11 +7,24 @@ import { DATA } from "@/data/resume";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-import { ScrollProgress } from "@/components/magicui/scroll-progress";
-import ClickSpark from "@/components/reactbits/ClickSpark";
-import Figlet from "@/components/Figlet";
+import dynamic from "next/dynamic";
 import "./globals.css";
+
+const FlickeringGrid = dynamic(
+  () => import("@/components/magicui/flickering-grid").then((mod) => mod.FlickeringGrid),
+  { ssr: false }
+);
+
+const ScrollProgress = dynamic(
+  () => import("@/components/magicui/scroll-progress").then((mod) => mod.ScrollProgress),
+  { ssr: false }
+);
+
+const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"), {
+  ssr: false,
+});
+
+const Figlet = dynamic(() => import("@/components/Figlet"), { ssr: false });
 
 const lexend = Lexend({
   subsets: ["latin"],
