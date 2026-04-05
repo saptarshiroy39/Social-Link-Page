@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:is(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
@@ -33,6 +33,7 @@ html {
 }
 
 :root {
+  --font-mono: var(--font-sans);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -83,6 +84,10 @@ html {
   section[id],
   [id="contact"] {
     scroll-margin-top: 6rem;
+  }
+
+  body, input, textarea, button, select {
+    font-family: var(--font-sans), monospace;
   }
 
   body {

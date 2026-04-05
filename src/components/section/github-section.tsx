@@ -1,9 +1,14 @@
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
-import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useSyncExternalStore } from "react";
+import dynamic from "next/dynamic";
+
+const GitHubCalendar = dynamic(
+  () => import("react-github-calendar").then((mod) => mod.GitHubCalendar),
+  { ssr: false },
+);
 
 const BLUR_FADE_DELAY = 0.04;
 

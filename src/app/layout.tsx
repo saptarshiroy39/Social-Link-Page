@@ -26,14 +26,9 @@ const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"));
 
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
-const jetbrainsSans = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -79,6 +74,7 @@ export const metadata: Metadata = {
     "AI Tools",
     "Automation",
     "Anabas Labs",
+    "Asynchronous Task",
   ],
   authors: [{ name: DATA.name, url: DATA.url }],
   creator: DATA.name,
@@ -116,11 +112,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={jetbrainsMono.variable}>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
-          jetbrainsSans.variable,
           jetbrainsMono.variable,
         )}
       >
