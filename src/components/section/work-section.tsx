@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import Image from "next/image";
 import { IconCornerRightUp } from "@tabler/icons-react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -36,10 +37,13 @@ export default function WorkSection() {
               >
                 <div className="flex items-center gap-x-3 flex-1 min-w-0">
                   {work.logoUrl ? (
-                    <img
+                    <Image
                       src={work.logoUrl}
                       alt={work.company}
+                      width={40}
+                      height={40}
                       className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+                      unoptimized
                     />
                   ) : (
                     <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
