@@ -50,6 +50,10 @@ export default function GithubSection() {
               <GitHubCalendar
                 username="saptarshiroy39"
                 colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
+                year={new Date().getFullYear()}
+                labels={{
+                  totalCount: "{{count}} contributions in {{year}}",
+                }}
               />
             </div>
           ) : (
