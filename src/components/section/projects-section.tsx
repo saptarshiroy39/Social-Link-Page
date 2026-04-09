@@ -1,23 +1,15 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
-
-const BLUR_FADE_DELAY = 0.04;
+import SectionHeader from "@/components/section-header";
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export default function ProjectsSection() {
   return (
     <section id="projects">
       <div className="flex min-h-0 flex-col gap-y-8">
         <div className="flex flex-col gap-y-4 items-center justify-center">
-          <div className="flex items-center w-full">
-            <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
-            <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-              <span className="text-background text-sm font-medium">
-                My Projects
-              </span>
-            </div>
-            <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
-          </div>
+          <SectionHeader label="My Projects" />
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto auto-rows-fr">
           {DATA.projects.map((project, id) => (

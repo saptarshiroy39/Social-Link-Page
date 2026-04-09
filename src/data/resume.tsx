@@ -120,6 +120,7 @@ export const DATA = {
     { href: "#projects", icon: IconBulb, label: "Projects" },
   ],
   contact: {
+    email: "saptarshiroy39@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -147,6 +148,21 @@ export const DATA = {
         url: "https://x.com/saptarshiroy39",
         icon: Icons.x,
         navbar: true,
+      },
+
+      HuggingFace: {
+        name: "Hugging Face",
+        url: "https://huggingface.co/saptarshiroy39",
+      },
+
+      VisualStudioMarketplace: {
+        name: "Visual Studio Marketplace",
+        url: "https://marketplace.visualstudio.com/publishers/saptarshiroy39",
+      },
+
+      Codeberg: {
+        name: "Codeberg",
+        url: "https://codeberg.org/saptarshiroy39",
       },
     },
   },

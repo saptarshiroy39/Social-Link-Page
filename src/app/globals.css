@@ -86,7 +86,11 @@ html {
     scroll-margin-top: 6rem;
   }
 
-  body, input, textarea, button, select {
+  body,
+  input,
+  textarea,
+  button,
+  select {
     font-family: var(--font-sans), monospace;
   }
 
@@ -111,7 +115,6 @@ html {
     color: var(--shiki-dark);
     background-color: transparent;
   }
-
 }
 
 ::view-transition-old(root),

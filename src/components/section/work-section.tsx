@@ -3,25 +3,15 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Image from "next/image";
 import { IconCornerRightUp } from "@tabler/icons-react";
-
-const BLUR_FADE_DELAY = 0.04;
+import SectionHeader from "@/components/section-header";
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export default function WorkSection() {
   return (
     <section id="work">
       <div className="flex min-h-0 flex-col gap-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="flex flex-col gap-y-4 items-center justify-center">
-            <div className="flex items-center w-full">
-              <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
-              <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                <span className="text-background text-sm font-medium">
-                  Work Experience
-                </span>
-              </div>
-              <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
-            </div>
-          </div>
+          <SectionHeader label="Work Experience" />
         </BlurFade>
         <div className="flex flex-col gap-8">
           {DATA.work.map((work, index) => (

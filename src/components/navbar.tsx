@@ -10,7 +10,6 @@ import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { usePathname } from "next/navigation";
@@ -79,63 +78,61 @@ export default function Navbar() {
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
-      <TooltipProvider>
-        <Dock
-          direction="middle"
-          className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
-        >
-          {!isNotFound && (
-            <>
-              {DATA.navbar.map((item) => {
-                const sectionId = item.href.replace("#", "");
-                const isActive = activeSection === sectionId;
-                return (
-                  <DockIcon key={item.label}>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Link
-                          href={item.href}
-                          aria-label={item.label}
-                          className={cn(
-                            buttonVariants({ variant: "ghost", size: "icon" }),
-                            "size-12 rounded-full transition-colors duration-200",
-                            isActive && "bg-primary/10 text-primary",
-                          )}
-                        >
-                          <item.icon
-                            className={cn("size-6", isActive && "stroke-[2.5]")}
-                          />
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{item.label}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </DockIcon>
-                );
-              })}
-              <Separator orientation="vertical" className="h-full" />
-            </>
-          )}
-          <DockIcon>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12 rounded-full cursor-pointer",
-                  )}
-                >
-                  <AnimatedThemeToggler />
-                </div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Theme</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        </Dock>
-      </TooltipProvider>
+      <Dock
+        direction="middle"
+        className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
+      >
+        {!isNotFound && (
+          <>
+            {DATA.navbar.map((item) => {
+              const sectionId = item.href.replace("#", "");
+              const isActive = activeSection === sectionId;
+              return (
+                <DockIcon key={item.label}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link
+                        href={item.href}
+                        aria-label={item.label}
+                        className={cn(
+                          buttonVariants({ variant: "ghost", size: "icon" }),
+                          "size-12 rounded-full transition-colors duration-200",
+                          isActive && "bg-primary/10 text-primary",
+                        )}
+                      >
+                        <item.icon
+                          className={cn("size-6", isActive && "stroke-[2.5]")}
+                        />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{item.label}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </DockIcon>
+              );
+            })}
+            <Separator orientation="vertical" className="h-full" />
+          </>
+        )}
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <div
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12 rounded-full cursor-pointer",
+                )}
+              >
+                <AnimatedThemeToggler />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Theme</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+      </Dock>
     </div>
   );
 }

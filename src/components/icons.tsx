@@ -8,8 +8,6 @@ import {
   IconDiamonds,
 } from "@tabler/icons-react";
 
-import { PyPI } from "@/components/ui/svgs/pypi";
-
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
@@ -20,5 +18,4 @@ export const Icons = {
   brandVscode: (props: IconProps) => <IconBrandVscode {...props} />,
   python: (props: IconProps) => <IconBrandPython {...props} />,
   openvsx: (props: IconProps) => <IconDiamonds {...props} />,
-  pypi: (props: IconProps) => <PyPI {...props} />,
 };

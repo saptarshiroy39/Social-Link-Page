@@ -27,8 +27,7 @@ import GithubSection from "@/components/section/github-section";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-
-const BLUR_FADE_DELAY = 0.04;
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export default function Page() {
   return (
@@ -54,7 +53,7 @@ export default function Page() {
                     },
                     {
                       name: "Email",
-                      href: `mailto:saptarshiroy39@gmail.com`,
+                      href: `mailto:${DATA.contact.email}`,
                       icon: IconMailOpened,
                     },
                     {
@@ -63,8 +62,8 @@ export default function Page() {
                       icon: IconBrandGithub,
                     },
                     {
-                      name: "Hugging Face",
-                      href: "https://huggingface.co/saptarshiroy39",
+                      name: DATA.contact.social.HuggingFace.name,
+                      href: DATA.contact.social.HuggingFace.url,
                       icon: IconMoodHappy,
                     },
                     {
@@ -73,13 +72,13 @@ export default function Page() {
                       icon: IconBrandPython,
                     },
                     {
-                      name: "Visual Studio Marketplace",
-                      href: "https://marketplace.visualstudio.com/publishers/saptarshiroy39",
+                      name: DATA.contact.social.VisualStudioMarketplace.name,
+                      href: DATA.contact.social.VisualStudioMarketplace.url,
                       icon: IconBrandVscode,
                     },
                     {
-                      name: "Codeberg",
-                      href: "https://codeberg.org/saptarshiroy39",
+                      name: DATA.contact.social.Codeberg.name,
+                      href: DATA.contact.social.Codeberg.url,
                       icon: IconPyramid,
                     },
                     {
