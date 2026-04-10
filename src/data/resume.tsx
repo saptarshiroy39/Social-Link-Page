@@ -166,6 +166,35 @@ export const DATA = {
 
   projects: [
     {
+      title: "Speed Bar",
+      href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
+      dates: "Mar 2026 - Mar 2026",
+      description:
+        "Speed Bar is a VS Code Extension that runs internet speed tests directly from a dedicated Activity Bar panel. It displays your IP, Country, ISP, Download, Upload, and Ping - all without leaving your editor.",
+      technologies: [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "VS Code Extension",
+        "vsce",
+      ],
+      links: [
+        {
+          type: "Marketplace",
+          href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
+          icon: <Icons.brandVscode className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/saptarshiroy39/Speed-Bar",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/Speed-Bar.png",
+    },
+
+    {
       title: "Cipher",
       href: "https://cipher.hirishi.in",
       dates: "Feb 2026 - Feb 2026",
