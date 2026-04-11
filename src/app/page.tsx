@@ -43,7 +43,7 @@ export default function Page() {
           </div>
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <div className="flex gap-3 flex-wrap py-2">
-              <a href="/resume.pdf" download>
+              <a href="/Saptarshi-Roy_CV.pdf" download>
                 <ShinyButton className="rounded-full bg-primary/5 dark:bg-primary/10 border-primary/20">
                   Download CV
                 </ShinyButton>
