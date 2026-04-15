@@ -36,7 +36,14 @@ interface ShinyButtonProps
 export const ShinyButton = React.forwardRef<
   HTMLButtonElement,
   ShinyButtonProps
->(({ children, className, ...props }, ref) => {
+>(({ children, className, onClick, ...props }, ref) => {
+  function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
+    const audio = new Audio("/teleport.ogg");
+    audio.volume = 0.1;
+    audio.play();
+    onClick?.(e);
+  }
+
   return (
     <motion.button
       ref={ref}
@@ -45,6 +52,7 @@ export const ShinyButton = React.forwardRef<
         className,
       )}
       {...animationProps}
+      onClick={handleClick}
       {...props}
     >
       <span
