@@ -13,6 +13,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { usePathname } from "next/navigation";
 import { DATA } from "@/data/resume";
 
 function useActiveSection() {
@@ -73,6 +74,8 @@ function useActiveSection() {
 
 export default function Navbar() {
   const activeSection = useActiveSection();
+  const pathname = usePathname();
+  const isNotFound = pathname !== "/";
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
@@ -81,40 +84,44 @@ export default function Navbar() {
           direction="middle"
           className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
         >
-          {DATA.navbar.map((item) => {
-            const sectionId = item.href.replace("#", "");
-            const isActive = activeSection === sectionId;
-            return (
-              <DockIcon key={item.label}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Link
-                      href={item.href}
-                      aria-label={item.label}
-                      onClick={() => {
-                        const audio = new Audio("/teleport.ogg");
-                        audio.volume = 0.1;
-                        audio.play();
-                      }}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full transition-colors duration-200",
-                        isActive && "bg-primary/10 text-primary",
-                      )}
-                    >
-                      <item.icon
-                        className={cn("size-6", isActive && "stroke-[2.5]")}
-                      />
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{item.label}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DockIcon>
-            );
-          })}
-          <Separator orientation="vertical" className="h-full" />
+          {!isNotFound && (
+            <>
+              {DATA.navbar.map((item) => {
+                const sectionId = item.href.replace("#", "");
+                const isActive = activeSection === sectionId;
+                return (
+                  <DockIcon key={item.label}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Link
+                          href={item.href}
+                          aria-label={item.label}
+                          onClick={() => {
+                            const audio = new Audio("/teleport.ogg");
+                            audio.volume = 0.1;
+                            audio.play();
+                          }}
+                          className={cn(
+                            buttonVariants({ variant: "ghost", size: "icon" }),
+                            "size-12 rounded-full transition-colors duration-200",
+                            isActive && "bg-primary/10 text-primary",
+                          )}
+                        >
+                          <item.icon
+                            className={cn("size-6", isActive && "stroke-[2.5]")}
+                          />
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>{item.label}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </DockIcon>
+                );
+              })}
+              <Separator orientation="vertical" className="h-full" />
+            </>
+          )}
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
