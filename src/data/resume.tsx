@@ -288,11 +288,11 @@ export const DATA = {
     },
 
     {
-      title: "Chrono Compiler",
-      href: "https://github.com/saptarshiroy39/Chrono-Compiler",
+      title: "Hourly",
+      href: "https://github.com/saptarshiroy39/Hourly",
       dates: "Jul 2025 - Jul 2025",
       description:
-        "Chrono Compiler is an intelligent email digest that sends personalized hourly updates to your inbox. Get real-time weather, entertainment, and AI-curated news in one clean email.",
+        "Hourly is an intelligent email digest that sends personalized hourly updates to your inbox. Get real-time weather, entertainment, and AI-curated news in one clean email.",
       technologies: [
         "n8n",
         "Gemini API",
@@ -305,11 +305,11 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Chrono-Compiler",
+          href: "https://github.com/saptarshiroy39/Hourly",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Chrono-Compiler.png",
+      image: "/Hourly.png",
       video: "",
     },
   ],
