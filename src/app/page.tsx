@@ -4,15 +4,28 @@ import Image from "next/image";
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ShinyButton } from "@/components/magicui/shiny-button";
-import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-import ContactSection from "@/components/section/contact-section";
+import {
+  IconFileCv,
+  IconMailOpened,
+  IconBrandGithub,
+  IconMoodHappy,
+  IconPyramid,
+  IconBrandX,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import EducationSection from "@/components/section/education-section";
 import SkillsSection from "@/components/section/skills-section";
 import GithubSection from "@/components/section/github-section";
 import Footer from "@/components/footer";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,15 +62,68 @@ export default function Page() {
             </BlurFade>
           </div>
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="flex gap-3 flex-wrap py-2">
-              <a href="/Saptarshi-Roy_CV.pdf" download>
-                <ShinyButton className="rounded-full bg-primary/5 dark:bg-primary/10 border-primary/20">
-                  Download CV
-                </ShinyButton>
-              </a>
-              <Link href="#contact">
-                <InteractiveHoverButton>Get in Touch</InteractiveHoverButton>
-              </Link>
+            <div className="flex gap-2 flex-wrap py-2">
+              {[
+                {
+                  name: "Download CV",
+                  href: "/Saptarshi-Roy_CV.pdf",
+                  icon: IconFileCv,
+                  download: true,
+                },
+                {
+                  name: "Email",
+                  href: `mailto:saptarshiroy39@gmail.com`,
+                  icon: IconMailOpened,
+                },
+                {
+                  name: "GitHub",
+                  href: DATA.contact.social.GitHub.url,
+                  icon: IconBrandGithub,
+                },
+                {
+                  name: "Hugging Face",
+                  href: "https://huggingface.co/saptarshiroy39",
+                  icon: IconMoodHappy,
+                },
+                {
+                  name: "Codeberg",
+                  href: "https://codeberg.org/saptarshiroy39",
+                  icon: IconPyramid,
+                },
+                {
+                  name: "X",
+                  href: DATA.contact.social.X.url,
+                  icon: IconBrandX,
+                },
+                {
+                  name: "LinkedIn",
+                  href: DATA.contact.social.LinkedIn.url,
+                  icon: IconBrandLinkedin,
+                },
+              ].map((link) => (
+                <Tooltip key={link.name}>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download={link.download}
+                      className={cn(
+                        buttonVariants({ variant: "outline", size: "icon" }),
+                        "size-10 rounded-xl transition-all duration-300 shadow-none hover:shadow-none hover:translate-y-0",
+                        "border-border bg-background hover:bg-secondary/10",
+                        "dark:border-border/50 dark:bg-background/50 dark:backdrop-blur-sm dark:hover:bg-accent dark:hover:text-accent-foreground",
+                      )}
+                    >
+                      <link.icon className="size-5" />
+                      <span className="sr-only">{link.name}</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{link.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -73,9 +139,6 @@ export default function Page() {
       <SkillsSection />
       <BlurFade delay={BLUR_FADE_DELAY * 11}>
         <ProjectsSection />
-      </BlurFade>
-      <BlurFade delay={BLUR_FADE_DELAY * 16}>
-        <ContactSection />
       </BlurFade>
       <Footer />
     </main>

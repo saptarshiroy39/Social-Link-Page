@@ -4,7 +4,6 @@ import {
   IconInfoCircle,
   IconSettings,
   IconBulb,
-  IconMailOpened,
 } from "@tabler/icons-react";
 import { CIcon } from "@/components/ui/svgs/c";
 import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
@@ -104,7 +103,6 @@ export const DATA = {
     { href: "#work", icon: IconInfoCircle, label: "About" },
     { href: "#skills", icon: IconSettings, label: "Skills" },
     { href: "#projects", icon: IconBulb, label: "Projects" },
-    { href: "#contact", icon: IconMailOpened, label: "Get in Touch" },
   ],
   contact: {
     social: {
