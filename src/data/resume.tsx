@@ -121,6 +121,13 @@ export const DATA = {
         navbar: true,
       },
 
+      PyPI: {
+        name: "PyPI",
+        url: "https://pypi.org/user/saptarshiroy39",
+        icon: Icons.python,
+        navbar: true,
+      },
+
       X: {
         name: "X",
         url: "https://x.com/saptarshiroy39",

@@ -12,6 +12,7 @@ import {
   IconPyramid,
   IconBrandX,
   IconBrandLinkedin,
+  IconBrandPython,
 } from "@tabler/icons-react";
 import {
   Tooltip,
@@ -84,6 +85,11 @@ export default function Page() {
                   name: "Hugging Face",
                   href: "https://huggingface.co/saptarshiroy39",
                   icon: IconMoodHappy,
+                },
+                {
+                  name: "PyPI",
+                  href: DATA.contact.social.PyPI.url,
+                  icon: IconBrandPython,
                 },
                 {
                   name: "Codeberg",
