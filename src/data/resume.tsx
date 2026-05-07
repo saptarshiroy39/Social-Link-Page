@@ -171,6 +171,38 @@ export const DATA = {
 
   projects: [
     {
+      title: "Ranno",
+      href: "https://pypi.org/project/ranno/",
+      dates: "Apr 2026 - Present",
+      description:
+        "Ranno is a minimalist AI-Bridge that turns plain English into executable Python - instantly. Just describe what you want, and Ranno generates, understands your data, and runs the code for you.",
+      technologies: [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Magika",
+        "FastAPI",
+        "Vercel",
+        "Gemini 3.1",
+      ],
+      links: [
+        {
+          type: "PyPI",
+          href: "https://pypi.org/project/ranno/",
+          icon: <Icons.python className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/saptarshiroy39/Ranno",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/Ranno.png",
+    },
+
+    {
       title: "Speed Bar",
       href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
       dates: "Mar 2026 - Mar 2026",
