@@ -175,7 +175,7 @@ export const DATA = {
       href: "https://pypi.org/project/ranno/",
       dates: "Apr 2026 - Present",
       description:
-        "Ranno is a minimalist AI-Bridge that turns plain English into executable Python - instantly. Just describe what you want, and Ranno generates, understands your data, and runs the code for you.",
+        "A Python Library that transforms natural language into Python code and executes it instantly to process and analyze your data.",
       technologies: [
         "Python",
         "NumPy",
@@ -207,7 +207,7 @@ export const DATA = {
       href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
       dates: "Mar 2026 - Mar 2026",
       description:
-        "Speed Bar is a VS Code Extension that runs internet speed tests directly from a dedicated Activity Bar panel. It displays your IP, Country, ISP, Download, Upload, and Ping - all without leaving your editor.",
+        "A VS Code extension that enables users to perform internet speed tests and view network details directly within the editor's Activity Bar",
       technologies: [
         "Python",
         "JavaScript",
@@ -236,7 +236,7 @@ export const DATA = {
       href: "https://cipher.hirishi.in",
       dates: "Feb 2026 - Feb 2026",
       description:
-        "Cipher is A complete toolkit for Cryptography. It lets you Encrypt, Decrypt, Perform Frequency Analysis Attack, and Compare attacked text with original text to see the accuracy.",
+        "A complete cryptography toolkit designed to Encrypt, Decrypt & perform Frequency Analysis Attacks while measuring accuracy against original texts",
       technologies: [
         "Python",
         "FastAPI",
@@ -300,7 +300,7 @@ export const DATA = {
       href: "https://github.com/saptarshiroy39/Luna-AI",
       dates: "Oct 2025 - Dec 2025",
       description:
-        "Luna AI is a multi-agent assistant that routes queries to specialized agents for research, coding, writing, and media generation through one unified interface.",
+        "A unified multi-agent assistant that intelligently routes requests to specialized agents for research, coding, writing & media generation",
       technologies: [
         "n8n",
         "Gemini API",
@@ -329,7 +329,7 @@ export const DATA = {
       href: "https://github.com/saptarshiroy39/Hourly",
       dates: "Jul 2025 - Jul 2025",
       description:
-        "Hourly is an intelligent email digest that sends personalized hourly updates to your inbox. Get real-time weather, entertainment, and AI-curated news in one clean email.",
+        "An intelligent email digest that delivers personalized, AI-curated updates on weather, entertainment & news directly to your inbox every hour.",
       technologies: [
         "n8n",
         "Gemini API",

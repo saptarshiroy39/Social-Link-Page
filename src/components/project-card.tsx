@@ -12,16 +12,16 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
   if (!src || imageError) {
-    return <div className="w-full h-48 bg-muted" />;
+    return <div className="w-full aspect-video bg-muted" />;
   }
 
   return (
     <Image
       src={src}
       alt={alt}
-      width={500}
-      height={300}
-      className="w-full h-48 object-cover"
+      width={640}
+      height={360}
+      className="w-full aspect-video object-cover block"
       onError={() => setImageError(true)}
     />
   );
@@ -61,7 +61,7 @@ export function ProjectCard({
         className,
       )}
     >
-      <div className="relative shrink-0">
+      <div className="relative shrink-0 overflow-hidden">
         <Link
           href={href || "#"}
           target="_blank"
@@ -75,23 +75,22 @@ export function ProjectCard({
               loop
               muted
               playsInline
-              className="w-full h-48 object-cover"
+              className="w-full aspect-video object-cover block"
             />
           ) : image ? (
             <ProjectImage src={image} alt={title} />
           ) : (
-            <div className="w-full h-48 bg-muted" />
+            <div className="w-full aspect-video bg-muted" />
           )}
         </Link>
         {links && links.length > 0 && (
-          <div className="absolute top-2 right-2 flex flex-wrap gap-2">
+          <div className="absolute top-2 right-2 z-10 flex flex-wrap justify-end gap-2 max-w-[calc(100%-1rem)]">
             {links.map((link, idx) => (
               <Link
                 href={link.href}
                 key={idx}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
               >
                 <Badge
                   className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
@@ -105,11 +104,13 @@ export function ProjectCard({
           </div>
         )}
       </div>
-      <div className="p-6 flex flex-col gap-3 flex-1">
+      <div className="px-4 py-4 flex flex-col gap-2 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">{title}</h3>
-            <time className="text-xs text-muted-foreground">{dates}</time>
+            <h3 className="font-semibold text-sm">{title}</h3>
+            <time className="text-[10px] font-mono text-muted-foreground">
+              {dates}
+            </time>
           </div>
           <Link
             href={href || "#"}
@@ -121,7 +122,7 @@ export function ProjectCard({
             <IconCornerRightUp className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+        <div className="text-[11px] flex-1 prose max-w-full text-pretty font-mono leading-snug text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>
         </div>
         {tags && tags.length > 0 && (
@@ -129,7 +130,7 @@ export function ProjectCard({
             {tags.map((tag) => (
               <Badge
                 key={tag}
-                className="text-[11px] font-medium border border-border h-6 w-fit px-2"
+                className="text-[11px] font-mono font-medium border border-border h-6 w-fit px-2"
                 variant="outline"
               >
                 {tag}

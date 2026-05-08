@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
@@ -26,10 +26,14 @@ const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"));
 
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
-const lexend = Lexend({
+const jetbrainsSans = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -117,7 +121,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
-          lexend.variable,
+          jetbrainsSans.variable,
+          jetbrainsMono.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">

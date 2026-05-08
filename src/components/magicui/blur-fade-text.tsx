@@ -38,16 +38,12 @@ const BlurFadeText = ({
     return (
       <div className="flex">
         {characters.map((char, i) => {
-          const charVariants: Variants = {
-            hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
-            visible: { y: 0, opacity: 1, filter: "blur(0px)" },
-          };
           return (
             <motion.span
               key={i}
               initial="hidden"
               animate="visible"
-              variants={charVariants}
+              variants={combinedVariants}
               transition={{
                 duration,
                 delay: delay + i * characterDelay,

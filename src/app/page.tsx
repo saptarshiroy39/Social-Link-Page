@@ -43,11 +43,79 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
               />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="flex gap-2 flex-wrap py-2">
+                  {[
+                    {
+                      name: "Download CV",
+                      href: "/Saptarshi-Roy_CV.pdf",
+                      icon: IconFileCv,
+                      download: true,
+                    },
+                    {
+                      name: "Email",
+                      href: `mailto:saptarshiroy39@gmail.com`,
+                      icon: IconMailOpened,
+                    },
+                    {
+                      name: "GitHub",
+                      href: DATA.contact.social.GitHub.url,
+                      icon: IconBrandGithub,
+                    },
+                    {
+                      name: "Hugging Face",
+                      href: "https://huggingface.co/saptarshiroy39",
+                      icon: IconMoodHappy,
+                    },
+                    {
+                      name: "PyPI",
+                      href: DATA.contact.social.PyPI.url,
+                      icon: IconBrandPython,
+                    },
+                    {
+                      name: "Codeberg",
+                      href: "https://codeberg.org/saptarshiroy39",
+                      icon: IconPyramid,
+                    },
+                    {
+                      name: "X",
+                      href: DATA.contact.social.X.url,
+                      icon: IconBrandX,
+                    },
+                    {
+                      name: "LinkedIn",
+                      href: DATA.contact.social.LinkedIn.url,
+                      icon: IconBrandLinkedin,
+                    },
+                  ].map((link) => (
+                    <Tooltip key={link.name}>
+                      <TooltipTrigger asChild>
+                        <Link
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          download={link.download}
+                          className={cn(
+                            buttonVariants({
+                              variant: "outline",
+                              size: "icon",
+                            }),
+                            "size-10 rounded-xl transition-all duration-300 shadow-none hover:shadow-none hover:translate-y-0",
+                            "border-border bg-background hover:bg-secondary/10",
+                            "dark:border-border/50 dark:bg-background/50 dark:backdrop-blur-sm dark:hover:bg-accent dark:hover:text-accent-foreground",
+                          )}
+                        >
+                          <link.icon className="size-5" />
+                          <span className="sr-only">{link.name}</span>
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>{link.name}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <div className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted relative overflow-hidden bg-muted">
@@ -62,76 +130,7 @@ export default function Page() {
               </div>
             </BlurFade>
           </div>
-          <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="flex gap-2 flex-wrap py-2">
-              {[
-                {
-                  name: "Download CV",
-                  href: "/Saptarshi-Roy_CV.pdf",
-                  icon: IconFileCv,
-                  download: true,
-                },
-                {
-                  name: "Email",
-                  href: `mailto:saptarshiroy39@gmail.com`,
-                  icon: IconMailOpened,
-                },
-                {
-                  name: "GitHub",
-                  href: DATA.contact.social.GitHub.url,
-                  icon: IconBrandGithub,
-                },
-                {
-                  name: "Hugging Face",
-                  href: "https://huggingface.co/saptarshiroy39",
-                  icon: IconMoodHappy,
-                },
-                {
-                  name: "PyPI",
-                  href: DATA.contact.social.PyPI.url,
-                  icon: IconBrandPython,
-                },
-                {
-                  name: "Codeberg",
-                  href: "https://codeberg.org/saptarshiroy39",
-                  icon: IconPyramid,
-                },
-                {
-                  name: "X",
-                  href: DATA.contact.social.X.url,
-                  icon: IconBrandX,
-                },
-                {
-                  name: "LinkedIn",
-                  href: DATA.contact.social.LinkedIn.url,
-                  icon: IconBrandLinkedin,
-                },
-              ].map((link) => (
-                <Tooltip key={link.name}>
-                  <TooltipTrigger asChild>
-                    <Link
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      download={link.download}
-                      className={cn(
-                        buttonVariants({ variant: "outline", size: "icon" }),
-                        "size-10 rounded-xl transition-all duration-300 shadow-none hover:shadow-none hover:translate-y-0",
-                        "border-border bg-background hover:bg-secondary/10",
-                        "dark:border-border/50 dark:bg-background/50 dark:backdrop-blur-sm dark:hover:bg-accent dark:hover:text-accent-foreground",
-                      )}
-                    >
-                      <link.icon className="size-5" />
-                      <span className="sr-only">{link.name}</span>
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{link.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
-          </BlurFade>
+
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
               <Markdown>{DATA.summary}</Markdown>
