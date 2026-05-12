@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { IconCornerRightUp } from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
-import Markdown from "react-markdown";
 import Image from "next/image";
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
@@ -122,9 +121,9 @@ export function ProjectCard({
             <IconCornerRightUp className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="text-[11px] flex-1 prose max-w-full text-pretty font-mono leading-snug text-muted-foreground dark:prose-invert">
-          <Markdown>{description}</Markdown>
-        </div>
+        <p className="text-[11px] flex-1 max-w-full text-pretty font-mono leading-snug text-muted-foreground">
+          {description}
+        </p>
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto">
             {tags.map((tag) => (

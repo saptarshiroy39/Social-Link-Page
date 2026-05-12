@@ -39,7 +39,7 @@ export const DATA = {
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
 
   summary:
-    "I'm a Software Developer focused on building [Full-Stack web apps, AI tools, and Automation systems](/#projects). I pursued a Bachelor's Degree in [Computer Science and Engineering](/#education). I work with [Python, FastAPI, Databases, and scalable backend services](/#skills) to create practical, user-centric products that solve real business problems and improve everyday workflows.",
+    "I'm a Software Developer focused on building Full-Stack web apps, AI tools, and Automation systems. I pursued a Bachelor's Degree in Computer Science and Engineering. I work with Python, FastAPI, Databases, and scalable backend services to create practical, user-centric products that solve real business problems and improve everyday workflows.",
 
   avatarUrl: "/me.png",
 

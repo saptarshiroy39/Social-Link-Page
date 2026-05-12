@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Markdown from "react-markdown";
 import Image from "next/image";
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
@@ -36,7 +35,7 @@ export default function Page() {
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
-            <div className="gap-2 flex flex-col order-2 md:order-1">
+            <div className="gap-4 flex flex-col order-2 md:order-1">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
@@ -132,9 +131,9 @@ export default function Page() {
           </div>
 
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-              <Markdown>{DATA.summary}</Markdown>
-            </div>
+            <p className="max-w-full text-pretty font-sans leading-relaxed text-muted-foreground">
+              {DATA.summary}
+            </p>
           </BlurFade>
           <GithubSection />
         </div>
