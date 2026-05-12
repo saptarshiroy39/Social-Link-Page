@@ -175,18 +175,8 @@ export const DATA = {
       href: "https://pypi.org/project/ranno/",
       dates: "Apr 2026 - Present",
       description:
-        "A Python Library that transforms natural language into Python code and executes it instantly to process and analyze your data.",
-      technologies: [
-        "Python",
-        "NumPy",
-        "Pandas",
-        "Matplotlib",
-        "Seaborn",
-        "Magika",
-        "FastAPI",
-        "Vercel",
-        "Gemini 3.1",
-      ],
+        "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
+      technologies: ["Python", "FastAPI", "Magika", "Vercel"],
       links: [
         {
           type: "PyPI",
@@ -207,14 +197,13 @@ export const DATA = {
       href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
       dates: "Mar 2026 - Mar 2026",
       description:
-        "A VS Code extension that enables users to perform internet speed tests and view network details directly within the editor's Activity Bar",
+        "A VS Code extension for running internet speed tests and viewing network details directly in your Activity Bar.",
       technologies: [
         "Python",
-        "JavaScript",
         "HTML",
         "CSS",
-        "VS Code Extension",
-        "vsce",
+        "JavaScript",
+        "Visual Studio Marketplace",
       ],
       links: [
         {
@@ -236,15 +225,14 @@ export const DATA = {
       href: "https://cipher.hirishi.in",
       dates: "Feb 2026 - Feb 2026",
       description:
-        "A complete cryptography toolkit designed to Encrypt, Decrypt & perform Frequency Analysis Attacks while measuring accuracy against original texts",
+        "A cryptography toolkit for encryption, decryption & frequency analysis attacks with accuracy measurement.",
       technologies: [
         "Python",
         "FastAPI",
-        "Typescript",
-        "TailwindCSS",
-        "Next.js",
-        "UptimeRobot",
         "Hugging Face",
+        "TypeScript",
+        "shadcn/ui",
+        "Next.js",
         "Vercel",
       ],
       links: [
@@ -267,17 +255,16 @@ export const DATA = {
       href: "https://arkiv.hirishi.in",
       dates: "Dec 2025 - Present",
       description:
-        "Arkiv is an AI-powered document assistant (RAG) that lets you upload files and have accurate context-aware conversations about their content.",
+        "A multi-file-format RAG application for context-aware conversations & accurate information retrieval from uploaded files.",
       technologies: [
         "Python",
-        "Pandas",
         "LangChain",
-        "Pinecone",
-        "Gemini API",
         "FastAPI",
-        "Supabase",
-        "React",
-        "Render",
+        "Hugging Face",
+        "TypeScript",
+        "shadcn/ui",
+        "Next.js",
+        "Vercel",
       ],
       links: [
         {
@@ -300,19 +287,8 @@ export const DATA = {
       href: "https://github.com/saptarshiroy39/Luna-AI",
       dates: "Oct 2025 - Dec 2025",
       description:
-        "A unified multi-agent assistant that intelligently routes requests to specialized agents for research, coding, writing & media generation",
-      technologies: [
-        "n8n",
-        "Gemini API",
-        "GitHub API",
-        "Translate API",
-        "YouTube API",
-        "OpenWeatherMap",
-        "SerpAPI",
-        "Nano Banana",
-        "Veo 3.1",
-        "VoiceRSS",
-      ],
+        "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
+      technologies: ["n8n", "GCP", "OpenWeatherMap", "GitHub API", "VoiceRSS"],
       links: [
         {
           type: "GitHub",
@@ -329,15 +305,13 @@ export const DATA = {
       href: "https://github.com/saptarshiroy39/Hourly",
       dates: "Jul 2025 - Jul 2025",
       description:
-        "An intelligent email digest that delivers personalized, AI-curated updates on weather, entertainment & news directly to your inbox every hour.",
+        "An AI-powered email digest delivering personalized hourly updates on weather, news & entertainment.",
       technologies: [
         "n8n",
-        "Gemini API",
-        "Gmail SMTP",
-        "icanhazdadjoke API",
-        "Sheet API",
+        "GCP",
         "OpenWeatherMap",
-        "Google News RSS",
+        "icanhazdadjoke API",
+        "Gmail SMTP",
       ],
       links: [
         {
