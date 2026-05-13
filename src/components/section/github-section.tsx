@@ -3,18 +3,19 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function GithubSection() {
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMounted(true);
-
     const scrollToEnd = () => {
       if (containerRef.current) {
         const scrollContainer =

@@ -6,6 +6,104 @@ import { IconCornerRightUp } from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { Python } from "@/components/ui/svgs/python";
+import { FastAPI } from "@/components/ui/svgs/fastapi";
+import { Vercel } from "@/components/ui/svgs/vercel";
+import { PyPI } from "@/components/ui/svgs/pypi";
+import { HTML } from "@/components/ui/svgs/html";
+import { CSS } from "@/components/ui/svgs/css";
+import { JavaScript } from "@/components/ui/svgs/javascript";
+import { VisualStudioMarketplace } from "@/components/ui/svgs/visualstudiomarketplace";
+import { HuggingFace } from "@/components/ui/svgs/huggingface";
+import { TypeScript } from "@/components/ui/svgs/typescript";
+import { TailwindCSS } from "@/components/ui/svgs/tailwindcss";
+import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
+import { NextJS } from "@/components/ui/svgs/nextjs";
+import { LangChain } from "@/components/ui/svgs/langchain";
+import { N8n } from "@/components/ui/svgs/n8n";
+import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
+import { Gemini } from "@/components/ui/svgs/gemini";
+import { YouTube } from "@/components/ui/svgs/youtube";
+import { GitHub } from "@/components/ui/svgs/github";
+import { GmailSMTP } from "@/components/ui/svgs/gmailsmtp";
+
+const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
+  Python: { icon: <Python className="w-3.5 h-3.5" />, label: "Python" },
+  FastAPI: { icon: <FastAPI className="w-3.5 h-3.5" />, label: "FastAPI" },
+  Vercel: { icon: <Vercel className="w-3.5 h-3.5" />, label: "Vercel" },
+  PyPI: { icon: <PyPI className="w-3.5 h-3.5" />, label: "PyPI" },
+  HTML: { icon: <HTML className="w-3.5 h-3.5" />, label: "HTML" },
+  CSS: { icon: <CSS className="w-3.5 h-3.5" />, label: "CSS" },
+  JavaScript: {
+    icon: <JavaScript className="w-3.5 h-3.5" />,
+    label: "JavaScript",
+  },
+  "Visual Studio Marketplace": {
+    icon: <VisualStudioMarketplace className="w-3.5 h-3.5" />,
+    label: "VS Marketplace",
+  },
+  "Hugging Face": {
+    icon: <HuggingFace className="w-3.5 h-3.5" />,
+    label: "Hugging Face",
+  },
+  TypeScript: {
+    icon: <TypeScript className="w-3.5 h-3.5" />,
+    label: "TypeScript",
+  },
+  "Tailwind CSS": {
+    icon: <TailwindCSS className="w-3.5 h-3.5" />,
+    label: "Tailwind CSS",
+  },
+  "shadcn/ui": {
+    icon: <ShadcnUI className="w-3.5 h-3.5" />,
+    label: "shadcn/ui",
+  },
+  "Next.js": { icon: <NextJS className="w-3.5 h-3.5" />, label: "Next.js" },
+  LangChain: {
+    icon: <LangChain className="w-3.5 h-3.5" />,
+    label: "LangChain",
+  },
+  n8n: { icon: <N8n className="w-3.5 h-3.5" />, label: "n8n" },
+  GCP: { icon: <GoogleCloud className="w-3.5 h-3.5" />, label: "GCP" },
+  "Gemini API": {
+    icon: <Gemini className="w-3.5 h-3.5" />,
+    label: "Gemini API",
+  },
+  "YouTube API": {
+    icon: <YouTube className="w-3.5 h-3.5" />,
+    label: "YouTube API",
+  },
+  "GitHub API": {
+    icon: <GitHub className="w-3.5 h-3.5" />,
+    label: "GitHub API",
+  },
+  "Gmail SMTP": {
+    icon: <GmailSMTP className="w-3.5 h-3.5" />,
+    label: "Gmail SMTP",
+  },
+};
+
+function TechBadge({ tag }: { tag: string }) {
+  const tech = TECH_ICONS[tag];
+  if (tech) {
+    return (
+      <div className="group relative flex items-center justify-center w-6 h-6 rounded-md border border-border hover:border-muted-foreground/50 transition-colors cursor-default">
+        {tech.icon}
+        <span className="pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-foreground px-1.5 py-0.5 text-[10px] font-mono text-background opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+          {tech.label}
+        </span>
+      </div>
+    );
+  }
+  return (
+    <Badge
+      className="text-[11px] font-mono font-medium border border-border h-6 w-fit px-2"
+      variant="outline"
+    >
+      {tag}
+    </Badge>
+  );
+}
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
@@ -125,15 +223,9 @@ export function ProjectCard({
           {description}
         </p>
         {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-auto">
+          <div className="flex flex-wrap gap-1 mt-auto items-center">
             {tags.map((tag) => (
-              <Badge
-                key={tag}
-                className="text-[11px] font-mono font-medium border border-border h-6 w-fit px-2"
-                variant="outline"
-              >
-                {tag}
-              </Badge>
+              <TechBadge key={tag} tag={tag} />
             ))}
           </div>
         )}

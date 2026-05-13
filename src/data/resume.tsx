@@ -176,7 +176,7 @@ export const DATA = {
       dates: "Apr 2026 - Present",
       description:
         "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
-      technologies: ["Python", "FastAPI", "Magika", "Vercel"],
+      technologies: ["Python", "FastAPI", "Vercel", "PyPI"],
       links: [
         {
           type: "PyPI",
@@ -231,6 +231,7 @@ export const DATA = {
         "FastAPI",
         "Hugging Face",
         "TypeScript",
+        "Tailwind CSS",
         "shadcn/ui",
         "Next.js",
         "Vercel",
@@ -258,10 +259,11 @@ export const DATA = {
         "A multi-file-format RAG application for context-aware conversations & accurate information retrieval from uploaded files.",
       technologies: [
         "Python",
-        "LangChain",
         "FastAPI",
+        "LangChain",
         "Hugging Face",
         "TypeScript",
+        "Tailwind CSS",
         "shadcn/ui",
         "Next.js",
         "Vercel",
@@ -288,7 +290,7 @@ export const DATA = {
       dates: "Oct 2025 - Dec 2025",
       description:
         "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
-      technologies: ["n8n", "GCP", "OpenWeatherMap", "GitHub API", "VoiceRSS"],
+      technologies: ["n8n", "Gemini API", "YouTube API", "GitHub API", "GCP"],
       links: [
         {
           type: "GitHub",
@@ -306,13 +308,7 @@ export const DATA = {
       dates: "Jul 2025 - Jul 2025",
       description:
         "An AI-powered email digest delivering personalized hourly updates on weather, news & entertainment.",
-      technologies: [
-        "n8n",
-        "GCP",
-        "OpenWeatherMap",
-        "icanhazdadjoke API",
-        "Gmail SMTP",
-      ],
+      technologies: ["n8n", "Gmail SMTP", "GCP"],
       links: [
         {
           type: "GitHub",
