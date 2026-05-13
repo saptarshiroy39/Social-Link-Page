@@ -96,11 +96,6 @@ export default function Navbar() {
                         <Link
                           href={item.href}
                           aria-label={item.label}
-                          onClick={() => {
-                            const audio = new Audio("/teleport.ogg");
-                            audio.volume = 0.1;
-                            audio.play();
-                          }}
                           className={cn(
                             buttonVariants({ variant: "ghost", size: "icon" }),
                             "size-12 rounded-full transition-colors duration-200",
