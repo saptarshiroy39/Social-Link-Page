@@ -23,8 +23,6 @@ import { LangChain } from "@/components/ui/svgs/langchain";
 import { N8n } from "@/components/ui/svgs/n8n";
 import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
 import { Gemini } from "@/components/ui/svgs/gemini";
-import { YouTube } from "@/components/ui/svgs/youtube";
-import { GitHub } from "@/components/ui/svgs/github";
 import { GmailSMTP } from "@/components/ui/svgs/gmailsmtp";
 
 const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
@@ -69,14 +67,6 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
     icon: <Gemini className="w-3.5 h-3.5" />,
     label: "Gemini API",
   },
-  "YouTube API": {
-    icon: <YouTube className="w-3.5 h-3.5" />,
-    label: "YouTube API",
-  },
-  "GitHub API": {
-    icon: <GitHub className="w-3.5 h-3.5" />,
-    label: "GitHub API",
-  },
   "Gmail SMTP": {
     icon: <GmailSMTP className="w-3.5 h-3.5" />,
     label: "Gmail SMTP",
@@ -85,11 +75,25 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
 
 function TechBadge({ tag }: { tag: string }) {
   const tech = TECH_ICONS[tag];
+  const [showTooltip, setShowTooltip] = useState(false);
+
   if (tech) {
+    const handleClick = () => {
+      setShowTooltip(true);
+      setTimeout(() => setShowTooltip(false), 1500);
+    };
     return (
-      <div className="group relative flex items-center justify-center w-6 h-6 rounded-md border border-border hover:border-muted-foreground/50 transition-colors cursor-default">
+      <div
+        className="group relative flex items-center justify-center w-6 h-6 rounded-md border border-border hover:border-muted-foreground/50 transition-colors cursor-default"
+        onClick={handleClick}
+      >
         {tech.icon}
-        <span className="pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-foreground px-1.5 py-0.5 text-[10px] font-mono text-background opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+        <span
+          className={cn(
+            "pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-foreground px-1.5 py-0.5 text-[10px] font-mono text-background transition-opacity duration-150",
+            showTooltip ? "opacity-100" : "opacity-0 group-hover:opacity-100",
+          )}
+        >
           {tech.label}
         </span>
       </div>
@@ -202,10 +206,11 @@ export function ProjectCard({
         )}
       </div>
       <div className="px-4 py-4 flex flex-col gap-2 flex-1">
-        <div className="flex items-start justify-between gap-2">
-          <div className="flex flex-col gap-1">
-            <h3 className="font-semibold text-sm">{title}</h3>
-            <time className="text-[10px] font-mono text-muted-foreground">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-baseline gap-1.5 min-w-0">
+            <h3 className="font-semibold text-sm shrink-0">{title}</h3>
+            <span className="text-muted-foreground/50 text-xs shrink-0">·</span>
+            <time className="text-[10px] font-mono text-muted-foreground truncate">
               {dates}
             </time>
           </div>

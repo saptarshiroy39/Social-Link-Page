@@ -117,7 +117,6 @@ export const DATA = {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/saptarshiroy39",
         icon: Icons.linkedin,
-
         navbar: true,
       },
 
@@ -132,7 +131,6 @@ export const DATA = {
         name: "X",
         url: "https://x.com/saptarshiroy39",
         icon: Icons.x,
-
         navbar: true,
       },
     },
@@ -281,7 +279,6 @@ export const DATA = {
         },
       ],
       image: "/Arkiv.png",
-      video: "",
     },
 
     {
@@ -290,7 +287,7 @@ export const DATA = {
       dates: "Oct 2025 - Dec 2025",
       description:
         "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
-      technologies: ["n8n", "Gemini API", "YouTube API", "GitHub API", "GCP"],
+      technologies: ["n8n", "Gemini API", "GCP"],
       links: [
         {
           type: "GitHub",
@@ -299,7 +296,6 @@ export const DATA = {
         },
       ],
       image: "/Luna-AI.png",
-      video: "",
     },
 
     {
@@ -317,7 +313,6 @@ export const DATA = {
         },
       ],
       image: "/Hourly.png",
-      video: "",
     },
   ],
 } as const;
