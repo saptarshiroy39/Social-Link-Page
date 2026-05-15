@@ -22,11 +22,13 @@ import { Railway } from "@/components/ui/svgs/railway";
 import { Render } from "@/components/ui/svgs/render";
 import { Vercel } from "@/components/ui/svgs/vercel";
 import { Pinecone } from "@/components/ui/svgs/pinecone";
-import { Requestly } from "@/components/ui/svgs/requestly";
-import { Pandas } from "@/components/ui/svgs/pandas";
-import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
 import { Redstone } from "@/components/ui/svgs/redstone";
+import { Oracle } from "@/components/ui/svgs/oracle";
+import { ESP32 } from "@/components/ui/svgs/esp32";
+import { Antigravity } from "@/components/ui/svgs/antigravity";
+import { GitHubCopilot } from "@/components/ui/svgs/githubcopilot";
+import { ClaudeCode } from "@/components/ui/svgs/claudecode";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -55,11 +57,10 @@ export const DATA = {
       ],
     },
     {
-      category: "Frameworks & Libraries",
+      category: "Frameworks",
       items: [
         { name: "FastAPI", icon: FastAPI },
         { name: "LangChain", icon: LangChain },
-        { name: "Pandas", icon: Pandas },
       ],
     },
     {
@@ -68,33 +69,42 @@ export const DATA = {
         { name: "MySQL", icon: MySQL },
         { name: "Supabase", icon: Supabase },
         { name: "Pinecone", icon: Pinecone },
+        { name: "Oracle", icon: Oracle },
       ],
     },
     {
-      category: "DevOps & Automation",
+      category: "DevOps",
       items: [
         { name: "Git", icon: Git },
         { name: "GitHub", icon: GitHub },
         { name: "Docker", icon: Docker },
-        { name: "n8n", icon: N8n },
       ],
     },
     {
-      category: "Cloud & Deployment",
+      category: "Deployment",
       items: [
-        { name: "GCP", icon: GoogleCloud },
         { name: "Vercel", icon: Vercel },
         { name: "Railway", icon: Railway },
         { name: "Render", icon: Render },
+        { name: "Hugging Face", icon: HuggingFace },
       ],
     },
     {
-      category: "Miscellaneous",
+      category: "Agents & Automation",
       items: [
-        { name: "Requestly", icon: Requestly },
-        { name: "UptimeRobot", icon: UptimeRobot },
-        { name: "Hugging Face", icon: HuggingFace },
+        { name: "n8n", icon: N8n },
+        { name: "Antigravity", icon: Antigravity },
+        { name: "GitHub Copilot", icon: GitHubCopilot },
+        { name: "Claude Code", icon: ClaudeCode },
       ],
+    },
+    {
+      category: "Cloud",
+      items: [{ name: "GCP", icon: GoogleCloud }],
+    },
+    {
+      category: "IoT",
+      items: [{ name: "ESP32", icon: ESP32 }],
     },
   ],
 
