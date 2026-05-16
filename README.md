@@ -8,7 +8,7 @@
 
 - **_Languages:_** `C` • `C++` • `Python` • `Bash`
 - **_Frameworks & Libraries:_** `FastAPI` • `LangChain` • `Pandas`
-- **_Databases:_** `MySQL` • `Supabase` • `Pinecone`
+- **_Databases:_** `Oracle SQL` • `Supabase` • `Pinecone`
 - **_DevOps & Automation:_** `Git` • `GitHub` • `Docker`•`n8n`
 - **_Cloud & Deployment:_** `GCP` • `Vercel` • `Railway` • `Render`
 - **_Miscellaneous:_** `Requestly` • `UptimeRobot` • `Hugging Face`

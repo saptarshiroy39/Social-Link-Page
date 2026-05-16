@@ -9,26 +9,32 @@ import { CIcon } from "@/components/ui/svgs/c";
 import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
 import { Python } from "@/components/ui/svgs/python";
 import { Bash } from "@/components/ui/svgs/bash";
+import { Redstone } from "@/components/ui/svgs/redstone";
+
 import { FastAPI } from "@/components/ui/svgs/fastapi";
 import { LangChain } from "@/components/ui/svgs/langchain";
-import { N8n } from "@/components/ui/svgs/n8n";
-import { MySQL } from "@/components/ui/svgs/mysql";
+
+import { Oracle } from "@/components/ui/svgs/oracle";
 import { Supabase } from "@/components/ui/svgs/supabase";
-import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
-import { Docker } from "@/components/ui/svgs/docker";
+import { Pinecone } from "@/components/ui/svgs/pinecone";
+
 import { Git } from "@/components/ui/svgs/git";
 import { GitHub } from "@/components/ui/svgs/github";
+import { Docker } from "@/components/ui/svgs/docker";
+
+import { Vercel } from "@/components/ui/svgs/vercel";
 import { Railway } from "@/components/ui/svgs/railway";
 import { Render } from "@/components/ui/svgs/render";
-import { Vercel } from "@/components/ui/svgs/vercel";
-import { Pinecone } from "@/components/ui/svgs/pinecone";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
-import { Redstone } from "@/components/ui/svgs/redstone";
-import { Oracle } from "@/components/ui/svgs/oracle";
-import { ESP32 } from "@/components/ui/svgs/esp32";
+
+import { N8n } from "@/components/ui/svgs/n8n";
 import { Antigravity } from "@/components/ui/svgs/antigravity";
 import { GitHubCopilot } from "@/components/ui/svgs/githubcopilot";
 import { ClaudeCode } from "@/components/ui/svgs/claudecode";
+
+import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
+
+import { ESP32 } from "@/components/ui/svgs/esp32";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -41,7 +47,7 @@ export const DATA = {
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
 
   summary:
-    "I'm a Software Developer focused on building Full-Stack web apps, AI tools, and Automation systems. I pursued a Bachelor's Degree in Computer Science and Engineering. I work with Python, FastAPI, Databases, and scalable backend services to create practical, user-centric products that solve real business problems and improve everyday workflows.",
+    "A Software Developer focused on building Open-Source Full-Stack Web Apps, CLI Tools, AI Tools & Automation Systems. Pursued a Bachelor's Degree in Computer Science and Engineering. Work with Python, FastAPI, Databases & scalable backend services to create practical, user-centric products that solve real business problems and improve everyday workflows.",
 
   avatarUrl: "/me.png",
 
@@ -66,10 +72,9 @@ export const DATA = {
     {
       category: "Databases",
       items: [
-        { name: "MySQL", icon: MySQL },
+        { name: "Oracle SQL", icon: Oracle },
         { name: "Supabase", icon: Supabase },
         { name: "Pinecone", icon: Pinecone },
-        { name: "Oracle", icon: Oracle },
       ],
     },
     {

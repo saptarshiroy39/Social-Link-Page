@@ -66,7 +66,6 @@ export const metadata: Metadata = {
     "C++",
     "LangChain",
     "Pandas",
-    "MySQL",
     "Supabase",
     "Pinecone",
     "Git",
