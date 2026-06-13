@@ -10,9 +10,7 @@ import { Python } from "@/components/ui/svgs/python";
 import { FastAPI } from "@/components/ui/svgs/fastapi";
 import { Vercel } from "@/components/ui/svgs/vercel";
 import { PyPI } from "@/components/ui/svgs/pypi";
-import { HTML } from "@/components/ui/svgs/html";
-import { CSS } from "@/components/ui/svgs/css";
-import { JavaScript } from "@/components/ui/svgs/javascript";
+import { OpenVSX } from "@/components/ui/svgs/openvsx";
 import { VisualStudioMarketplace } from "@/components/ui/svgs/visualstudiomarketplace";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
 import { TypeScript } from "@/components/ui/svgs/typescript";
@@ -24,17 +22,20 @@ import { N8n } from "@/components/ui/svgs/n8n";
 import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
 import { Gemini } from "@/components/ui/svgs/gemini";
 import { GmailSMTP } from "@/components/ui/svgs/gmailsmtp";
+import { Antigravity } from "@/components/ui/svgs/antigravity";
 
 const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
   Python: { icon: <Python className="w-3.5 h-3.5" />, label: "Python" },
   FastAPI: { icon: <FastAPI className="w-3.5 h-3.5" />, label: "FastAPI" },
   Vercel: { icon: <Vercel className="w-3.5 h-3.5" />, label: "Vercel" },
   PyPI: { icon: <PyPI className="w-3.5 h-3.5" />, label: "PyPI" },
-  HTML: { icon: <HTML className="w-3.5 h-3.5" />, label: "HTML" },
-  CSS: { icon: <CSS className="w-3.5 h-3.5" />, label: "CSS" },
-  JavaScript: {
-    icon: <JavaScript className="w-3.5 h-3.5" />,
-    label: "JavaScript",
+  Antigravity: {
+    icon: <Antigravity className="w-3.5 h-3.5" />,
+    label: "Antigravity",
+  },
+  "Open VSX Registry": {
+    icon: <OpenVSX className="w-3.5 h-3.5" />,
+    label: "Open VSX",
   },
   "Visual Studio Marketplace": {
     icon: <VisualStudioMarketplace className="w-3.5 h-3.5" />,

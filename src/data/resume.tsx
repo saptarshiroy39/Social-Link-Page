@@ -206,31 +206,35 @@ export const DATA = {
     },
 
     {
-      title: "Speed Bar",
-      href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
-      dates: "Mar 2026 - Mar 2026",
+      title: "Portyard",
+      href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+      dates: "May 2026 - Jun 2026",
       description:
-        "A VS Code extension for running internet speed tests and viewing network details directly in your Activity Bar.",
+        "A VS Code extension to discover active local ports, manage running processes & forward them directly from the Activity Bar.",
       technologies: [
-        "Python",
-        "HTML",
-        "CSS",
-        "JavaScript",
+        "TypeScript",
+        "Antigravity",
         "Visual Studio Marketplace",
+        "Open VSX Registry",
       ],
       links: [
         {
           type: "Marketplace",
-          href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.speedbar",
+          href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
           icon: <Icons.brandVscode className="size-3" />,
         },
         {
+          type: "Open VSX",
+          href: "https://open-vsx.org/extension/saptarshiroy39/portyard",
+          icon: <Icons.openvsx className="size-3" />,
+        },
+        {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Speed-Bar",
+          href: "https://github.com/saptarshiroy39/Portyard",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Speed-Bar.png",
+      image: "/Portyard.png",
     },
 
     {

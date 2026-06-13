@@ -5,6 +5,7 @@ import {
   IconBrandGithub,
   IconBrandVscode,
   IconBrandPython,
+  IconDiamonds,
 } from "@tabler/icons-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
@@ -16,4 +17,5 @@ export const Icons = {
   github: (props: IconProps) => <IconBrandGithub {...props} />,
   brandVscode: (props: IconProps) => <IconBrandVscode {...props} />,
   python: (props: IconProps) => <IconBrandPython {...props} />,
+  openvsx: (props: IconProps) => <IconDiamonds {...props} />,
 };

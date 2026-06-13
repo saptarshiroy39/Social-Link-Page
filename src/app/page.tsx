@@ -12,6 +12,7 @@ import {
   IconBrandX,
   IconBrandLinkedin,
   IconBrandPython,
+  IconBrandVscode,
 } from "@tabler/icons-react";
 import {
   Tooltip,
@@ -70,6 +71,11 @@ export default function Page() {
                       name: "PyPI",
                       href: DATA.contact.social.PyPI.url,
                       icon: IconBrandPython,
+                    },
+                    {
+                      name: "Visual Studio Marketplace",
+                      href: "https://marketplace.visualstudio.com/publishers/saptarshiroy39",
+                      icon: IconBrandVscode,
                     },
                     {
                       name: "Codeberg",
