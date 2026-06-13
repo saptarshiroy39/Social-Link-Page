@@ -186,11 +186,23 @@ export const DATA = {
     {
       title: "Ranno",
       href: "https://pypi.org/project/ranno/",
-      dates: "Apr 2026 - Present",
+      dates: "Apr 2026 - May 2026",
       description:
         "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
-      technologies: ["Python", "FastAPI", "Vercel", "PyPI"],
+      technologies: [
+        "Python",
+        "FastAPI",
+        "Hugging Face",
+        "Next.js",
+        "Vercel",
+        "PyPI",
+      ],
       links: [
+        {
+          type: "Website",
+          href: "https://ranno.hirishi.in",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "PyPI",
           href: "https://pypi.org/project/ranno/",
