@@ -283,7 +283,7 @@ export const DATA = {
     {
       title: "Arkiv",
       href: "https://arkiv.hirishi.in",
-      dates: "Dec 2025 - Present",
+      dates: "Dec 2025 - May 2026",
       description:
         "A multi-file-format RAG application for context-aware conversations & accurate information retrieval from uploaded files.",
       technologies: [
