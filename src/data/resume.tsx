@@ -9,7 +9,6 @@ import { CIcon } from "@/components/ui/svgs/c";
 import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
 import { Python } from "@/components/ui/svgs/python";
 import { Bash } from "@/components/ui/svgs/bash";
-import { Redstone } from "@/components/ui/svgs/redstone";
 
 import { FastAPI } from "@/components/ui/svgs/fastapi";
 import { LangChain } from "@/components/ui/svgs/langchain";
@@ -35,6 +34,10 @@ import { ClaudeCode } from "@/components/ui/svgs/claudecode";
 import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
 
 import { ESP32 } from "@/components/ui/svgs/esp32";
+import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
+import { Requestly } from "@/components/ui/svgs/requestly";
+import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
+import { OpenAIAgentBuilder } from "@/components/ui/svgs/openaiagentbuilder";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -59,7 +62,6 @@ export const DATA = {
         { name: "C++", icon: CPlusPlus },
         { name: "Python", icon: Python },
         { name: "Bash", icon: Bash },
-        { name: "Redstone", icon: Redstone },
       ],
     },
     {
@@ -76,6 +78,10 @@ export const DATA = {
         { name: "Supabase", icon: Supabase },
         { name: "Pinecone", icon: Pinecone },
       ],
+    },
+    {
+      category: "Cloud",
+      items: [{ name: "GCP", icon: GoogleCloud }],
     },
     {
       category: "DevOps",
@@ -98,18 +104,28 @@ export const DATA = {
       category: "Agents & Automation",
       items: [
         { name: "n8n", icon: N8n },
+        { name: "OpenAI Agent Builder", icon: OpenAIAgentBuilder },
+      ],
+    },
+    {
+      category: "AI Coding Agents",
+      items: [
         { name: "Antigravity", icon: Antigravity },
         { name: "GitHub Copilot", icon: GitHubCopilot },
         { name: "Claude Code", icon: ClaudeCode },
       ],
     },
     {
-      category: "Cloud",
-      items: [{ name: "GCP", icon: GoogleCloud }],
-    },
-    {
       category: "IoT",
       items: [{ name: "ESP32", icon: ESP32 }],
+    },
+    {
+      category: "Miscellaneous",
+      items: [
+        { name: "UptimeRobot", icon: UptimeRobot },
+        { name: "Requestly", icon: Requestly },
+        { name: "shadcn/ui", icon: ShadcnUI },
+      ],
     },
   ],
 
@@ -201,7 +217,7 @@ export const DATA = {
   projects: [
     {
       title: "Ranno",
-      href: "https://pypi.org/project/ranno/",
+      href: "https://ranno.hirishi.in",
       dates: "Apr 2026 - May 2026",
       description:
         "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
@@ -221,7 +237,7 @@ export const DATA = {
         },
         {
           type: "PyPI",
-          href: "https://pypi.org/project/ranno/",
+          href: "https://pypi.org/project/ranno",
           icon: <Icons.python className="size-3" />,
         },
         {

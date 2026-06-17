@@ -3,11 +3,11 @@ import type { SVGProps } from "react";
 const TailwindCSS = (props: SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
+    xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 54 33"
-    xmlns="http://www.w3.org/2000/svg"
   >
-    <g clipPath="url(#tailwindcss__a)">
+    <g clipPath="url(#tw-clip-a)">
       <path
         fill="#38bdf8"
         fillRule="evenodd"
@@ -16,7 +16,7 @@ const TailwindCSS = (props: SVGProps<SVGSVGElement>) => (
       />
     </g>
     <defs>
-      <clipPath id="tailwindcss__a">
+      <clipPath id="tw-clip-a">
         <path fill="#fff" d="M0 0h54v32.4H0z" />
       </clipPath>
     </defs>

@@ -57,6 +57,16 @@ export default function Page() {
                       icon: IconMailOpened,
                     },
                     {
+                      name: "LinkedIn",
+                      href: DATA.contact.social.LinkedIn.url,
+                      icon: IconBrandLinkedin,
+                    },
+                    {
+                      name: "X",
+                      href: DATA.contact.social.X.url,
+                      icon: IconBrandX,
+                    },
+                    {
                       name: "GitHub",
                       href: DATA.contact.social.GitHub.url,
                       icon: IconBrandGithub,
@@ -80,16 +90,6 @@ export default function Page() {
                       name: DATA.contact.social.Codeberg.name,
                       href: DATA.contact.social.Codeberg.url,
                       icon: IconPyramid,
-                    },
-                    {
-                      name: "X",
-                      href: DATA.contact.social.X.url,
-                      icon: IconBrandX,
-                    },
-                    {
-                      name: "LinkedIn",
-                      href: DATA.contact.social.LinkedIn.url,
-                      icon: IconBrandLinkedin,
                     },
                   ].map((link) => (
                     <Tooltip key={link.name}>

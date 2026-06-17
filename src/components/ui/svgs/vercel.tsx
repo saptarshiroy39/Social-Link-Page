@@ -1,15 +1,30 @@
 import type { SVGProps } from "react";
 
 const Vercel = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    {...props}
-    role="img"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <title>Vercel</title>
-    <path fill="currentColor" d="m12 1.608 12 20.784H0Z" />
-  </svg>
+  <>
+    <svg
+      {...props}
+      className={`dark:hidden ${props.className || ""}`}
+      viewBox="0 0 256 222"
+      width="256"
+      height="222"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
+    >
+      <path fill="#000" d="m128 0 128 221.705H0z" />
+    </svg>
+    <svg
+      {...props}
+      className={`hidden dark:block ${props.className || ""}`}
+      viewBox="0 0 256 222"
+      width="256"
+      height="222"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
+    >
+      <path fill="#fff" d="m128 0 128 221.705H0z" />
+    </svg>
+  </>
 );
 
 export { Vercel };

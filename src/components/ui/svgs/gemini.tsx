@@ -4,11 +4,13 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
     viewBox="0 0 296 298"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="296"
+    height="298"
+    fill="none"
   >
     <mask
-      id="gemini__a"
+      id="gemini-mask-a"
       width="296"
       height="298"
       x="0"
@@ -21,35 +23,35 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         d="M141.201 4.886c2.282-6.17 11.042-6.071 13.184.148l5.985 17.37a184.004 184.004 0 0 0 111.257 113.049l19.304 6.997c6.143 2.227 6.156 10.91.02 13.155l-19.35 7.082a184.001 184.001 0 0 0-109.495 109.385l-7.573 20.629c-2.241 6.105-10.869 6.121-13.133.025l-7.908-21.296a184 184 0 0 0-109.02-108.658l-19.698-7.239c-6.102-2.243-6.118-10.867-.025-13.132l20.083-7.467A183.998 183.998 0 0 0 133.291 26.28l7.91-21.394Z"
       />
     </mask>
-    <g mask="url(#gemini__a)">
-      <g filter="url(#gemini__b)">
+    <g mask="url(#gemini-mask-a)">
+      <g filter="url(#gemini-filter-b)">
         <ellipse cx="163" cy="149" fill="#3689FF" rx="196" ry="159" />
       </g>
-      <g filter="url(#gemini__c)">
+      <g filter="url(#gemini-filter-c)">
         <ellipse cx="33.5" cy="142.5" fill="#F6C013" rx="68.5" ry="72.5" />
       </g>
-      <g filter="url(#gemini__d)">
+      <g filter="url(#gemini-filter-d)">
         <ellipse cx="19.5" cy="148.5" fill="#F6C013" rx="68.5" ry="72.5" />
       </g>
-      <g filter="url(#gemini__e)">
+      <g filter="url(#gemini-filter-e)">
         <path
           fill="#FA4340"
           d="M194 10.5C172 82.5 65.5 134.333 22.5 135L144-66l50 76.5Z"
         />
       </g>
-      <g filter="url(#gemini__f)">
+      <g filter="url(#gemini-filter-f)">
         <path
           fill="#FA4340"
           d="M190.5-12.5C168.5 59.5 62 111.333 19 112L140.5-89l50 76.5Z"
         />
       </g>
-      <g filter="url(#gemini__g)">
+      <g filter="url(#gemini-filter-g)">
         <path
           fill="#14BB69"
           d="M194.5 279.5C172.5 207.5 66 155.667 23 155l121.5 201 50-76.5Z"
         />
       </g>
-      <g filter="url(#gemini__h)">
+      <g filter="url(#gemini-filter-h)">
         <path
           fill="#14BB69"
           d="M196.5 320.5C174.5 248.5 68 196.667 25 196l121.5 201 50-76.5Z"
@@ -58,7 +60,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
     </g>
     <defs>
       <filter
-        id="gemini__b"
+        id="gemini-filter-b"
         width="464"
         height="390"
         x="-69"
@@ -74,7 +76,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="gemini__c"
+        id="gemini-filter-c"
         width="265"
         height="273"
         x="-99"
@@ -90,7 +92,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="gemini__d"
+        id="gemini-filter-d"
         width="265"
         height="273"
         x="-113"
@@ -106,7 +108,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="gemini__e"
+        id="gemini-filter-e"
         width="299.5"
         height="329"
         x="-41.5"
@@ -122,7 +124,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="gemini__f"
+        id="gemini-filter-f"
         width="299.5"
         height="329"
         x="-45"
@@ -138,7 +140,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="gemini__g"
+        id="gemini-filter-g"
         width="299.5"
         height="329"
         x="-41"
@@ -154,7 +156,7 @@ const Gemini = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="gemini__h"
+        id="gemini-filter-h"
         width="299.5"
         height="329"
         x="-39"

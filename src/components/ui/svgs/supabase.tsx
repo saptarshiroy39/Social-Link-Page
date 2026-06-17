@@ -3,50 +3,47 @@ import type { SVGProps } from "react";
 const Supabase = (props: SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
-    role="img"
-    viewBox="0 0 512 512"
+    viewBox="0 0 109 113"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    xmlSpace="preserve"
   >
+    <path
+      d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z"
+      fill="url(#supabase-grad-0)"
+    />
+    <path
+      d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z"
+      fill="url(#supabase-grad-1)"
+      fillOpacity="0.2"
+    />
+    <path
+      d="M45.317 2.07103C48.1765 -1.53037 53.9745 0.442937 54.0434 5.041L54.4849 72.2922H9.83113C1.64038 72.2922 -2.92775 62.8321 2.1655 56.4175L45.317 2.07103Z"
+      fill="#3ECF8E"
+    />
     <defs>
       <linearGradient
-        id="supa-a"
-        x1="237.109"
-        x2="419.106"
-        y1="223.219"
-        y2="146.89"
-        gradientTransform="matrix(1 0 0 -1 0 513)"
+        id="supabase-grad-0"
+        x1="53.9738"
+        y1="54.974"
+        x2="94.1635"
+        y2="71.8295"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#249361" />
-        <stop offset="1" stopColor="#3ecf8e" />
+        <stop stopColor="#249361" />
+        <stop offset="1" stopColor="#3ECF8E" />
       </linearGradient>
       <linearGradient
-        id="supa-b"
-        x1="245.829"
-        x2="328.829"
-        y1="411.681"
-        y2="255.438"
-        gradientTransform="matrix(1 0 0 -1 0 513)"
+        id="supabase-grad-1"
+        x1="36.1558"
+        y1="30.578"
+        x2="54.4844"
+        y2="65.0806"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#000" />
-        <stop offset="1" stopColor="#000" stopOpacity="0" />
+        <stop />
+        <stop offset="1" stopOpacity="0" />
       </linearGradient>
     </defs>
-    <path
-      d="M297.6 501c-12.9 16.3-39.2 7.4-39.5-13.4L253.6 183h204.8c37.1 0 57.8 42.8 34.7 71.9z"
-      fill="url(#supa-a)"
-    />
-    <path
-      d="M297.6 501c-12.9 16.3-39.2 7.4-39.5-13.4L253.6 183h204.8c37.1 0 57.8 42.8 34.7 71.9z"
-      fill="url(#supa-b)"
-      fillOpacity=".2"
-    />
-    <path
-      d="M214.4 11c12.9-16.3 39.2-7.4 39.5 13.4l2 304.5H53.7c-37.1 0-57.8-42.8-34.7-71.9z"
-      fill="#3ecf8e"
-    />
   </svg>
 );
 

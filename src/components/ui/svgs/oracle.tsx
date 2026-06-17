@@ -1,7 +1,7 @@
 export function Oracle({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 200" className={className}>
-      <path d="M0 0h200v200H0z" fill="#c74634" />
+      <path d="M0 0h200v200H0z" fill="#F80000" />
       <rect
         fill="none"
         height="60"
