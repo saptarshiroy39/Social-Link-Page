@@ -1,28 +1,33 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
-import { IconCornerRightUp } from "@tabler/icons-react";
-import Link from "next/link";
-import { useState } from "react";
 import Image from "next/image";
-import { Python } from "@/components/ui/svgs/python";
+import Link from "next/link";
+
+import { Antigravity } from "@/components/ui/svgs/antigravity";
+import { Badge } from "@/components/ui/badge";
 import { FastAPI } from "@/components/ui/svgs/fastapi";
-import { Vercel } from "@/components/ui/svgs/vercel";
-import { PyPI } from "@/components/ui/svgs/pypi";
-import { OpenVSX } from "@/components/ui/svgs/openvsx";
-import { VisualStudioMarketplace } from "@/components/ui/svgs/visualstudiomarketplace";
+import { Gemini } from "@/components/ui/svgs/gemini";
+import { GitHub } from "@/components/ui/svgs/github";
+import { Gmail } from "@/components/ui/svgs/gmail";
+import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
+import { GoogleSheet } from "@/components/ui/svgs/googlesheet";
+import { GoogleTranslate } from "@/components/ui/svgs/googletranslate";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
-import { TypeScript } from "@/components/ui/svgs/typescript";
-import { TailwindCSS } from "@/components/ui/svgs/tailwindcss";
-import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
-import { NextJS } from "@/components/ui/svgs/nextjs";
+import { IconCornerRightUp } from "@tabler/icons-react";
 import { LangChain } from "@/components/ui/svgs/langchain";
 import { N8n } from "@/components/ui/svgs/n8n";
-import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
-import { Gemini } from "@/components/ui/svgs/gemini";
-import { GmailSMTP } from "@/components/ui/svgs/gmailsmtp";
-import { Antigravity } from "@/components/ui/svgs/antigravity";
+import { NextJS } from "@/components/ui/svgs/nextjs";
+import { OpenVSX } from "@/components/ui/svgs/openvsx";
+import { PyPI } from "@/components/ui/svgs/pypi";
+import { Python } from "@/components/ui/svgs/python";
+import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
+import { TailwindCSS } from "@/components/ui/svgs/tailwindcss";
+import { TypeScript } from "@/components/ui/svgs/typescript";
+import { VSMarketplace } from "@/components/ui/svgs/vsmarketplace";
+import { Vercel } from "@/components/ui/svgs/vercel";
+import { YouTube } from "@/components/ui/svgs/youtube";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
   Python: { icon: <Python className="w-3.5 h-3.5" />, label: "Python" },
@@ -38,7 +43,7 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
     label: "Open VSX",
   },
   "Visual Studio Marketplace": {
-    icon: <VisualStudioMarketplace className="w-3.5 h-3.5" />,
+    icon: <VSMarketplace className="w-3.5 h-3.5" />,
     label: "VS Marketplace",
   },
   "Hugging Face": {
@@ -68,9 +73,25 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
     icon: <Gemini className="w-3.5 h-3.5" />,
     label: "Gemini API",
   },
+  "Google Sheet API": {
+    icon: <GoogleSheet className="w-3.5 h-3.5" />,
+    label: "Google Sheet API",
+  },
   "Gmail SMTP": {
-    icon: <GmailSMTP className="w-3.5 h-3.5" />,
+    icon: <Gmail className="w-3.5 h-3.5" />,
     label: "Gmail SMTP",
+  },
+  "YouTube API": {
+    icon: <YouTube className="w-3.5 h-3.5" />,
+    label: "YouTube API",
+  },
+  "Translate API": {
+    icon: <GoogleTranslate className="w-3.5 h-3.5" />,
+    label: "Translate API",
+  },
+  "GitHub API": {
+    icon: <GitHub className="w-3.5 h-3.5" />,
+    label: "GitHub API",
   },
 };
 

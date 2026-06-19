@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-const GmailSMTP = (props: SVGProps<SVGSVGElement>) => (
+const Gmail = (props: SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
@@ -58,4 +58,4 @@ const GmailSMTP = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export { GmailSMTP };
+export { Gmail };

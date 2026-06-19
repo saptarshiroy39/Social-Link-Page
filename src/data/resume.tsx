@@ -17,6 +17,8 @@ import { Oracle } from "@/components/ui/svgs/oracle";
 import { Supabase } from "@/components/ui/svgs/supabase";
 import { Pinecone } from "@/components/ui/svgs/pinecone";
 
+import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
+
 import { Git } from "@/components/ui/svgs/git";
 import { GitHub } from "@/components/ui/svgs/github";
 import { Docker } from "@/components/ui/svgs/docker";
@@ -27,17 +29,17 @@ import { Render } from "@/components/ui/svgs/render";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
 
 import { N8n } from "@/components/ui/svgs/n8n";
+import { AgentBuilder } from "@/components/ui/svgs/agentbuilder";
+
 import { Antigravity } from "@/components/ui/svgs/antigravity";
 import { GitHubCopilot } from "@/components/ui/svgs/githubcopilot";
 import { ClaudeCode } from "@/components/ui/svgs/claudecode";
 
-import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
-
 import { ESP32 } from "@/components/ui/svgs/esp32";
+
 import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
 import { Requestly } from "@/components/ui/svgs/requestly";
 import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
-import { OpenAIAgentBuilder } from "@/components/ui/svgs/openaiagentbuilder";
 
 export const DATA = {
   name: "Saptarshi Roy",
@@ -104,7 +106,7 @@ export const DATA = {
       category: "Agents & Automation",
       items: [
         { name: "n8n", icon: N8n },
-        { name: "OpenAI Agent Builder", icon: OpenAIAgentBuilder },
+        { name: "OpenAI Agent Builder", icon: AgentBuilder },
       ],
     },
     {
@@ -224,6 +226,7 @@ export const DATA = {
       technologies: [
         "Python",
         "FastAPI",
+        "Gemini API",
         "Hugging Face",
         "Next.js",
         "Vercel",
@@ -350,7 +353,14 @@ export const DATA = {
       dates: "Oct 2025 - Dec 2025",
       description:
         "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
-      technologies: ["n8n", "Gemini API", "GCP"],
+      technologies: [
+        "n8n",
+        "Gemini API",
+        "YouTube API",
+        "Translate API",
+        "GitHub API",
+        "GCP",
+      ],
       links: [
         {
           type: "GitHub",
@@ -367,7 +377,13 @@ export const DATA = {
       dates: "Jul 2025 - Jul 2025",
       description:
         "An AI-powered email digest delivering personalized hourly updates on weather, news & entertainment.",
-      technologies: ["n8n", "Gmail SMTP", "GCP"],
+      technologies: [
+        "n8n",
+        "Gemini API",
+        "Google Sheet API",
+        "Gmail SMTP",
+        "GCP",
+      ],
       links: [
         {
           type: "GitHub",

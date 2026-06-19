@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-const OpenAIAgentBuilder = (props: SVGProps<SVGSVGElement>) => (
+const AgentBuilder = (props: SVGProps<SVGSVGElement>) => (
   <>
     <svg
       {...props}
@@ -30,4 +30,4 @@ const OpenAIAgentBuilder = (props: SVGProps<SVGSVGElement>) => (
   </>
 );
 
-export { OpenAIAgentBuilder };
+export { AgentBuilder };

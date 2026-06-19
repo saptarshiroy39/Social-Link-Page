@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-const VisualStudioMarketplace = (props: SVGProps<SVGSVGElement>) => (
+const VSMarketplace = (props: SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
@@ -113,4 +113,4 @@ const VisualStudioMarketplace = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export { VisualStudioMarketplace };
+export { VSMarketplace };
