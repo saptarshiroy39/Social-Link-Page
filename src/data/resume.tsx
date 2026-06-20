@@ -36,6 +36,7 @@ import { GitHubCopilot } from "@/components/ui/svgs/githubcopilot";
 import { ClaudeCode } from "@/components/ui/svgs/claudecode";
 
 import { ESP32 } from "@/components/ui/svgs/esp32";
+import { Quectel } from "@/components/ui/svgs/quectel";
 
 import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
 import { Requestly } from "@/components/ui/svgs/requestly";
@@ -119,7 +120,10 @@ export const DATA = {
     },
     {
       category: "IoT",
-      items: [{ name: "ESP32", icon: ESP32 }],
+      items: [
+        { name: "ESP32", icon: ESP32 },
+        { name: "L89HA", icon: Quectel },
+      ],
     },
     {
       category: "Miscellaneous",
