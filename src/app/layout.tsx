@@ -10,12 +10,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import dynamic from "next/dynamic";
 import "./globals.css";
 
-const FlickeringGrid = dynamic(() =>
-  import("@/components/magicui/flickering-grid").then(
-    (mod) => mod.FlickeringGrid,
-  ),
-);
-
 const ScrollProgress = dynamic(() =>
   import("@/components/magicui/scroll-progress").then(
     (mod) => mod.ScrollProgress,
@@ -120,25 +114,13 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <ClickSpark
-            sparkColor="currentColor"
+            sparkColor="var(--spark-color)"
             sparkSize={10}
             sparkRadius={15}
             sparkCount={8}
             duration={400}
           >
             <TooltipProvider delayDuration={0}>
-              <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
-                <FlickeringGrid
-                  className="h-full w-full"
-                  squareSize={2}
-                  gridGap={2}
-                  style={{
-                    maskImage: "linear-gradient(to bottom, black, transparent)",
-                    WebkitMaskImage:
-                      "linear-gradient(to bottom, black, transparent)",
-                  }}
-                />
-              </div>
               <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
                 {children}
               </div>

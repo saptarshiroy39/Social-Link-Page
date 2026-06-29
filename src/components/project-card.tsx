@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { AIStudio } from "@/components/ui/svgs/aistudio";
 import { Antigravity } from "@/components/ui/svgs/antigravity";
 import { Badge } from "@/components/ui/badge";
 import { FastAPI } from "@/components/ui/svgs/fastapi";
@@ -17,11 +18,14 @@ import { IconCornerRightUp } from "@tabler/icons-react";
 import { LangChain } from "@/components/ui/svgs/langchain";
 import { N8n } from "@/components/ui/svgs/n8n";
 import { NextJS } from "@/components/ui/svgs/nextjs";
+import { JSONIcon } from "@/components/ui/svgs/json";
 import { OpenVSX } from "@/components/ui/svgs/openvsx";
 import { PyPI } from "@/components/ui/svgs/pypi";
+import { PydanticAI } from "@/components/ui/svgs/pydanticai";
 import { Python } from "@/components/ui/svgs/python";
 import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
 import { TailwindCSS } from "@/components/ui/svgs/tailwindcss";
+import { TOMLIcon } from "@/components/ui/svgs/toml";
 import { TypeScript } from "@/components/ui/svgs/typescript";
 import { VSMarketplace } from "@/components/ui/svgs/vsmarketplace";
 import { Vercel } from "@/components/ui/svgs/vercel";
@@ -73,6 +77,14 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
     icon: <Gemini className="w-3.5 h-3.5" />,
     label: "Gemini API",
   },
+  "Google AI Studio": {
+    icon: <AIStudio className="w-3.5 h-3.5" />,
+    label: "Google AI Studio",
+  },
+  "AI Studio": {
+    icon: <AIStudio className="w-3.5 h-3.5" />,
+    label: "AI Studio",
+  },
   "Google Sheet API": {
     icon: <GoogleSheet className="w-3.5 h-3.5" />,
     label: "Google Sheet API",
@@ -93,6 +105,12 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
     icon: <GitHub className="w-3.5 h-3.5" />,
     label: "GitHub API",
   },
+  "Pydantic AI": {
+    icon: <PydanticAI className="w-3.5 h-3.5" />,
+    label: "Pydantic AI",
+  },
+  JSON: { icon: <JSONIcon className="w-3.5 h-3.5" />, label: "JSON" },
+  TOML: { icon: <TOMLIcon className="w-3.5 h-3.5" />, label: "TOML" },
 };
 
 function TechBadge({ tag }: { tag: string }) {

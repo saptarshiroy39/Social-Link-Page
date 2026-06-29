@@ -11,6 +11,7 @@ interface ClickSparkProps {
   easing?: "linear" | "ease-in" | "ease-out" | "ease-in-out";
   extraScale?: number;
   children?: React.ReactNode;
+  className?: string;
 }
 
 interface Spark {
@@ -21,23 +22,25 @@ interface Spark {
 }
 
 const ClickSpark: React.FC<ClickSparkProps> = ({
-  sparkColor = "#fff",
+  sparkColor = "var(--spark-color)",
   sparkSize = 10,
   sparkRadius = 15,
   sparkCount = 8,
-  duration = 400,
+  duration = 500,
   easing = "ease-out",
-  extraScale = 1.0,
+  extraScale = 1.2,
   children,
+  className = "relative w-full h-full",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sparksRef = useRef<Spark[]>([]);
   const startTimeRef = useRef<number | null>(null);
+  const isRunningRef = useRef(false);
+  const drawRef = useRef<(timestamp: number) => void>(() => {});
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const parent = canvas.parentElement;
     if (!parent) return;
 
@@ -95,7 +98,15 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
       if (!startTimeRef.current) {
         startTimeRef.current = timestamp;
       }
-      ctx?.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (sparksRef.current.length === 0) {
+        startTimeRef.current = null;
+        isRunningRef.current = false;
+        return;
+      }
+
+      const resolvedColor = getComputedStyle(canvas).color || "#000";
 
       sparksRef.current = sparksRef.current.filter((spark: Spark) => {
         const elapsed = timestamp - spark.startTime;
@@ -114,12 +125,7 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
         const x2 = spark.x + (distance + lineLength) * Math.cos(spark.angle);
         const y2 = spark.y + (distance + lineLength) * Math.sin(spark.angle);
 
-        ctx.strokeStyle =
-          sparkColor === "currentColor"
-            ? document.documentElement.classList.contains("dark")
-              ? "#fff"
-              : "#000"
-            : sparkColor;
+        ctx.strokeStyle = resolvedColor;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(x1, y1);
@@ -132,7 +138,12 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
       animationId = requestAnimationFrame(draw);
     };
 
-    animationId = requestAnimationFrame(draw);
+    drawRef.current = draw;
+
+    if (sparksRef.current.length > 0 && !isRunningRef.current) {
+      isRunningRef.current = true;
+      animationId = requestAnimationFrame(draw);
+    }
 
     return () => {
       cancelAnimationFrame(animationId);
@@ -163,13 +174,20 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
     }));
 
     sparksRef.current.push(...newSparks);
+
+    if (!isRunningRef.current) {
+      isRunningRef.current = true;
+      startTimeRef.current = null;
+      requestAnimationFrame(drawRef.current);
+    }
   };
 
   return (
-    <div className="relative w-full h-full" onClick={handleClick}>
+    <div className={className} onClick={handleClick}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 pointer-events-none"
+        style={{ color: sparkColor }}
       />
       {children}
     </div>

@@ -9,9 +9,18 @@ import { CIcon } from "@/components/ui/svgs/c";
 import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
 import { Python } from "@/components/ui/svgs/python";
 import { Bash } from "@/components/ui/svgs/bash";
+import { JSONIcon } from "@/components/ui/svgs/json";
+import { TOMLIcon } from "@/components/ui/svgs/toml";
 
 import { FastAPI } from "@/components/ui/svgs/fastapi";
+
+import { AIStudio } from "@/components/ui/svgs/aistudio";
+import { HuggingFace } from "@/components/ui/svgs/huggingface";
 import { LangChain } from "@/components/ui/svgs/langchain";
+import { PydanticAI } from "@/components/ui/svgs/pydanticai";
+
+import { N8n } from "@/components/ui/svgs/n8n";
+import { AgentBuilder } from "@/components/ui/svgs/agentbuilder";
 
 import { Oracle } from "@/components/ui/svgs/oracle";
 import { Supabase } from "@/components/ui/svgs/supabase";
@@ -26,20 +35,11 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { Vercel } from "@/components/ui/svgs/vercel";
 import { Railway } from "@/components/ui/svgs/railway";
 import { Render } from "@/components/ui/svgs/render";
-import { HuggingFace } from "@/components/ui/svgs/huggingface";
-
-import { N8n } from "@/components/ui/svgs/n8n";
-import { AgentBuilder } from "@/components/ui/svgs/agentbuilder";
-
-import { Antigravity } from "@/components/ui/svgs/antigravity";
-import { GitHubCopilot } from "@/components/ui/svgs/githubcopilot";
-import { ClaudeCode } from "@/components/ui/svgs/claudecode";
 
 import { ESP32 } from "@/components/ui/svgs/esp32";
 import { Quectel } from "@/components/ui/svgs/quectel";
 
 import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
-import { Requestly } from "@/components/ui/svgs/requestly";
 import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
 
 export const DATA = {
@@ -65,13 +65,28 @@ export const DATA = {
         { name: "C++", icon: CPlusPlus },
         { name: "Python", icon: Python },
         { name: "Bash", icon: Bash },
+        { name: "JSON", icon: JSONIcon },
+        { name: "TOML", icon: TOMLIcon },
       ],
     },
     {
-      category: "Frameworks",
+      category: "Backend & Frameworks",
+      items: [{ name: "FastAPI", icon: FastAPI }],
+    },
+    {
+      category: "Gen AI",
       items: [
-        { name: "FastAPI", icon: FastAPI },
+        { name: "AI Studio", icon: AIStudio },
         { name: "LangChain", icon: LangChain },
+        { name: "Hugging Face", icon: HuggingFace },
+        { name: "Pydantic AI", icon: PydanticAI },
+      ],
+    },
+    {
+      category: "Agents & Automation",
+      items: [
+        { name: "n8n", icon: N8n },
+        { name: "Agent Builder", icon: AgentBuilder },
       ],
     },
     {
@@ -100,22 +115,6 @@ export const DATA = {
         { name: "Vercel", icon: Vercel },
         { name: "Railway", icon: Railway },
         { name: "Render", icon: Render },
-        { name: "Hugging Face", icon: HuggingFace },
-      ],
-    },
-    {
-      category: "Agents & Automation",
-      items: [
-        { name: "n8n", icon: N8n },
-        { name: "OpenAI Agent Builder", icon: AgentBuilder },
-      ],
-    },
-    {
-      category: "AI Coding Agents",
-      items: [
-        { name: "Antigravity", icon: Antigravity },
-        { name: "GitHub Copilot", icon: GitHubCopilot },
-        { name: "Claude Code", icon: ClaudeCode },
       ],
     },
     {
@@ -129,7 +128,6 @@ export const DATA = {
       category: "Miscellaneous",
       items: [
         { name: "UptimeRobot", icon: UptimeRobot },
-        { name: "Requestly", icon: Requestly },
         { name: "shadcn/ui", icon: ShadcnUI },
       ],
     },

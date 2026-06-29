@@ -37,11 +37,25 @@ export const AnimatedThemeToggler = ({
   const toggleTheme = async () => {
     if (!buttonRef.current) return;
 
+    if (!document.startViewTransition) {
+      const newTheme = !isDark;
+      setIsDark(newTheme);
+      setTheme(newTheme ? "dark" : "light");
+      return;
+    }
+
     await document.startViewTransition(() => {
       flushSync(() => {
         const newTheme = !isDark;
         setIsDark(newTheme);
         setTheme(newTheme ? "dark" : "light");
+
+        // Synchronously toggle the dark class so the view transition screenshot is captured correctly
+        if (newTheme) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
       });
     }).ready;
 
