@@ -74,7 +74,11 @@ function useActiveSection() {
 export default function Navbar() {
   const activeSection = useActiveSection();
   const pathname = usePathname();
-  const isNotFound = pathname !== "/";
+  const isNotHome = pathname !== "/";
+
+  if (isNotHome) {
+    return null;
+  }
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
@@ -82,7 +86,7 @@ export default function Navbar() {
         direction="middle"
         className="pointer-events-auto bg-card/80 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
       >
-        {!isNotFound && (
+        {!isNotHome && (
           <>
             {DATA.navbar.map((item) => {
               const sectionId = item.href.replace("#", "");
