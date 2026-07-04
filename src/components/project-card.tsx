@@ -14,7 +14,7 @@ import { GoogleCloud } from "@/components/ui/svgs/googlecloud";
 import { GoogleSheet } from "@/components/ui/svgs/googlesheet";
 import { GoogleTranslate } from "@/components/ui/svgs/googletranslate";
 import { HuggingFace } from "@/components/ui/svgs/huggingface";
-import { IconCornerRightUp } from "@tabler/icons-react";
+import { IconArrowUpRight } from "@tabler/icons-react";
 import { LangChain } from "@/components/ui/svgs/langchain";
 import { N8n } from "@/components/ui/svgs/n8n";
 import { NextJS } from "@/components/ui/svgs/nextjs";
@@ -23,6 +23,9 @@ import { OpenVSX } from "@/components/ui/svgs/openvsx";
 import { PyPI } from "@/components/ui/svgs/pypi";
 import { PydanticAI } from "@/components/ui/svgs/pydanticai";
 import { Python } from "@/components/ui/svgs/python";
+import { Ruff } from "@/components/ui/svgs/ruff";
+import { Setuptools } from "@/components/ui/svgs/setuptools";
+import { Pytest } from "@/components/ui/svgs/pytest";
 import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
 import { TailwindCSS } from "@/components/ui/svgs/tailwindcss";
 import { TOMLIcon } from "@/components/ui/svgs/toml";
@@ -38,6 +41,12 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; label: string }> = {
   FastAPI: { icon: <FastAPI className="w-3.5 h-3.5" />, label: "FastAPI" },
   Vercel: { icon: <Vercel className="w-3.5 h-3.5" />, label: "Vercel" },
   PyPI: { icon: <PyPI className="w-3.5 h-3.5" />, label: "PyPI" },
+  Ruff: { icon: <Ruff className="w-3.5 h-3.5" />, label: "Ruff" },
+  Setuptools: {
+    icon: <Setuptools className="w-3.5 h-3.5" />,
+    label: "Setuptools",
+  },
+  Pytest: { icon: <Pytest className="w-3.5 h-3.5" />, label: "Pytest" },
   Antigravity: {
     icon: <Antigravity className="w-3.5 h-3.5" />,
     label: "Antigravity",
@@ -261,7 +270,7 @@ export function ProjectCard({
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
           >
-            <IconCornerRightUp className="h-4 w-4" aria-hidden />
+            <IconArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
         <p className="text-[11px] flex-1 max-w-full text-pretty font-mono leading-snug text-muted-foreground">

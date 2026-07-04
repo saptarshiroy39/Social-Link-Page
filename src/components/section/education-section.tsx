@@ -2,7 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Image from "next/image";
-import { IconCornerRightUp } from "@tabler/icons-react";
+import { IconArrowUpRight } from "@tabler/icons-react";
 import SectionHeader from "@/components/section-header";
 import { BLUR_FADE_DELAY } from "@/lib/constants";
 
@@ -41,7 +41,7 @@ export default function EducationSection() {
                   <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                     <div className="font-semibold leading-none flex items-center gap-2">
                       {education.school}
-                      <IconCornerRightUp
+                      <IconArrowUpRight
                         className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
                         aria-hidden
                       />

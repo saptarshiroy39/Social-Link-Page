@@ -220,6 +220,27 @@ export const DATA = {
 
   projects: [
     {
+      title: "Sizelib",
+      href: "https://pypi.org/project/sizelib",
+      dates: "Jun 2026 - Jun 2026",
+      description:
+        "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
+      technologies: ["Python", "PyPI", "Ruff", "Setuptools", "Pytest"],
+      links: [
+        {
+          type: "PyPI",
+          href: "https://pypi.org/project/sizelib",
+          icon: <Icons.python className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/saptarshiroy39/sizelib",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/sizelib.png",
+    },
+    {
       title: "Ranno",
       href: "https://ranno.hirishi.in",
       dates: "Apr 2026 - May 2026",
@@ -247,11 +268,11 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Ranno",
+          href: "https://github.com/saptarshiroy39/ranno",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Ranno.png",
+      image: "/ranno.png",
     },
 
     {
@@ -279,11 +300,11 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Portyard",
+          href: "https://github.com/saptarshiroy39/portyard",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Portyard.png",
+      image: "/portyard.png",
     },
 
     {
@@ -310,11 +331,11 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Cipher",
+          href: "https://github.com/saptarshiroy39/cipher",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Cipher.png",
+      image: "/cipher.png",
     },
 
     {
@@ -342,16 +363,16 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Arkiv",
+          href: "https://github.com/saptarshiroy39/arkiv",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Arkiv.png",
+      image: "/arkiv.png",
     },
 
     {
       title: "Luna AI",
-      href: "https://github.com/saptarshiroy39/Luna-AI",
+      href: "https://github.com/saptarshiroy39/luna-ai",
       dates: "Oct 2025 - Dec 2025",
       description:
         "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
@@ -366,16 +387,16 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Luna-AI",
+          href: "https://github.com/saptarshiroy39/luna-ai",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Luna-AI.png",
+      image: "/luna-ai.png",
     },
 
     {
       title: "Hourly",
-      href: "https://github.com/saptarshiroy39/Hourly",
+      href: "https://github.com/saptarshiroy39/hourly",
       dates: "Jul 2025 - Jul 2025",
       description:
         "An AI-powered email digest delivering personalized hourly updates on weather, news & entertainment.",
@@ -389,11 +410,11 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/saptarshiroy39/Hourly",
+          href: "https://github.com/saptarshiroy39/hourly",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Hourly.png",
+      image: "/hourly.png",
     },
   ],
 } as const;
