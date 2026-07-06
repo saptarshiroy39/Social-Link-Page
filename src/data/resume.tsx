@@ -42,6 +42,9 @@ import { Quectel } from "@/components/ui/svgs/quectel";
 import { UptimeRobot } from "@/components/ui/svgs/uptimerobot";
 import { ShadcnUI } from "@/components/ui/svgs/shadcnui";
 
+import { UV } from "@/components/ui/svgs/uv";
+import { Ruff } from "@/components/ui/svgs/ruff";
+
 export const DATA = {
   name: "Saptarshi Roy",
 
@@ -53,7 +56,7 @@ export const DATA = {
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
 
   summary:
-    "A Software Developer focused on building Open-Source Full-Stack Web Apps, CLI Tools, AI Tools & Automation Systems. Pursued a Bachelor's Degree in Computer Science and Engineering. Work with Python, FastAPI, Databases & scalable backend services to create practical, user-centric products that solve real business problems and improve everyday workflows.",
+    "A Gen AI and Agentic Developer building open-source full-stack web applications, CLI tools, and autonomous workflows. Currently pursuing a B.Tech in Computer Science and Engineering. I specialize in Python, FastAPI, and backend system integration to build scalable, AI-driven products that solve real business problems.",
 
   avatarUrl: "/me.png",
 
@@ -71,7 +74,10 @@ export const DATA = {
     },
     {
       category: "Backend & Frameworks",
-      items: [{ name: "FastAPI", icon: FastAPI }],
+      items: [
+        { name: "FastAPI", icon: FastAPI },
+        { name: "uv", icon: UV },
+      ],
     },
     {
       category: "Gen AI",
@@ -129,6 +135,7 @@ export const DATA = {
       items: [
         { name: "UptimeRobot", icon: UptimeRobot },
         { name: "shadcn/ui", icon: ShadcnUI },
+        { name: "Ruff", icon: Ruff },
       ],
     },
   ],
@@ -257,9 +264,9 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Docs",
           href: "https://ranno.hirishi.in",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.book className="size-3" />,
         },
         {
           type: "PyPI",
@@ -415,6 +422,38 @@ export const DATA = {
         },
       ],
       image: "/hourly.png",
+    },
+  ],
+  openSourceProjects: [
+    {
+      title: "Arkiv",
+      href: "https://arkiv.hirishi.in",
+      description: "RAG Application.",
+    },
+    {
+      title: "Cipher",
+      href: "https://cipher.hirishi.in",
+      description: "Cryptography Toolkit.",
+    },
+    {
+      title: "Sizelib",
+      href: "https://sizelib.hirishi.in",
+      description: "Python Library.",
+    },
+    {
+      title: "Ranno",
+      href: "https://ranno.hirishi.in",
+      description: "Python Library.",
+    },
+    {
+      title: "Luna AI",
+      href: "https://github.com/saptarshiroy39/luna-ai",
+      description: "Multi-Agent AI System.",
+    },
+    {
+      title: "Portyard",
+      href: "https://github.com/saptarshiroy39/portyard",
+      description: "VS Code Extension.",
     },
   ],
 } as const;
