@@ -1,7 +1,6 @@
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
-import { useTheme } from "next-themes";
 import { useEffect, useRef, useSyncExternalStore } from "react";
 import dynamic from "next/dynamic";
 import SectionHeader from "@/components/section-header";
@@ -13,7 +12,6 @@ const GitHubCalendar = dynamic(
 );
 
 export default function GithubSection() {
-  const { resolvedTheme } = useTheme();
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -49,7 +47,7 @@ export default function GithubSection() {
             <div className="w-full overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [&_*::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [&_*]:[-ms-overflow-style:none] [scrollbar-width:none] [&_*]:[scrollbar-width:none]">
               <GitHubCalendar
                 username="saptarshiroy39"
-                colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
+                colorScheme="dark"
                 year={new Date().getFullYear()}
                 labels={{
                   totalCount: "{{count}} contributions in {{year}}",

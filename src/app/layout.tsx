@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import dynamic from "next/dynamic";
+import "@fontsource/google-sans-code/index.css";
+import "@fontsource/google-sans-code/500.css";
+import "@fontsource/google-sans-code/700.css";
 import "./globals.css";
 
 const ScrollProgress = dynamic(() =>
@@ -20,10 +21,6 @@ const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"));
 
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -106,29 +103,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={jetbrainsMono.variable}>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <ClickSpark
-            sparkColor="var(--spark-color)"
-            sparkSize={10}
-            sparkRadius={15}
-            sparkCount={8}
-            duration={400}
-          >
-            <TooltipProvider delayDuration={0}>
-              <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
-                {children}
-              </div>
-              <ScrollProgress />
-              <Navbar />
-            </TooltipProvider>
-          </ClickSpark>
-        </ThemeProvider>
+        <ClickSpark
+          sparkColor="var(--spark-color)"
+          sparkSize={10}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={400}
+        >
+          <TooltipProvider delayDuration={0}>
+            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+              {children}
+            </div>
+            <ScrollProgress />
+            <Navbar />
+          </TooltipProvider>
+        </ClickSpark>
         <Figlet />
         <Analytics />
         <SpeedInsights />

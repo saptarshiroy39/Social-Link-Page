@@ -261,6 +261,8 @@ export const DATA = {
         "Next.js",
         "Vercel",
         "PyPI",
+        "Ruff",
+        "Setuptools",
       ],
       links: [
         {

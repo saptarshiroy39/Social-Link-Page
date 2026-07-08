@@ -24,7 +24,6 @@ import WorkSection from "@/components/section/work-section";
 import EducationSection from "@/components/section/education-section";
 import SkillsSection from "@/components/section/skills-section";
 import GithubSection from "@/components/section/github-section";
-import OpenSourceSection from "@/components/section/open-source-section";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -141,7 +140,6 @@ export default function Page() {
               {DATA.summary}
             </p>
           </BlurFade>
-          <OpenSourceSection />
           <GithubSection />
         </div>
       </section>

@@ -5,8 +5,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { AnimatedThemeToggler } from "@/components/magicui/animated-theme-toggler";
-import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
   TooltipContent,
@@ -116,26 +114,8 @@ export default function Navbar() {
                 </DockIcon>
               );
             })}
-            <Separator orientation="vertical" className="h-full" />
           </>
         )}
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <div
-                className={cn(
-                  buttonVariants({ variant: "ghost", size: "icon" }),
-                  "size-12 rounded-full cursor-pointer",
-                )}
-              >
-                <AnimatedThemeToggler />
-              </div>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
       </Dock>
     </div>
   );
