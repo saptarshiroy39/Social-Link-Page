@@ -43,81 +43,93 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <div className="flex gap-2 flex-wrap py-2">
-                  {[
-                    {
-                      name: "Download CV",
-                      href: "/Saptarshi-Roy_CV.pdf",
-                      icon: IconFileCv,
-                      download: true,
-                    },
-                    {
-                      name: "Email",
-                      href: `mailto:${DATA.contact.email}`,
-                      icon: IconMailOpened,
-                    },
-                    {
-                      name: "LinkedIn",
-                      href: DATA.contact.social.LinkedIn.url,
-                      icon: IconBrandLinkedin,
-                    },
-                    {
-                      name: "X",
-                      href: DATA.contact.social.X.url,
-                      icon: IconBrandX,
-                    },
-                    {
-                      name: "GitHub",
-                      href: DATA.contact.social.GitHub.url,
-                      icon: IconBrandGithub,
-                    },
-                    {
-                      name: DATA.contact.social.HuggingFace.name,
-                      href: DATA.contact.social.HuggingFace.url,
-                      icon: IconMoodHappy,
-                    },
-                    {
-                      name: "PyPI",
-                      href: DATA.contact.social.PyPI.url,
-                      icon: IconBrandPython,
-                    },
-                    {
-                      name: DATA.contact.social.VisualStudioMarketplace.name,
-                      href: DATA.contact.social.VisualStudioMarketplace.url,
-                      icon: IconBrandVscode,
-                    },
-                    {
-                      name: DATA.contact.social.Codeberg.name,
-                      href: DATA.contact.social.Codeberg.url,
-                      icon: IconPyramid,
-                    },
-                  ].map((link) => (
-                    <Tooltip key={link.name}>
-                      <TooltipTrigger asChild>
-                        <Link
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          download={link.download}
-                          className={cn(
-                            buttonVariants({
-                              variant: "outline",
-                              size: "icon",
-                            }),
-                            "size-10 rounded-xl transition-all duration-300 shadow-none hover:shadow-none hover:translate-y-0",
-                            "border-border bg-background hover:bg-secondary/10",
-                            "dark:border-border/50 dark:bg-background/50 dark:backdrop-blur-sm dark:hover:bg-accent dark:hover:text-accent-foreground",
-                          )}
-                        >
-                          <link.icon className="size-5" />
-                          <span className="sr-only">{link.name}</span>
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{link.name}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  ))}
+                <div className="flex flex-col gap-3 py-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3 text-sm font-mono">
+                    <a
+                      href={`mailto:${DATA.contact.email}`}
+                      className="flex items-center gap-2 text-muted-foreground hover:text-[#26A641] transition-colors"
+                    >
+                      <IconMailOpened className="size-4 shrink-0" />
+                      <span>{DATA.contact.email}</span>
+                    </a>
+                    <span className="hidden sm:inline text-muted-foreground/30">
+                      |
+                    </span>
+                    <a
+                      href="/Saptarshi-Roy_CV.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                      className="flex items-center gap-2 text-muted-foreground hover:text-[#26A641] transition-colors w-fit"
+                    >
+                      <IconFileCv className="size-4 shrink-0" />
+                      <span>Download CV</span>
+                    </a>
+                  </div>
+                  <div className="flex gap-2 flex-wrap pt-1.5">
+                    {[
+                      {
+                        name: "LinkedIn",
+                        href: DATA.contact.social.LinkedIn.url,
+                        icon: IconBrandLinkedin,
+                      },
+                      {
+                        name: "X",
+                        href: DATA.contact.social.X.url,
+                        icon: IconBrandX,
+                      },
+                      {
+                        name: "GitHub",
+                        href: DATA.contact.social.GitHub.url,
+                        icon: IconBrandGithub,
+                      },
+                      {
+                        name: DATA.contact.social.HuggingFace.name,
+                        href: DATA.contact.social.HuggingFace.url,
+                        icon: IconMoodHappy,
+                      },
+                      {
+                        name: "PyPI",
+                        href: DATA.contact.social.PyPI.url,
+                        icon: IconBrandPython,
+                      },
+                      {
+                        name: DATA.contact.social.VisualStudioMarketplace.name,
+                        href: DATA.contact.social.VisualStudioMarketplace.url,
+                        icon: IconBrandVscode,
+                      },
+                      {
+                        name: DATA.contact.social.Codeberg.name,
+                        href: DATA.contact.social.Codeberg.url,
+                        icon: IconPyramid,
+                      },
+                    ].map((link) => (
+                      <Tooltip key={link.name}>
+                        <TooltipTrigger asChild>
+                          <Link
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={cn(
+                              buttonVariants({
+                                variant: "outline",
+                                size: "icon",
+                              }),
+                              "size-10 rounded-xl transition-all duration-300 shadow-none hover:shadow-none hover:translate-y-0",
+                              "border-border bg-background hover:bg-[#26A641]/10 hover:text-[#26A641] hover:border-[#26A641]/50",
+                              "dark:border-border/50 dark:bg-background/50 dark:backdrop-blur-sm dark:hover:bg-[#26A641]/10 dark:hover:text-[#26A641] dark:hover:border-[#26A641]/50",
+                            )}
+                          >
+                            <link.icon className="size-5" />
+                            <span className="sr-only">{link.name}</span>
+                          </Link>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{link.name}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </div>
                 </div>
               </BlurFade>
             </div>

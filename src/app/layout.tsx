@@ -21,7 +21,6 @@ const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"));
 
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
-
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
@@ -110,7 +109,7 @@ export default function RootLayout({
         )}
       >
         <ClickSpark
-          sparkColor="var(--spark-color)"
+          sparkColor="#26A641"
           sparkSize={10}
           sparkRadius={15}
           sparkCount={8}

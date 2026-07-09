@@ -207,7 +207,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-[#26A641]/50 transition-all duration-200 group",
         className,
       )}
     >
@@ -257,9 +257,11 @@ export function ProjectCard({
       <div className="px-4 py-4 flex flex-col gap-2 flex-1">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-baseline gap-1.5 min-w-0">
-            <h3 className="font-semibold text-sm shrink-0">{title}</h3>
+            <h3 className="font-semibold text-sm shrink-0 group-hover:text-[#26A641] transition-colors">
+              {title}
+            </h3>
             <span className="text-muted-foreground/50 text-xs shrink-0">·</span>
-            <time className="text-[10px] font-mono text-muted-foreground truncate">
+            <time className="text-[10px] font-mono text-[#26A641] truncate">
               {dates}
             </time>
           </div>
@@ -267,7 +269,7 @@ export function ProjectCard({
             href={href || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="text-muted-foreground hover:text-foreground group-hover:text-[#26A641] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
           >
             <IconArrowUpRight className="h-4 w-4" aria-hidden />

@@ -20,7 +20,7 @@ import { LangChain } from "@/components/ui/svgs/langchain";
 import { PydanticAI } from "@/components/ui/svgs/pydanticai";
 
 import { N8n } from "@/components/ui/svgs/n8n";
-import { AgentBuilder } from "@/components/ui/svgs/agentbuilder";
+import { OpenAI } from "@/components/ui/svgs/openai";
 
 import { Oracle } from "@/components/ui/svgs/oracle";
 import { Supabase } from "@/components/ui/svgs/supabase";
@@ -92,7 +92,7 @@ export const DATA = {
       category: "Agents & Automation",
       items: [
         { name: "n8n", icon: N8n },
-        { name: "Agent Builder", icon: AgentBuilder },
+        { name: "Agent Builder", icon: OpenAI },
       ],
     },
     {
@@ -232,7 +232,7 @@ export const DATA = {
       dates: "Jun 2026 - Jun 2026",
       description:
         "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
-      technologies: ["Python", "PyPI", "Ruff", "Setuptools", "Pytest"],
+      technologies: ["Python", "Pytest", "Ruff", "Setuptools", "PyPI"],
       links: [
         {
           type: "PyPI",
@@ -256,13 +256,13 @@ export const DATA = {
       technologies: [
         "Python",
         "FastAPI",
+        "Next.js",
         "Gemini API",
         "Hugging Face",
-        "Next.js",
-        "Vercel",
-        "PyPI",
         "Ruff",
         "Setuptools",
+        "PyPI",
+        "Vercel",
       ],
       links: [
         {
@@ -325,11 +325,11 @@ export const DATA = {
       technologies: [
         "Python",
         "FastAPI",
-        "Hugging Face",
         "TypeScript",
+        "Next.js",
         "Tailwind CSS",
         "shadcn/ui",
-        "Next.js",
+        "Hugging Face",
         "Vercel",
       ],
       links: [
@@ -359,9 +359,9 @@ export const DATA = {
         "LangChain",
         "Hugging Face",
         "TypeScript",
+        "Next.js",
         "Tailwind CSS",
         "shadcn/ui",
-        "Next.js",
         "Vercel",
       ],
       links: [
@@ -388,10 +388,10 @@ export const DATA = {
       technologies: [
         "n8n",
         "Gemini API",
+        "GCP",
+        "GitHub API",
         "YouTube API",
         "Translate API",
-        "GitHub API",
-        "GCP",
       ],
       links: [
         {
@@ -412,9 +412,9 @@ export const DATA = {
       technologies: [
         "n8n",
         "Gemini API",
+        "GCP",
         "Google Sheet API",
         "Gmail SMTP",
-        "GCP",
       ],
       links: [
         {

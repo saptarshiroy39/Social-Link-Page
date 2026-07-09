@@ -14,13 +14,13 @@ export default function NotFound() {
       <div className="w-full max-w-xl py-6">
         <MorphingText
           texts={["404", "Not Found"]}
-          className="text-primary font-sans font-bold"
+          className="text-[#26A641] font-sans font-bold"
         />
       </div>
       <Button
         size="lg"
         variant="outline"
-        className="mt-4 text-lg font-sans cursor-pointer gap-2"
+        className="mt-4 text-lg font-sans cursor-pointer gap-2 hover:bg-[#26A641]/10 hover:text-[#26A641] hover:border-[#26A641]/50 transition-colors"
         asChild
       >
         <Link href="/">

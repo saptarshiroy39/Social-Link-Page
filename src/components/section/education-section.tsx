@@ -39,10 +39,10 @@ export default function EducationSection() {
                     <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
                   )}
                   <div className="flex-1 min-w-0 flex flex-col gap-0.5">
-                    <div className="font-semibold leading-none flex items-center gap-2">
+                    <div className="font-semibold leading-none flex items-center gap-2 group-hover:text-[#26A641] transition-colors">
                       {education.school}
                       <IconArrowUpRight
-                        className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                        className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#26A641] transition-all duration-200"
                         aria-hidden
                       />
                     </div>
@@ -51,7 +51,7 @@ export default function EducationSection() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
+                <div className="flex items-center gap-1 text-xs tabular-nums text-[#26A641] text-right flex-none">
                   <span>
                     {education.start} - {education.end}
                   </span>

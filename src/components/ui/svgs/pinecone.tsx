@@ -5,7 +5,7 @@ const Pinecone = (props: SVGProps<SVGSVGElement>) => (
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 220 220"
-    fill="currentColor"
+    fill="#fff"
   >
     <path
       clipRule="evenodd"

@@ -99,7 +99,7 @@ export default function Navbar() {
                         className={cn(
                           buttonVariants({ variant: "ghost", size: "icon" }),
                           "size-12 rounded-full transition-colors duration-200",
-                          isActive && "bg-primary/10 text-primary",
+                          isActive && "bg-[#26A641]/10 text-[#26A641]",
                         )}
                       >
                         <item.icon
