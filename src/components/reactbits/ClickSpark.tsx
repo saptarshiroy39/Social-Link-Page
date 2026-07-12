@@ -37,6 +37,7 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
   const startTimeRef = useRef<number | null>(null);
   const isRunningRef = useRef(false);
   const drawRef = useRef<(timestamp: number) => void>(() => {});
+  const resolvedColorRef = useRef("#000");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -106,7 +107,7 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
         return;
       }
 
-      const resolvedColor = getComputedStyle(canvas).color || "#000";
+      const resolvedColor = resolvedColorRef.current;
 
       sparksRef.current = sparksRef.current.filter((spark: Spark) => {
         const elapsed = timestamp - spark.startTime;
@@ -161,6 +162,10 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
   const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    resolvedColorRef.current =
+      getComputedStyle(canvas).color || sparkColor || "#000";
+
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;

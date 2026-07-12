@@ -18,7 +18,7 @@ export default function Figlet() {
 
     console.log(
       `%c\n${figletText}\n`,
-      "color: #5BAFE3; font-family: monospace; white-space: pre; line-height: normal;",
+      "color: #26a641; font-family: monospace; white-space: pre; line-height: normal;",
     );
   }, []);
 

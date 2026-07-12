@@ -8,9 +8,9 @@ export default function ProjectsSection() {
   return (
     <section id="projects">
       <div className="flex min-h-0 flex-col gap-y-8">
-        <div className="flex flex-col gap-y-4 items-center justify-center">
-          <SectionHeader label="My Projects" />
-        </div>
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <SectionHeader label="Projects" />
+        </BlurFade>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto auto-rows-fr">
           {DATA.projects.map((project, id) => (
             <BlurFade

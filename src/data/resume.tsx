@@ -1,10 +1,5 @@
 import { Icons } from "@/components/icons";
-import {
-  IconHome,
-  IconInfoCircle,
-  IconSettings,
-  IconBulb,
-} from "@tabler/icons-react";
+
 import { CIcon } from "@/components/ui/svgs/c";
 import { CPlusPlus } from "@/components/ui/svgs/cplusplus";
 import { Python } from "@/components/ui/svgs/python";
@@ -140,57 +135,17 @@ export const DATA = {
     },
   ],
 
-  navbar: [
-    { href: "#hero", icon: IconHome, label: "Home" },
-    { href: "#work", icon: IconInfoCircle, label: "About" },
-    { href: "#skills", icon: IconSettings, label: "Skills" },
-    { href: "#projects", icon: IconBulb, label: "Projects" },
-  ],
   contact: {
     email: "saptarshiroy39@gmail.com",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/saptarshiroy39",
-        icon: Icons.github,
-        navbar: true,
-      },
-
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/saptarshiroy39",
-        icon: Icons.linkedin,
-        navbar: true,
-      },
-
-      PyPI: {
-        name: "PyPI",
-        url: "https://pypi.org/user/saptarshiroy39",
-        icon: Icons.python,
-        navbar: true,
-      },
-
-      X: {
-        name: "X",
-        url: "https://x.com/saptarshiroy39",
-        icon: Icons.x,
-        navbar: true,
-      },
-
-      HuggingFace: {
-        name: "Hugging Face",
-        url: "https://huggingface.co/saptarshiroy39",
-      },
-
-      VisualStudioMarketplace: {
-        name: "Visual Studio Marketplace",
-        url: "https://marketplace.visualstudio.com/publishers/saptarshiroy39",
-      },
-
-      Codeberg: {
-        name: "Codeberg",
-        url: "https://codeberg.org/saptarshiroy39",
-      },
+      GitHub: "https://github.com/saptarshiroy39",
+      LinkedIn: "https://www.linkedin.com/in/saptarshiroy39",
+      X: "https://x.com/saptarshiroy39",
+      HuggingFace: "https://huggingface.co/saptarshiroy39",
+      PyPI: "https://pypi.org/user/saptarshiroy39",
+      VisualStudioMarketplace:
+        "https://marketplace.visualstudio.com/publishers/saptarshiroy39",
+      Codeberg: "https://codeberg.org/saptarshiroy39",
     },
   },
 

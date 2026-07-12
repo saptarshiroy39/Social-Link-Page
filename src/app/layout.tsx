@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
-import Navbar from "@/components/navbar";
+import VerticalNav from "@/components/vertical-nav";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import dynamic from "next/dynamic";
 import "@fontsource/google-sans-code/index.css";
@@ -116,11 +116,11 @@ export default function RootLayout({
           duration={400}
         >
           <TooltipProvider delayDuration={0}>
-            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+            <div className="relative z-10 max-w-2xl mx-auto pt-12 pb-4 sm:pt-24 sm:pb-4 px-6">
               {children}
             </div>
             <ScrollProgress />
-            <Navbar />
+            <VerticalNav />
           </TooltipProvider>
         </ClickSpark>
         <Figlet />

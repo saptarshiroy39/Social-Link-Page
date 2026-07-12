@@ -8,10 +8,10 @@ import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export default function WorkSection() {
   return (
-    <section id="work">
+    <section id="Experience">
       <div className="flex min-h-0 flex-col gap-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <SectionHeader label="Work Experience" />
+          <SectionHeader label="Experience" />
         </BlurFade>
         <div className="flex flex-col gap-8">
           {DATA.work.map((work, index) => (

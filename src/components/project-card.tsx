@@ -133,14 +133,16 @@ function TechBadge({ tag }: { tag: string }) {
     };
     return (
       <div
-        className="group relative flex items-center justify-center w-6 h-6 rounded-md border border-border hover:border-muted-foreground/50 transition-colors cursor-default"
+        className="group/badge relative flex items-center justify-center w-6 h-6 rounded-md border border-border hover:border-muted-foreground/50 transition-colors cursor-default"
         onClick={handleClick}
       >
         {tech.icon}
         <span
           className={cn(
             "pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-foreground px-1.5 py-0.5 text-[10px] font-mono text-background transition-opacity duration-150",
-            showTooltip ? "opacity-100" : "opacity-0 group-hover:opacity-100",
+            showTooltip
+              ? "opacity-100"
+              : "opacity-0 group-hover/badge:opacity-100",
           )}
         >
           {tech.label}
@@ -243,7 +245,7 @@ export function ProjectCard({
                 rel="noopener noreferrer"
               >
                 <Badge
-                  className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
+                  className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black hover:text-[#26A641] transition-colors duration-200"
                   variant="default"
                 >
                   {link.icon}
