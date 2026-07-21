@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
@@ -21,6 +21,12 @@ const ClickSpark = dynamic(() => import("@/components/reactbits/ClickSpark"));
 
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
+export const viewport: Viewport = {
+  themeColor: "#0f0f0f",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
@@ -28,18 +34,35 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  applicationName: DATA.name,
   keywords: [
     "Saptarshi Roy",
     "Saptarshi",
     "Roy",
     "saptarshiroy39",
     "hirishi",
+    "hirishi.in",
+    "https://hirishi.in",
     "Software Engineer",
     "Full-Stack Developer",
     "Backend Developer",
     "Frontend Developer",
     "Portfolio",
     "Projects",
+    "Arkiv",
+    "arkiv.hirishi.in",
+    "Cipher",
+    "cipher.hirishi.in",
+    "Ranno",
+    "ranno.hirishi.in",
+    "luna-ai",
+    "Portyard",
+    "Sizelib",
+    "XPMC",
+    "Hourly",
+    "Agentic AI",
+    "AI Agents",
+    "Autonomous Workflows",
     "Python",
     "FastAPI",
     "Next.js",
@@ -88,8 +111,11 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
     card: "summary_large_image",
+    title: `${DATA.name}`,
+    description: DATA.description,
+    site: "@saptarshiroy39",
+    creator: "@saptarshiroy39",
   },
   alternates: {
     canonical: DATA.url,
