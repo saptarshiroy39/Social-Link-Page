@@ -1,0 +1,28 @@
+export function haptic(pattern: number | number[] = 50) {
+  try {
+    if (typeof window === "undefined") return;
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+    if (!isTouchDevice) return;
+
+    if ("vibrate" in navigator) {
+      navigator.vibrate(pattern);
+      return;
+    }
+
+    const label = document.createElement("label");
+    label.ariaHidden = "true";
+    label.style.display = "none";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.setAttribute("switch", "");
+    label.appendChild(input);
+
+    try {
+      document.head.appendChild(label);
+      label.click();
+    } finally {
+      document.head.removeChild(label);
+    }
+  } catch {}
+}

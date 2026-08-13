@@ -3,6 +3,17 @@ const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
   reactCompiler: true,
+  experimental: {
+    optimizePackageImports: [
+      "@tabler/icons-react",
+      "motion",
+      "date-fns",
+      "clsx",
+    ],
+  },
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   allowedDevOrigins: [
     "localhost:3000", // Local development host
     "*.lhr.life", // localhost.run secure tunnels

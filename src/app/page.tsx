@@ -1,20 +1,24 @@
-import HeroSection from "@/components/section/hero-section";
-import ActivitySection from "@/components/section/activity-section";
-import WorkSection from "@/components/section/work-section";
-import EducationSection from "@/components/section/education-section";
-import SkillsSection from "@/components/section/skills-section";
-import ProjectsSection from "@/components/section/projects-section";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
+import About from "@/components/section/About";
+import Activity from "@/components/section/Activity";
+import Contact from "@/components/section/Contact";
+import Education from "@/components/section/Education";
+import Experience from "@/components/section/Experience";
+import Home from "@/components/section/Home";
+import Projects from "@/components/section/Projects";
+import Stack from "@/components/section/Stack";
 
 export default function Page() {
   return (
-    <main className="min-h-dvh flex flex-col gap-14 relative">
-      <HeroSection />
-      <ActivitySection />
-      <WorkSection />
-      <EducationSection />
-      <SkillsSection />
-      <ProjectsSection />
+    <main className="min-h-dvh flex flex-col gap-14 relative animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <Home />
+      <About />
+      <Activity />
+      <Experience />
+      <Education />
+      <Stack />
+      <Projects />
+      <Contact />
       <Footer />
     </main>
   );

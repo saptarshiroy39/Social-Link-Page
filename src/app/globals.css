@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark, .dark *));
 
@@ -8,63 +9,93 @@ html {
 }
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-border: var(--border);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-destructive: var(--destructive);
+  --color-foreground: var(--foreground);
+  --color-input: var(--input);
+  --color-level-0: var(--gh-lv-0);
+  --color-level-1: var(--gh-lv-1);
+  --color-level-2: var(--gh-lv-2);
+  --color-level-3: var(--gh-lv-3);
+  --color-level-4: var(--gh-lv-4);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-ring: var(--ring);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-spark: var(--spark-color);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+  --font-sans: var(--font-mono);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-blink-cursor: blink-cursor 1s step-start infinite;
+
+  @keyframes blink-cursor {
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
-:root {
-  --font-sans: "Google Sans Code", monospace;
-  --font-mono: var(--font-sans);
-  --radius: 0.625rem;
-  --background: oklch(0.18 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: #26a641;
-  --primary-foreground: #ffffff;
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
+.dark {
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.145 0 0);
+  --border: oklch(1 0 0 / 20%);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --foreground: oklch(0.985 0 0);
   --input: oklch(1 0 0 / 15%);
+  --gh-lv-0: oklch(21.982% 0.01818 255.744);
+  --gh-lv-1: oklch(30.542% 0.08255 149.362);
+  --gh-lv-2: oklch(46.81% 0.12312 147.616);
+  --gh-lv-3: oklch(62.222% 0.16612 146.241);
+  --gh-lv-4: oklch(77.17% 0.18801 145.502);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(98.511% 0.00011 271.152);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --radius: 0.625rem;
   --ring: oklch(0.556 0 0);
-  --spark-color: #26a641;
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --selection: oklch(0.35 0 0);
+}
+
+@utility link-underline {
+  @apply hover:underline decoration-1 underline-offset-3 transition-colors;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    user-select: text;
   }
 
-  section[id],
-  [id="contact"] {
+  section[id] {
     scroll-margin-top: 6rem;
   }
 
@@ -78,29 +109,18 @@ html {
 
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-
-  /* Shiki dual theme support */
-  .shiki,
-  .shiki span {
-    color: var(--shiki-light);
-    background-color: transparent;
-  }
-
-  .dark .shiki,
-  .dark .shiki span {
-    color: var(--shiki-dark);
-    background-color: transparent;
-  }
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
+::selection {
+  background-color: var(--selection);
+  color: var(--popover-foreground);
 }

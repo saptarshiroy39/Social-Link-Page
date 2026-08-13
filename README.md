@@ -6,16 +6,16 @@
 
 ## ⚙️ _Tech Stack_
 
-- **_Languages:_** `C` • `C++` • `Python` • `Bash` • `JSON` • `TOML`
-- **_Backend & Frameworks:_** `FastAPI` • `uv`
+- **_Languages:_** `Python` • `C++` • `C` • `Bash` • `JSON` • `TOML`
+- **_Backend & Frameworks:_** `FastAPI` • `Pydantic` • `uv`
+- **_Frontend & UI:_** `Next.js` • `TypeScript` • `Tailwind CSS` • `shadcn/ui`
 - **_Gen AI:_** `AI Studio` • `LangChain` • `Hugging Face` • `Pydantic AI`
 - **_Agents & Automation:_** `n8n` • `Agent Builder`
-- **_Databases:_** `Oracle SQL` • `Supabase` • `Pinecone`
+- **_Databases:_** `Supabase` • `Pinecone` • `Oracle SQL`
 - **_Cloud:_** `GCP`
-- **_DevOps:_** `Git` • `GitHub` • `Docker`
+- **_DevOps & Monitoring:_** `Git` • `GitHub` • `Docker` • `UptimeRobot`
 - **_Deployment:_** `Vercel` • `Railway` • `Render`
 - **_IoT:_** `ESP32` • `L89HA`
-- **_Miscellaneous:_** `UptimeRobot` • `shadcn/ui` • `Ruff`
 
 ## 🌐 _Website:_ [`hirishi.in`](https://hirishi.in)
 
