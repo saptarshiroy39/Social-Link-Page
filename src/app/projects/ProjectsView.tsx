@@ -15,10 +15,10 @@ export default function ProjectsView() {
         <Link
           href="/"
           onClick={() => haptic()}
-          className="text-xs font-mono text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 uppercase tracking-wider font-semibold"
+          className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer select-none w-fit"
         >
-          <IconArrowLeft className="size-3.5" />
-          Home
+          <IconArrowLeft className="size-3.5 select-none" />
+          <span>HOME</span>
         </Link>
       </div>
 

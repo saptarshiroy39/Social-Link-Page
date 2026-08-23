@@ -18,10 +18,10 @@ export default function Footer() {
         <FluidGradientText text={firstName} />
       </div>
 
-      <p className="font-mono text-muted-foreground text-center text-xs">
-        &copy; {currentYear}{" "}
+      <p className="font-mono text-muted-foreground text-center text-sm">
+        © {currentYear}{" "}
         <button
-          className="cursor-pointer bg-transparent border-0 p-0 font-mono text-muted-foreground hover:text-foreground transition-colors text-xs"
+          className="cursor-pointer bg-transparent border-0 p-0 font-mono text-muted-foreground hover:text-foreground transition-colors text-sm"
           onClick={() => {
             haptic();
             window.scrollTo({ top: 0, behavior: "smooth" });

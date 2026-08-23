@@ -36,7 +36,7 @@ export default function Header() {
                     haptic();
                   }}
                   className={cn(
-                    "text-xs font-mono tracking-wider transition-colors uppercase font-medium",
+                    "text-xs font-mono tracking-wider transition-colors font-medium",
                     isActive
                       ? "text-foreground font-semibold"
                       : "text-muted-foreground hover:text-foreground",

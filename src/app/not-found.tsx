@@ -1,6 +1,17 @@
 import Link from "next/link";
 import { InteractiveHoverButton } from "@/components/ui/int-hover-btn";
 import Particles from "@/components/Particles";
+import { Typewriter } from "@/components/ui/typewriter";
+
+const notFoundTexts = [
+  "Scanning Sector 404...",
+  "Detecting Deep Space Signals...",
+  "Searching for Organic Lifeforms...",
+  "Contacting Alien Civilizations...",
+  "Entering the Cosmic Void...",
+  "Recalculating Warp Coordinates...",
+  "Signal Lost in a Black Hole...",
+];
 
 export default function NotFound() {
   return (
@@ -25,8 +36,8 @@ export default function NotFound() {
         <h1 className="text-3xl sm:text-4xl font-normal font-heading leading-none tracking-tight text-foreground">
           Lost in Space
         </h1>
-        <p className="text-sm leading-relaxed text-muted-foreground font-mono max-w-md mx-auto">
-          404: This page could not be found.
+        <p className="text-xs sm:text-sm font-semibold font-mono text-muted-foreground max-w-md mx-auto min-h-[1.5rem]">
+          <Typewriter words={notFoundTexts} />
         </p>
       </div>
 

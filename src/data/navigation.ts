@@ -1,5 +1,5 @@
 export default [
-  { label: "Projects", href: "/projects" },
-  { label: "Sponsor", href: "https://github.com/sponsors/saptarshiroy39" },
-  { label: "Contact", href: "/contact" },
+  { label: "PROJECTS", href: "/projects" },
+  { label: "SPONSOR", href: "https://github.com/sponsors/saptarshiroy39" },
+  { label: "CONTACT", href: "/contact" },
 ] as const;

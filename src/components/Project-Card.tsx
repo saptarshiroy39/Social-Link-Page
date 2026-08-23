@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  IconArrowsSplit2,
   IconArrowUpRight,
   IconBook,
   IconBrandGithub,
@@ -25,6 +26,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   vscode: IconBrandVscode,
   diamonds: IconDiamonds,
   world: IconWorld,
+  workflow: IconArrowsSplit2,
 };
 
 interface Props {

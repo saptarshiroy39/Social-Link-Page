@@ -5,7 +5,18 @@ export default [
     dates: "Jun 2026 - Jun 2026",
     description:
       "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
-    tags: ["Python", "Pytest", "Ruff", "Setuptools", "PyPI"],
+    tags: [
+      "Python",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Vercel",
+      "Pytest",
+      "Ruff",
+      "Setuptools",
+      "PyPI",
+    ],
     links: [
       {
         type: "Docs",
@@ -33,10 +44,14 @@ export default [
       "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
     tags: [
       "Python",
-      "FastAPI",
-      "Next.js",
       "Gemini API",
+      "FastAPI",
       "Hugging Face",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Vercel",
       "Ruff",
       "Setuptools",
       "PyPI",
@@ -97,11 +112,11 @@ export default [
     tags: [
       "Python",
       "FastAPI",
+      "Hugging Face",
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
-      "Hugging Face",
       "Vercel",
     ],
     links: [
@@ -154,7 +169,7 @@ export default [
 
   {
     title: "Luna AI",
-    href: "https://github.com/saptarshiroy39/luna-ai",
+    href: "https://community.n8n.io/t/luna-ai-n8n/305503",
     dates: "Oct 2025 - Dec 2025",
     description:
       "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
@@ -169,6 +184,11 @@ export default [
     ],
     links: [
       {
+        type: "Workflow",
+        href: "https://community.n8n.io/t/luna-ai-n8n/305503",
+        iconName: "workflow",
+      },
+      {
         type: "GitHub",
         href: "https://github.com/saptarshiroy39/luna-ai",
         iconName: "github",
@@ -179,12 +199,25 @@ export default [
 
   {
     title: "Hourly",
-    href: "https://github.com/saptarshiroy39/hourly",
+    href: "https://community.n8n.io/t/hourly-n8n/305271",
     dates: "Jul 2025 - Jul 2025",
     description:
       "An AI-powered email digest delivering personalized hourly updates on weather, news & entertainment.",
-    tags: ["n8n", "Gemini API", "GCP", "Google Sheet API", "Gmail SMTP"],
+    tags: [
+      "n8n",
+      "GCP",
+      "OpenWeatherMap API",
+      "icanhazdadjoke API",
+      "Hacker News API",
+      "Google Sheet API",
+      "Gmail API",
+    ],
     links: [
+      {
+        type: "Workflow",
+        href: "https://community.n8n.io/t/hourly-n8n/305271",
+        iconName: "workflow",
+      },
       {
         type: "GitHub",
         href: "https://github.com/saptarshiroy39/hourly",

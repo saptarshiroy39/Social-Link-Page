@@ -56,10 +56,10 @@ export default function ContactForm() {
         <Link
           href="/"
           onClick={() => haptic()}
-          className="text-xs font-mono text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 uppercase tracking-wider font-semibold"
+          className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer select-none w-fit"
         >
-          <IconArrowLeft className="size-3.5" />
-          Home
+          <IconArrowLeft className="size-3.5 select-none" />
+          <span>HOME</span>
         </Link>
       </div>
 
@@ -71,9 +71,9 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="name"
-              className="block text-xs font-bold font-mono text-muted-foreground uppercase tracking-widest"
+              className="block text-xs font-bold font-mono text-muted-foreground tracking-widest"
             >
-              Name
+              NAME
             </label>
             <input
               id="name"
@@ -88,9 +88,9 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="block text-xs font-bold font-mono text-muted-foreground uppercase tracking-widest"
+              className="block text-xs font-bold font-mono text-muted-foreground tracking-widest"
             >
-              Email
+              EMAIL
             </label>
             <input
               id="email"
@@ -105,9 +105,9 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="message"
-              className="block text-xs font-bold font-mono text-muted-foreground uppercase tracking-widest"
+              className="block text-xs font-bold font-mono text-muted-foreground tracking-widest"
             >
-              Message
+              MESSAGE
             </label>
             <textarea
               id="message"

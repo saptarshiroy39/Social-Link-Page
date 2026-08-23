@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { IconChevronDown } from "@tabler/icons-react";
+import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { ProjectCard } from "@/components/Project-Card";
 import { SectionHeader } from "@/components/ui/sec-header";
 import { DATA } from "@/data/resume";
 import { haptic } from "@/lib/haptic";
-import { cn } from "@/lib/utils";
 
 export default function Projects() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -31,15 +30,14 @@ export default function Projects() {
         <div className="flex justify-center pt-2">
           <button
             onClick={toggleExpand}
-            className="flex items-center gap-1.5 text-xs font-mono border border-border/80 bg-muted/30 px-2.5 py-1 text-muted-foreground rounded-md hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer select-none w-fit"
+            className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer select-none w-fit"
           >
-            <IconChevronDown
-              className={cn(
-                "size-3.5 transition-transform duration-200 select-none",
-                isExpanded && "rotate-180",
-              )}
-            />
-            <span>{isExpanded ? "Show Less" : "Show More"}</span>
+            {isExpanded ? (
+              <IconEyeOff className="size-3.5 select-none" />
+            ) : (
+              <IconEye className="size-3.5 select-none" />
+            )}
+            <span>{isExpanded ? "SHOW LESS" : "SHOW MORE"}</span>
           </button>
         </div>
       )}

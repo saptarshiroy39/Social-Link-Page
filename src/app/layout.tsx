@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hirishi.in"),
   title: {
     default: "Saptarshi Roy",
-    template: "%s | Saptarshi Roy",
+    template: "%s | SR",
   },
   description:
-    "Gen AI & Agentic Developer building Python tools, AI agents, and automation workflows.",
+    "Gen AI & Agentic AI Developer crafting intelligent AI agents and automated workflows.",
   applicationName: "Saptarshi Roy",
   keywords: [
     "Saptarshi Roy",
@@ -100,14 +100,14 @@ export const metadata: Metadata = {
     url: "https://hirishi.in",
     title: "Saptarshi Roy",
     description:
-      "Gen AI & Agentic Developer building Python tools, AI agents, and automation workflows.",
+      "Gen AI & Agentic AI Developer crafting intelligent AI agents and automated workflows.",
     siteName: "Saptarshi Roy",
     images: [
       {
         url: "https://hirishi.in/OG.png",
         width: 1200,
         height: 630,
-        alt: "Saptarshi Roy - Gen AI & Agentic Developer",
+        alt: "Saptarshi Roy - Gen AI & Agentic AI Developer",
       },
     ],
   },
@@ -126,10 +126,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Saptarshi Roy",
     description:
-      "Gen AI & Agentic Developer building Python tools, AI agents, and automation workflows.",
+      "Gen AI & Agentic AI Developer crafting intelligent AI agents and automated workflows.",
     images: ["https://hirishi.in/OG.png"],
     site: "@saptarshiroy39",
     creator: "@saptarshiroy39",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   alternates: {
     canonical: "https://hirishi.in",
