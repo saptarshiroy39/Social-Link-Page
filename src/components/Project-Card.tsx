@@ -96,9 +96,7 @@ export function ProjectCard({
               onError={() => setImageError(true)}
               draggable={false}
             />
-          ) : (
-            <div className="w-full h-full bg-muted" />
-          )}
+          ) : null}
           {/* Number Badge Overlay */}
           {index !== undefined && (
             <div className="absolute top-2 left-2 z-10 flex items-center justify-center h-6 min-w-6 px-1.5 text-xs font-mono font-medium leading-none tabular-nums bg-background/90 border border-border/80 text-foreground rounded-md select-none">

@@ -1,6 +1,6 @@
-import { CIcon } from "@/components/stack/c";
-import { CPlusPlus } from "@/components/stack/cplusplus";
 import { Python } from "@/components/stack/python";
+import { CPlusPlus } from "@/components/stack/cplusplus";
+import { CIcon } from "@/components/stack/c";
 import { Bash } from "@/components/stack/bash";
 import { JSONIcon } from "@/components/stack/json";
 import { TOMLIcon } from "@/components/stack/toml";
@@ -22,9 +22,10 @@ import { PydanticAI } from "@/components/stack/pydanticai";
 import { N8n } from "@/components/stack/n8n";
 import { OpenAI } from "@/components/stack/openai";
 
-import { Oracle } from "@/components/stack/oracle";
 import { Supabase } from "@/components/stack/supabase";
 import { Pinecone } from "@/components/stack/pinecone";
+import { Qdrant } from "@/components/stack/qdrant";
+import { Oracle } from "@/components/stack/oracle";
 
 import { GoogleCloud } from "@/components/stack/googlecloud";
 
@@ -90,6 +91,7 @@ export default [
     items: [
       { name: "Supabase", icon: Supabase },
       { name: "Pinecone", icon: Pinecone },
+      { name: "Qdrant", icon: Qdrant },
       { name: "Oracle SQL", icon: Oracle },
     ],
   },

@@ -11,10 +11,10 @@ export default function Contact() {
       <SectionHeader>Scrolled Too Far</SectionHeader>
       <div className="flex flex-col items-center justify-center gap-4 py-8 text-center">
         <p className="text-muted-foreground text-sm sm:text-base">
-          If you&apos;ve read this far, you might be interested.
+          If you've read this far, you might be interested.
         </p>
         <Link href="/contact" onClick={() => haptic()} className="mt-2">
-          <InteractiveHoverButton>Let&apos;s Talk</InteractiveHoverButton>
+          <InteractiveHoverButton>Let's Talk</InteractiveHoverButton>
         </Link>
       </div>
     </section>

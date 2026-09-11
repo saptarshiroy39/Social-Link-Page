@@ -79,6 +79,7 @@ export const metadata: Metadata = {
     "Pandas",
     "Supabase",
     "Pinecone",
+    "Qdrant",
     "Git",
     "GitHub",
     "Docker",

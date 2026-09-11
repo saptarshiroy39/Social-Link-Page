@@ -37,6 +37,64 @@ export default [
     image: "/projects/sizelib.webp",
   },
   {
+    title: "Portyard",
+    href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+    dates: "May 2026 - Jun 2026",
+    description:
+      "A VS Code extension to discover active local ports, manage running processes & forward them directly from the Activity Bar.",
+    tags: ["TypeScript", "Visual Studio Marketplace", "Open VSX Registry"],
+    links: [
+      {
+        type: "Marketplace",
+        href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+        iconName: "vscode",
+      },
+      {
+        type: "Open VSX",
+        href: "https://open-vsx.org/extension/saptarshiroy39/portyard",
+        iconName: "diamonds",
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/saptarshiroy39/portyard",
+        iconName: "github",
+      },
+    ],
+    image: "/projects/portyard.webp",
+  },
+  {
+    title: "Arkiv",
+    href: "https://arkiv.hirishi.in",
+    dates: "May 2026 - Jun 2026",
+    description:
+      "A multi-file-format RAG application for context-aware conversations & accurate information retrieval from uploaded files.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "Hugging Face",
+      "Qdrant",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://arkiv.hirishi.in",
+        iconName: "world",
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/saptarshiroy39/arkiv",
+        iconName: "github",
+      },
+    ],
+    image: "/projects/arkiv.webp",
+  },
+  {
     title: "Ranno",
     href: "https://ranno.hirishi.in",
     dates: "Apr 2026 - May 2026",
@@ -75,34 +133,6 @@ export default [
     ],
     image: "/projects/ranno.webp",
   },
-
-  {
-    title: "Portyard",
-    href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
-    dates: "May 2026 - Jun 2026",
-    description:
-      "A VS Code extension to discover active local ports, manage running processes & forward them directly from the Activity Bar.",
-    tags: ["TypeScript", "Visual Studio Marketplace", "Open VSX Registry"],
-    links: [
-      {
-        type: "Marketplace",
-        href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
-        iconName: "vscode",
-      },
-      {
-        type: "Open VSX",
-        href: "https://open-vsx.org/extension/saptarshiroy39/portyard",
-        iconName: "diamonds",
-      },
-      {
-        type: "GitHub",
-        href: "https://github.com/saptarshiroy39/portyard",
-        iconName: "github",
-      },
-    ],
-    image: "/projects/portyard.webp",
-  },
-
   {
     title: "Cipher",
     href: "https://cipher.hirishi.in",
@@ -133,40 +163,6 @@ export default [
     ],
     image: "/projects/cipher.webp",
   },
-
-  {
-    title: "Arkiv",
-    href: "https://arkiv.hirishi.in",
-    dates: "Dec 2025 - May 2026",
-    description:
-      "A multi-file-format RAG application for context-aware conversations & accurate information retrieval from uploaded files.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "LangChain",
-      "Hugging Face",
-      "Pinecone",
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Vercel",
-    ],
-    links: [
-      {
-        type: "Website",
-        href: "https://arkiv.hirishi.in",
-        iconName: "world",
-      },
-      {
-        type: "GitHub",
-        href: "https://github.com/saptarshiroy39/arkiv",
-        iconName: "github",
-      },
-    ],
-    image: "/projects/arkiv.webp",
-  },
-
   {
     title: "Luna AI",
     href: "https://community.n8n.io/t/luna-ai-n8n/305503",
@@ -196,7 +192,6 @@ export default [
     ],
     image: "/projects/luna-ai.webp",
   },
-
   {
     title: "Hourly",
     href: "https://community.n8n.io/t/hourly-n8n/305271",

@@ -20,34 +20,32 @@ export default function Header() {
           {DATA.initials}
         </Link>
 
-        <div className="flex items-center gap-4">
-          <nav className="flex items-center gap-4">
-            {DATA.navigation.map((item) => {
-              const isExternal = item.href.startsWith("http");
-              const isActive = !isExternal && pathname.startsWith(item.href);
+        <nav className="flex items-center gap-4">
+          {DATA.navigation.map((item) => {
+            const isExternal = item.href.startsWith("http");
+            const isActive = !isExternal && pathname.startsWith(item.href);
 
-              return (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  onClick={() => {
-                    haptic();
-                  }}
-                  className={cn(
-                    "text-xs font-mono tracking-wider transition-colors font-medium",
-                    isActive
-                      ? "text-foreground font-semibold"
-                      : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                onClick={() => {
+                  haptic();
+                }}
+                className={cn(
+                  "text-xs font-mono tracking-wider transition-colors font-medium",
+                  isActive
+                    ? "text-foreground font-semibold"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
     </header>
   );
