@@ -7,12 +7,12 @@ export type FluidGradientTextProps = {
   text: string;
   /**
    * SVG viewBox width used to scale the gradient and text layout.
-   * @default 1200
+   * @default 768
    * */
   svgViewBoxWidth?: number;
   /**
    * SVG viewBox height used as the base text size.
-   * @default 300
+   * @default 128
    * */
   svgViewBoxHeight?: number;
 };
@@ -23,6 +23,7 @@ export function FluidGradientText({
   svgViewBoxHeight = 128,
 }: FluidGradientTextProps) {
   const gradientX1Raw = useMotionValue(0.5);
+
   const gradientX1 = useSpring(
     useTransform(gradientX1Raw, [0, 1], [0, svgViewBoxWidth]),
     {
@@ -42,11 +43,27 @@ export function FluidGradientText({
     gradientX1Raw.set(0.5);
   };
 
+  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    const touch = event.touches[0];
+    if (!touch) return;
+    const containerRect = event.currentTarget.getBoundingClientRect();
+    gradientX1Raw.set(
+      (touch.clientX - containerRect.left) / containerRect.width,
+    );
+  };
+
+  const handleTouchEnd = () => {
+    gradientX1Raw.set(0.5);
+  };
+
   return (
     <div
       className="relative size-full overflow-hidden after:absolute after:bottom-0 after:h-px after:w-full after:bg-current/15 cursor-default select-none [-webkit-touch-callout:none]"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchMove}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <svg
         className="size-full translate-y-[25%] pointer-events-none"

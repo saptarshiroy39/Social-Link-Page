@@ -64,7 +64,7 @@ export default function ContactForm() {
       </div>
 
       <section className="flex min-h-0 flex-col gap-y-4">
-        <SectionHeader>Let's Connect</SectionHeader>
+        <SectionHeader>{"Let's Connect"}</SectionHeader>
 
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-6">

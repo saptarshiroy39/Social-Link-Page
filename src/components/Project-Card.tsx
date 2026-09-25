@@ -46,6 +46,8 @@ interface Props {
   className?: string;
 }
 
+const INITIAL_VISIBLE_TAGS = 3;
+
 export function ProjectCard({
   index,
   title,
@@ -156,36 +158,38 @@ export function ProjectCard({
 
         {/* Collapsible Stack */}
         {tags && tags.length > 0 && (
-          <div className="flex flex-col gap-2 mt-2">
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                haptic();
-                setShowTags(!showTags);
-              }}
-              className="flex items-center gap-1 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors cursor-pointer select-none w-fit"
-            >
-              <IconChevronDown
-                className={cn(
-                  "size-3.5 transition-transform duration-200 select-none",
-                  showTags && "rotate-180",
-                )}
-              />
-              <span>{showTags ? "Hide Stack" : "Show Stack"}</span>
-            </button>
-            {showTags && (
-              <div className="flex flex-wrap gap-1.5 animate-in fade-in slide-in-from-top-1 duration-200">
-                {tags.map((tag) => (
-                  <Badge
-                    key={tag}
-                    className="text-xs font-mono font-normal border border-border/80 bg-muted/30 px-2 py-0.5 text-muted-foreground/90 rounded-md hover:text-foreground transition-colors"
-                    variant="outline"
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
+          <div className="flex flex-wrap items-center gap-1.5 mt-2">
+            {(showTags ? tags : tags.slice(0, INITIAL_VISIBLE_TAGS)).map((tag) => (
+              <Badge
+                key={tag}
+                className="text-xs font-mono font-normal border border-border/80 bg-muted/30 px-2 py-0.5 text-muted-foreground/90 rounded-md hover:text-foreground transition-colors"
+                variant="outline"
+              >
+                {tag}
+              </Badge>
+            ))}
+            {tags.length > INITIAL_VISIBLE_TAGS && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  haptic();
+                  setShowTags(!showTags);
+                }}
+                className="flex items-center gap-1 text-xs font-mono text-muted-foreground hover:text-foreground border border-border/80 bg-muted/30 px-2 py-0.5 rounded-md transition-colors cursor-pointer select-none"
+              >
+                <IconChevronDown
+                  className={cn(
+                    "size-3 transition-transform duration-200 select-none",
+                    showTags && "rotate-180",
+                  )}
+                />
+                <span>
+                  {showTags
+                    ? "less"
+                    : `+${tags.length - INITIAL_VISIBLE_TAGS} more`}
+                </span>
+              </button>
             )}
           </div>
         )}
