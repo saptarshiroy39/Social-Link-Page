@@ -1,24 +1,25 @@
 import type { MetadataRoute } from "next";
-import { DATA } from "@/data/resume";
+
+const lastModified = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: DATA.url,
-      lastModified: new Date(),
+      url: "https://hirishi.in",
+      lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: `${DATA.url}/projects`,
-      lastModified: new Date(),
+      url: "https://hirishi.in/projects",
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${DATA.url}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      url: "https://hirishi.in/contact",
+      lastModified,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
   ];
