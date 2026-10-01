@@ -22,9 +22,11 @@ export default function Projects() {
     <section id="projects" className="flex min-h-0 flex-col gap-y-4">
       <SectionHeader>Projects ({DATA.projects.length})</SectionHeader>
       <div className="flex flex-col gap-6 w-full">
-        {DATA.projects.slice(0, INITIAL_VISIBLE_PROJECTS).map((project, idx) => (
-          <ProjectCard key={project.title} index={idx + 1} {...project} />
-        ))}
+        {DATA.projects
+          .slice(0, INITIAL_VISIBLE_PROJECTS)
+          .map((project, idx) => (
+            <ProjectCard key={project.title} index={idx + 1} {...project} />
+          ))}
         <AnimatePresence initial={false}>
           {isExpanded && (
             <motion.div
@@ -35,13 +37,15 @@ export default function Projects() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
               className="flex flex-col gap-6 w-full overflow-hidden"
             >
-              {DATA.projects.slice(INITIAL_VISIBLE_PROJECTS).map((project, idx) => (
-                <ProjectCard
-                  key={project.title}
-                  index={idx + 1 + INITIAL_VISIBLE_PROJECTS}
-                  {...project}
-                />
-              ))}
+              {DATA.projects
+                .slice(INITIAL_VISIBLE_PROJECTS)
+                .map((project, idx) => (
+                  <ProjectCard
+                    key={project.title}
+                    index={idx + 1 + INITIAL_VISIBLE_PROJECTS}
+                    {...project}
+                  />
+                ))}
             </motion.div>
           )}
         </AnimatePresence>

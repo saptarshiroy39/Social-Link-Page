@@ -159,15 +159,17 @@ export function ProjectCard({
         {/* Collapsible Stack */}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap items-center gap-1.5 mt-2">
-            {(showTags ? tags : tags.slice(0, INITIAL_VISIBLE_TAGS)).map((tag) => (
-              <Badge
-                key={tag}
-                className="text-xs font-mono font-normal border border-border/80 bg-muted/30 px-2 py-0.5 text-muted-foreground/90 rounded-md hover:text-foreground transition-colors"
-                variant="outline"
-              >
-                {tag}
-              </Badge>
-            ))}
+            {(showTags ? tags : tags.slice(0, INITIAL_VISIBLE_TAGS)).map(
+              (tag) => (
+                <Badge
+                  key={tag}
+                  className="text-xs font-mono font-normal border border-border/80 bg-muted/30 px-2 py-0.5 text-muted-foreground/90 rounded-md hover:text-foreground transition-colors"
+                  variant="outline"
+                >
+                  {tag}
+                </Badge>
+              ),
+            )}
             {tags.length > INITIAL_VISIBLE_TAGS && (
               <button
                 onClick={(e) => {

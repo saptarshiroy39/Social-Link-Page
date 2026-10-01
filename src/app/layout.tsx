@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
-import { LineNavSidebar } from "@/components/Line-Nav-Sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -16,10 +15,6 @@ const instrumentSerifHeading = Instrument_Serif({
   weight: ["400"],
   variable: "--font-heading",
 });
-
-const ScrollProgress = dynamic(() =>
-  import("@/components/ui/scroll-progress").then((mod) => mod.ScrollProgress),
-);
 
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
@@ -166,8 +161,6 @@ export default function RootLayout({
           <div className="relative z-10 max-w-3xl w-full mx-auto pt-4 pb-4 sm:pt-6 sm:pb-4 px-4 sm:px-6">
             {children}
           </div>
-          <ScrollProgress />
-          <LineNavSidebar />
         </TooltipProvider>
         <Figlet />
         <Analytics />
