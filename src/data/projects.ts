@@ -7,15 +7,12 @@ export default [
       "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
     tags: [
       "Python",
+      "PyPI",
       "TypeScript",
-      "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
+      "Next.js",
       "Vercel",
-      "Pytest",
-      "Ruff",
-      "Setuptools",
-      "PyPI",
     ],
     links: [
       {
@@ -75,9 +72,9 @@ export default [
       "Hugging Face",
       "Qdrant",
       "TypeScript",
-      "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
+      "Next.js",
       "Vercel",
     ],
     links: [
@@ -102,17 +99,14 @@ export default [
       "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
     tags: [
       "Python",
-      "Gemini API",
       "FastAPI",
+      "Gemini API",
       "Hugging Face",
       "TypeScript",
-      "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
+      "Next.js",
       "Vercel",
-      "Ruff",
-      "Setuptools",
-      "PyPI",
     ],
     links: [
       {
@@ -144,9 +138,9 @@ export default [
       "FastAPI",
       "Hugging Face",
       "TypeScript",
-      "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
+      "Next.js",
       "Vercel",
     ],
     links: [
@@ -171,12 +165,12 @@ export default [
       "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
     tags: [
       "n8n",
-      "Gemini API",
       "GCP",
+      "Gemini API",
       "GitHub API",
       "YouTube API",
       "Translate API",
-      "OpenWeather API",
+      "OpenWeatherMap API",
     ],
     links: [
       {
@@ -201,11 +195,11 @@ export default [
     tags: [
       "n8n",
       "GCP",
-      "OpenWeatherMap API",
-      "icanhazdadjoke API",
-      "Hacker News API",
-      "Google Sheet API",
       "Gmail API",
+      "Google Sheet API",
+      "OpenWeatherMap API",
+      "Hacker News API",
+      "icanhazdadjoke API",
     ],
     links: [
       {
