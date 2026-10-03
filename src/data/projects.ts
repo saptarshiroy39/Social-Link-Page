@@ -2,7 +2,7 @@ export default [
   {
     title: "Sizelib",
     href: "https://sizelib.hirishi.in",
-    dates: "Jun 2026 - Jun 2026",
+    dates: "Jun 2026 - Aug 2026",
     description:
       "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
     tags: [
@@ -160,7 +160,7 @@ export default [
   {
     title: "Luna AI",
     href: "https://community.n8n.io/t/luna-ai-n8n/305503",
-    dates: "Oct 2025 - Dec 2025",
+    dates: "Oct 2025 - Oct 2025",
     description:
       "A multi-agent AI assistant that intelligently routes requests for specialized research, coding & media generation tasks.",
     tags: [
