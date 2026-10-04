@@ -10,6 +10,7 @@ import {
 } from "motion/react";
 
 import { cn } from "@/lib/utils";
+import { haptic } from "@/lib/haptic";
 
 export type ScrollProgressSection = { id: string; label: string };
 
@@ -58,11 +59,20 @@ const ScrollProgress = ({
   const scrollLockTimer =
     React.useRef<ReturnType<typeof setTimeout>>(undefined);
 
+  const labelMap = React.useMemo(
+    () => new Map(sections.map((s) => [s.id, s.label])),
+    [sections],
+  );
+
   React.useEffect(() => {
     const scroller = containerRef?.current ?? window;
 
     const update = () => {
       if (scrollLock.current) return;
+      if (!containerRef && window.scrollY < 60) {
+        setActiveId(sections[0]?.id);
+        return;
+      }
       const anchor =
         (containerRef?.current?.getBoundingClientRect().top ?? 0) + offset;
       const active = sections.findLast(({ id }) => {
@@ -82,7 +92,20 @@ const ScrollProgress = ({
     };
   }, [sections, containerRef, offset]);
 
-  const label = sections.find((s) => s.id === activeId)?.label;
+  React.useEffect(() => {
+    if (!activeId) return;
+    const isFirst = activeId === (sections[0]?.id ?? "home");
+    const targetHash = isFirst ? window.location.pathname : `#${activeId}`;
+    const currentHash = window.location.hash;
+    if (
+      (isFirst && currentHash) ||
+      (!isFirst && currentHash !== `#${activeId}`)
+    ) {
+      window.history.replaceState(null, "", targetHash);
+    }
+  }, [activeId, sections]);
+
+  const label = labelMap.get(activeId) ?? sections[0]?.label;
 
   const collapsedRef = React.useRef<HTMLDivElement>(null);
   const openRef = React.useRef<HTMLDivElement>(null);
@@ -131,10 +154,16 @@ const ScrollProgress = ({
   React.useEffect(() => {
     if (!open) return;
     const onPointer = (e: PointerEvent) => {
-      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+      if (!rootRef.current?.contains(e.target as Node)) {
+        haptic();
+        setOpen(false);
+      }
     };
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        haptic();
+        setOpen(false);
+      }
     };
     document.addEventListener("pointerdown", onPointer);
     document.addEventListener("keydown", onKey);
@@ -147,6 +176,7 @@ const ScrollProgress = ({
   React.useEffect(() => () => clearTimeout(scrollLockTimer.current), []);
 
   const selectSection = (id: string) => {
+    haptic();
     scrollLock.current = true;
     clearTimeout(scrollLockTimer.current);
     scrollLockTimer.current = setTimeout(
@@ -158,6 +188,11 @@ const ScrollProgress = ({
 
     setActiveId(id);
     setOpen(false);
+
+    const isFirst = id === (sections[0]?.id ?? "home");
+    const targetHash = isFirst ? window.location.pathname : `#${id}`;
+    window.history.replaceState(null, "", targetHash);
+
     document.getElementById(id)?.scrollIntoView({
       behavior: reduceMotion ? "auto" : "smooth",
       block: "start",
@@ -221,13 +256,9 @@ const ScrollProgress = ({
               <motion.ul
                 key="list"
                 className="absolute inset-0 flex flex-col p-1.5"
-                initial={{
-                  opacity: 0,
-                }}
+                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{
-                  opacity: 0,
-                }}
+                exit={{ opacity: 0 }}
                 transition={LAYER_FADE}
               >
                 {sections.map((s, i) => {
@@ -295,16 +326,15 @@ const ScrollProgress = ({
               <motion.button
                 key="pill"
                 type="button"
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                  haptic();
+                  setOpen(true);
+                }}
                 aria-label="Show sections"
                 className="absolute inset-0 flex items-center gap-2.5 py-1.5 pl-2 pr-4"
-                initial={{
-                  opacity: 0,
-                }}
+                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{
-                  opacity: 0,
-                }}
+                exit={{ opacity: 0 }}
                 transition={LAYER_FADE}
               >
                 <span className="shrink-0">
@@ -344,9 +374,9 @@ const ScrollProgress = ({
                         key={activeId ?? label}
                         data-slot="scroll-progress-label"
                         className="absolute inset-y-0 left-0 flex items-center whitespace-nowrap text-sm font-medium leading-none text-background"
-                        initial={reduceMotion ? { opacity: 0 } : { opacity: 0 }}
+                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        exit={reduceMotion ? { opacity: 0 } : { opacity: 0 }}
+                        exit={{ opacity: 0 }}
                         transition={LABEL_CROSSFADE}
                       >
                         {label}
