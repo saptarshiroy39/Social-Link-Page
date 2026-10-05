@@ -21,7 +21,7 @@ export default function Header() {
         </Link>
 
         <nav className="flex items-center gap-4">
-          {DATA.navigation.map((item) => {
+          {DATA.header.map((item) => {
             const isExternal = item.href.startsWith("http");
             const isActive = !isExternal && pathname.startsWith(item.href);
 

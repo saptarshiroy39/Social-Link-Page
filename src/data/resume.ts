@@ -4,6 +4,7 @@ import experience from "./experience";
 import education from "./education";
 import projects from "./projects";
 import about from "./about";
+import header from "./header";
 import navigation from "./navigation";
 
 export const DATA = {
@@ -13,5 +14,6 @@ export const DATA = {
   experience,
   education,
   projects,
+  header,
   navigation,
 } as const;

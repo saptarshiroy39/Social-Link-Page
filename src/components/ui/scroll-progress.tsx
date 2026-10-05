@@ -11,6 +11,7 @@ import {
 
 import { cn } from "@/lib/utils";
 import { haptic } from "@/lib/haptic";
+import navigation from "@/data/navigation";
 
 export type ScrollProgressSection = { id: string; label: string };
 
@@ -25,10 +26,10 @@ const useIsoLayoutEffect =
 
 type Size = { width: number; height: number };
 
-const DEFAULT_SECTIONS: ScrollProgressSection[] = [];
+const DEFAULT_SECTIONS: readonly ScrollProgressSection[] = navigation;
 
 export type ScrollProgressProps = React.ComponentProps<"div"> & {
-  sections?: ScrollProgressSection[];
+  sections?: readonly ScrollProgressSection[] | ScrollProgressSection[];
   containerRef?: React.RefObject<HTMLElement | null>;
   offset?: number;
 };
