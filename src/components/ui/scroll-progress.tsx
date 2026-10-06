@@ -29,7 +29,7 @@ type Size = { width: number; height: number };
 const DEFAULT_SECTIONS: readonly ScrollProgressSection[] = navigation;
 
 export type ScrollProgressProps = React.ComponentProps<"div"> & {
-  sections?: readonly ScrollProgressSection[] | ScrollProgressSection[];
+  sections?: readonly ScrollProgressSection[];
   containerRef?: React.RefObject<HTMLElement | null>;
   offset?: number;
 };
@@ -38,7 +38,7 @@ const ScrollProgress = ({
   className,
   sections = DEFAULT_SECTIONS,
   containerRef,
-  offset = 120,
+  offset,
   ...props
 }: ScrollProgressProps) => {
   const layoutId = React.useId();
@@ -75,7 +75,10 @@ const ScrollProgress = ({
         return;
       }
       const anchor =
-        (containerRef?.current?.getBoundingClientRect().top ?? 0) + offset;
+        containerRef?.current
+          ? containerRef.current.getBoundingClientRect().top +
+            (offset ?? containerRef.current.clientHeight / 2)
+          : (offset ?? window.innerHeight / 2);
       const active = sections.findLast(({ id }) => {
         const top = document.getElementById(id)?.getBoundingClientRect().top;
         return top !== undefined && top <= anchor;
@@ -189,10 +192,6 @@ const ScrollProgress = ({
 
     setActiveId(id);
     setOpen(false);
-
-    const isFirst = id === (sections[0]?.id ?? "home");
-    const targetHash = isFirst ? window.location.pathname : `#${id}`;
-    window.history.replaceState(null, "", targetHash);
 
     document.getElementById(id)?.scrollIntoView({
       behavior: reduceMotion ? "auto" : "smooth",
