@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="w-full max-w-3xl mx-auto flex flex-col gap-8 pt-8 -mt-8 border-t border-dotted border-border/80 pb-8"
+      className="w-full max-w-3xl mx-auto flex flex-col gap-8 pt-8 -mt-8 border-t border-dotted border-border/80 pb-20 sm:pb-24"
       aria-label="Footer"
     >
       <div className="relative w-full h-24 md:h-32 text-foreground select-none [-webkit-touch-callout:none]">
