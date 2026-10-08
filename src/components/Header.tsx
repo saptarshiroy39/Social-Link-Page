@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { DATA } from "@/data/resume";
 import { haptic } from "@/lib/haptic";
 import { cn } from "@/lib/utils";
+import Theme from "@/components/Theme";
 
 export default function Header() {
   const pathname = usePathname();
@@ -20,33 +21,40 @@ export default function Header() {
           {DATA.initials}
         </Link>
 
-        <nav className="flex items-center gap-4">
-          {DATA.header.map((item) => {
-            const isExternal = item.href.startsWith("http");
-            const isActive = !isExternal && pathname.startsWith(item.href);
+        <div className="flex items-center gap-4">
+          <nav className="flex items-center gap-4">
+            {DATA.header.map((item) => {
+              const isExternal = item.href.startsWith("http");
+              const isActive = !isExternal && pathname.startsWith(item.href);
 
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                target={isExternal ? "_blank" : undefined}
-                rel={isExternal ? "noopener noreferrer" : undefined}
-                onClick={() => {
-                  haptic();
-                }}
-                className={cn(
-                  "text-xs font-mono tracking-wider transition-colors font-medium",
-                  isActive
-                    ? "text-foreground font-semibold"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  onClick={() => {
+                    haptic();
+                  }}
+                  className={cn(
+                    "text-xs font-mono tracking-wider transition-colors font-medium",
+                    isActive
+                      ? "text-foreground font-semibold"
+                      : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="flex items-center">
+            <Theme />
+          </div>
+        </div>
       </div>
     </header>
   );
 }
+

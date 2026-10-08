@@ -130,7 +130,10 @@ export default function Home() {
       <div className="space-y-3">
         {/* Avatar & Title */}
         <div className="flex flex-row items-end gap-5 pl-4 sm:pl-6 relative z-10">
-          <div className="size-28 sm:size-36 -mt-14 sm:-mt-18 border-4 border-background rounded-full overflow-hidden bg-card flex-shrink-0 relative group">
+          <div
+            id="profile-avatar"
+            className="size-28 sm:size-36 -mt-14 sm:-mt-18 border-4 border-background rounded-full overflow-hidden bg-card flex-shrink-0 relative group"
+          >
             <Image
               src={DATA.avatarUrl}
               alt={DATA.name}
