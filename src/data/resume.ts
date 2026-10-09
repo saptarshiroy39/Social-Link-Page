@@ -19,4 +19,3 @@ export const DATA = {
   theme,
   navigation,
 } as const;
-

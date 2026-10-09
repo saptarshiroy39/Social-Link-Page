@@ -31,8 +31,8 @@ function DetailRow({ detail }: { detail: DetailItem }) {
   const Icon = detail.icon;
 
   return (
-    <div className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-mono text-foreground min-w-0">
-      <div className="flex items-center justify-center size-7 rounded-md bg-muted/30 border border-border/80 text-foreground/80 shrink-0">
+    <div className="group/row flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-mono min-w-0">
+      <div className="flex items-center justify-center size-7 rounded-md bg-muted/30 border border-border/80 text-foreground/80 group-hover/row:bg-amber group-hover/row:border-amber group-hover/row:text-background transition-colors shrink-0">
         <Icon className="size-4" />
       </div>
       <div className="min-w-0 truncate">
@@ -43,12 +43,12 @@ function DetailRow({ detail }: { detail: DetailItem }) {
             rel="noopener noreferrer"
             onClick={() => haptic()}
             download={detail.download ? "Saptarshi-Roy_CV.pdf" : undefined}
-            className="link-underline text-foreground block truncate"
+            className="link-underline block truncate"
           >
             {detail.text}
           </a>
         ) : (
-          <span className="block truncate">{detail.text}</span>
+          <span className="block truncate text-foreground">{detail.text}</span>
         )}
       </div>
     </div>
@@ -97,8 +97,13 @@ export default function Home() {
       text: time
         ? `${time} [${DATA.timezoneOffset}]`
         : `--:--:-- [${DATA.timezoneOffset}]`,
+      href: DATA.timezoneLink,
     },
-    { icon: IconGenderMale, text: DATA.pronouns },
+    {
+      icon: IconGenderMale,
+      text: DATA.pronouns,
+      href: DATA.pronounsLink,
+    },
     {
       icon: IconBrandX,
       text: DATA.contact.social.X.user,

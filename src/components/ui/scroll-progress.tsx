@@ -74,11 +74,10 @@ const ScrollProgress = ({
         setActiveId(sections[0]?.id);
         return;
       }
-      const anchor =
-        containerRef?.current
-          ? containerRef.current.getBoundingClientRect().top +
-            (offset ?? containerRef.current.clientHeight / 2)
-          : (offset ?? window.innerHeight / 2);
+      const anchor = containerRef?.current
+        ? containerRef.current.getBoundingClientRect().top +
+          (offset ?? containerRef.current.clientHeight / 2)
+        : (offset ?? window.innerHeight / 2);
       const active = sections.findLast(({ id }) => {
         const top = document.getElementById(id)?.getBoundingClientRect().top;
         return top !== undefined && top <= anchor;

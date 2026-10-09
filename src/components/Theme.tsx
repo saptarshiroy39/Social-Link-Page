@@ -84,7 +84,7 @@ export default function Theme() {
         type="button"
         aria-label="Toggle theme"
         onClick={handleBrightnessClick}
-        className="p-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer rounded focus:outline-none"
+        className="p-1 text-muted-foreground hover:text-amber transition-colors cursor-pointer rounded focus:outline-none"
       >
         <IconBrightness className="size-4" stroke={1.5} />
       </button>
@@ -102,17 +102,17 @@ export default function Theme() {
               right: bubblePos.right,
             }}
             className={cn(
-              "fixed z-[999] max-w-[260px] sm:max-w-[290px] bg-[#f3eee1] text-[#1a1813] font-mono text-xs sm:text-[13px] leading-relaxed px-3.5 py-2.5 rounded-[12px] shadow-[0_8px_24px_rgba(0,0,0,0.45)] pointer-events-none select-none",
+              "fixed z-[999] max-w-[260px] sm:max-w-[290px] bg-foreground text-background font-mono text-xs sm:text-[13px] leading-relaxed px-3.5 py-2.5 rounded-[12px] pointer-events-none select-none",
               bubblePos.placement === "avatar-top" && "-translate-y-full",
             )}
           >
             <span
               aria-hidden="true"
               className={cn(
-                "absolute w-0 h-0 border-x-[7px] border-x-transparent",
+                "absolute w-3 h-3 bg-foreground rotate-45",
                 bubblePos.placement === "avatar-top"
-                  ? "-bottom-[7px] left-7 border-t-[7px] border-t-[#f3eee1]"
-                  : "-top-[7px] right-[14px] border-b-[7px] border-b-[#f3eee1]",
+                  ? "-bottom-1.5 left-7"
+                  : "-top-1.5 right-4",
               )}
             />
             <p className="m-0 font-medium">{THEME_QUOTES[quoteIndex]}</p>

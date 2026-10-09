@@ -11,6 +11,7 @@ html {
 @theme inline {
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-amber: var(--amber);
   --color-background: var(--background);
   --color-border: var(--border);
   --color-card: var(--card);
@@ -50,35 +51,36 @@ html {
 }
 
 .dark {
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --background: oklch(0.145 0 0);
-  --border: oklch(1 0 0 / 20%);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --foreground: oklch(0.985 0 0);
-  --input: oklch(1 0 0 / 15%);
-  --gh-lv-0: oklch(21.982% 0.01818 255.744);
-  --gh-lv-1: oklch(30.542% 0.08255 149.362);
-  --gh-lv-2: oklch(46.81% 0.12312 147.616);
-  --gh-lv-3: oklch(62.222% 0.16612 146.241);
-  --gh-lv-4: oklch(77.17% 0.18801 145.502);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(98.511% 0.00011 271.152);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --accent: #1e1c16;
+  --accent-foreground: #d8d3c5;
+  --amber: #d8a657;
+  --background: #0e0d0b;
+  --border: #211f19;
+  --card: #161410;
+  --card-foreground: #d8d3c5;
+  --destructive: #e0705f;
+  --foreground: #d8d3c5;
+  --input: #211f19;
+  --gh-lv-0: #1a1813;
+  --gh-lv-1: #2b3e23;
+  --gh-lv-2: #446833;
+  --gh-lv-3: #649748;
+  --gh-lv-4: #83c167;
+  --muted: #1a1813;
+  --muted-foreground: #8b8270;
+  --popover: #161410;
+  --popover-foreground: #d8d3c5;
+  --primary: #83c167;
+  --primary-foreground: #0e0d0b;
   --radius: 0.625rem;
-  --ring: oklch(0.556 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --selection: oklch(0.35 0 0);
+  --ring: #83c167;
+  --secondary: #1e1c16;
+  --secondary-foreground: #d8d3c5;
+  --selection: #83c167;
 }
 
 @utility link-underline {
-  @apply hover:underline decoration-1 underline-offset-3 transition-colors;
+  @apply text-foreground hover:text-amber hover:underline decoration-amber/50 underline-offset-3 transition-colors;
 }
 
 @utility no-scrollbar {
@@ -122,5 +124,5 @@ html {
 
 ::selection {
   background-color: var(--selection);
-  color: var(--popover-foreground);
+  color: var(--background);
 }

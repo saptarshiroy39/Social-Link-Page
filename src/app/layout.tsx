@@ -19,7 +19,7 @@ const instrumentSerifHeading = Instrument_Serif({
 const Figlet = dynamic(() => import("@/components/Figlet"));
 
 export const viewport: Viewport = {
-  themeColor: "#0f0f0f",
+  themeColor: "#0e0d0b",
   width: "device-width",
   initialScale: 1,
 };

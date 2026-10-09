@@ -54,7 +54,7 @@ export default function Projects() {
         <div className="flex justify-center pt-2">
           <button
             onClick={toggleExpand}
-            className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer select-none w-fit"
+            className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:bg-amber hover:border-amber hover:text-background transition-colors cursor-pointer select-none w-fit"
           >
             {isExpanded ? (
               <IconEyeOff className="size-3.5 select-none" />

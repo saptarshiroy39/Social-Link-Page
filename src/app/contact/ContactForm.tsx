@@ -56,7 +56,7 @@ export default function ContactForm() {
         <Link
           href="/"
           onClick={() => haptic()}
-          className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:text-foreground hover:bg-muted/50 transition-colors cursor-pointer select-none w-fit"
+          className="flex items-center gap-1.5 text-xs font-mono font-bold border border-border/80 bg-muted/30 px-3 py-1 text-muted-foreground rounded-full hover:bg-amber hover:border-amber hover:text-background transition-colors cursor-pointer select-none w-fit"
         >
           <IconArrowLeft className="size-3.5 select-none" />
           <span>HOME</span>
@@ -135,7 +135,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -15, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 p-2 px-6 rounded-full border border-transparent bg-foreground text-background font-semibold text-sm whitespace-nowrap max-w-[90vw] animate-in fade-in zoom-in-95 duration-300"
+            className="fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 p-2 px-6 rounded-full border border-transparent bg-foreground text-background font-semibold text-sm whitespace-nowrap max-w-[90vw]"
           >
             <IconCircleCheck className="size-4 text-background shrink-0" />
             <span>Message Sent!</span>

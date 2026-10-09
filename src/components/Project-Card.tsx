@@ -116,7 +116,7 @@ export function ProjectCard({
       <div className="flex-1 flex flex-col gap-2 min-w-0">
         {/* Title and Dates */}
         <div className="flex items-baseline gap-x-2 min-w-0">
-          <h3 className="font-semibold text-sm group-hover:text-foreground transition-colors shrink-0">
+          <h3 className="font-semibold text-sm text-amber md:text-foreground md:group-hover:text-amber transition-colors shrink-0">
             {title}
           </h3>
           <time className="text-xs font-mono text-muted-foreground truncate before:content-['·_']">
@@ -131,7 +131,7 @@ export function ProjectCard({
 
         {/* Project Links / Badges */}
         {links && links.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-1 group/links">
+          <div className="flex flex-wrap gap-2 mt-1">
             {links.map((link, idx) => {
               const Icon = link.iconName ? ICON_MAP[link.iconName] : null;
               return (
@@ -141,10 +141,9 @@ export function ProjectCard({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => haptic()}
-                  className="transition-all duration-200 group-hover/links:opacity-40 hover:!opacity-100"
                 >
                   <Badge
-                    className="flex items-center gap-1.5 text-xs bg-muted/30 border border-border/80 text-foreground rounded-md py-0.5 px-2 hover:bg-muted/20 hover:border-muted-foreground/30 transition-colors"
+                    className="flex items-center gap-1.5 text-xs bg-muted/30 border border-border/80 text-foreground rounded-md py-0.5 px-2 hover:bg-amber hover:border-amber hover:text-background transition-colors"
                     variant="default"
                   >
                     {Icon && <Icon className="size-3 select-none" />}
@@ -163,7 +162,7 @@ export function ProjectCard({
               (tag) => (
                 <Badge
                   key={tag}
-                  className="text-xs font-mono font-normal border border-border/80 bg-muted/30 px-2 py-0.5 text-muted-foreground/90 rounded-md hover:text-foreground transition-colors"
+                  className="text-xs font-mono font-normal border border-border/80 bg-muted/30 px-2 py-0.5 text-muted-foreground/90 rounded-md hover:bg-amber hover:border-amber hover:text-background transition-colors"
                   variant="outline"
                 >
                   {tag}
@@ -178,7 +177,7 @@ export function ProjectCard({
                   haptic();
                   setShowTags(!showTags);
                 }}
-                className="flex items-center gap-1 text-xs font-mono text-muted-foreground hover:text-foreground border border-border/80 bg-muted/30 px-2 py-0.5 rounded-md transition-colors cursor-pointer select-none"
+                className="flex items-center gap-1 text-xs font-mono text-muted-foreground hover:bg-amber hover:border-amber hover:text-background border border-border/80 bg-muted/30 px-2 py-0.5 rounded-md transition-colors cursor-pointer select-none"
               >
                 <IconChevronDown
                   className={cn(

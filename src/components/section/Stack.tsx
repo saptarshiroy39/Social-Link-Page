@@ -24,7 +24,7 @@ export default function Stack() {
               {category.items.map((tech) => (
                 <div
                   key={tech.name}
-                  className="group rounded-md border border-border/80 bg-muted/30 px-2.5 flex items-center gap-1.5 h-7 text-xs font-mono font-normal tracking-tight text-foreground hover:bg-muted/20 hover:border-muted-foreground/30 transition-all duration-200 cursor-default"
+                  className="group rounded-md border border-border/80 bg-muted/30 px-2.5 flex items-center gap-1.5 h-7 text-xs font-mono font-normal tracking-tight text-foreground hover:bg-amber hover:border-amber hover:text-background transition-all duration-200 cursor-default"
                 >
                   <tech.icon className="size-3.5 shrink-0 object-contain grayscale-0 md:grayscale group-hover:md:grayscale-0 transition-all duration-300 select-none" />
                   <span>{tech.name}</span>

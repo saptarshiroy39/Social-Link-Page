@@ -7,8 +7,15 @@ import { haptic } from "@/lib/haptic";
 import { cn } from "@/lib/utils";
 import Theme from "@/components/Theme";
 
+const VALID_ROUTES = ["/", "/projects", "/contact"];
+
 export default function Header() {
   const pathname = usePathname();
+
+  const normalizedPath = pathname?.replace(/\/$/, "") || "/";
+  if (!VALID_ROUTES.includes(normalizedPath)) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-dotted border-border/80 bg-background">
@@ -39,8 +46,8 @@ export default function Header() {
                   className={cn(
                     "text-xs font-mono tracking-wider transition-colors font-medium",
                     isActive
-                      ? "text-foreground font-semibold"
-                      : "text-muted-foreground hover:text-foreground",
+                      ? "text-amber font-semibold"
+                      : "text-muted-foreground hover:text-amber",
                   )}
                 >
                   {item.label}
@@ -57,4 +64,3 @@ export default function Header() {
     </header>
   );
 }
-

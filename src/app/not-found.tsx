@@ -15,8 +15,8 @@ const notFoundTexts = [
 
 export default function NotFound() {
   return (
-    <main className="min-h-[calc(100vh-16rem)] flex flex-col items-center justify-center gap-6 p-4 text-center font-mono relative overflow-hidden rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="fixed inset-0 -z-10 pointer-events-none">
+    <main className="min-h-[80vh] flex flex-col items-center justify-center gap-6 p-4 text-center font-mono relative overflow-hidden rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="fixed inset-0 -z-10 pointer-events-none w-screen h-screen">
         <Particles
           particleCount={300}
           particleSpread={10}
@@ -29,6 +29,7 @@ export default function NotFound() {
           sizeRandomness={0.7}
           cameraDistance={20}
           disableRotation={false}
+          className="w-full h-full"
         />
       </div>
 

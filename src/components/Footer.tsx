@@ -21,7 +21,7 @@ export default function Footer() {
       <p className="font-mono text-muted-foreground text-center text-sm">
         © {currentYear}{" "}
         <button
-          className="cursor-pointer bg-transparent border-0 p-0 font-mono text-muted-foreground hover:text-foreground transition-colors text-sm"
+          className="cursor-pointer bg-transparent border-0 p-0 font-mono text-muted-foreground hover:text-amber transition-colors text-sm"
           onClick={() => {
             haptic();
             window.scrollTo({ top: 0, behavior: "smooth" });
