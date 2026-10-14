@@ -7,7 +7,6 @@ import {
   IconBrandLinkedin,
   IconBrandX,
   IconClockHour4,
-  IconGenderMale,
   IconMail,
   IconMapPin,
   IconPaperclip,
@@ -77,13 +76,13 @@ export default function Home() {
   }, []);
 
   const leftDetails: DetailItem[] = [
+    {
+      icon: IconMail,
+      text: DATA.contact.email,
+      href: `mailto:${DATA.contact.email}`,
+    },
     { icon: IconMapPin, text: DATA.location, href: DATA.locationLink },
     { icon: IconWorld, text: DATA.displayUrl, href: DATA.url },
-    {
-      icon: IconBrandGithub,
-      text: DATA.contact.social.GitHub.user,
-      href: DATA.contact.social.GitHub.url,
-    },
     {
       icon: IconBrandLinkedin,
       text: DATA.contact.social.LinkedIn.user,
@@ -93,6 +92,12 @@ export default function Home() {
 
   const rightDetails: DetailItem[] = [
     {
+      icon: IconPaperclip,
+      text: "Resume",
+      href: DATA.resumeUrl,
+      download: true,
+    },
+    {
       icon: IconClockHour4,
       text: time
         ? `${time} [${DATA.timezoneOffset}]`
@@ -100,20 +105,14 @@ export default function Home() {
       href: DATA.timezoneLink,
     },
     {
-      icon: IconGenderMale,
-      text: DATA.pronouns,
-      href: DATA.pronounsLink,
+      icon: IconBrandGithub,
+      text: DATA.contact.social.GitHub.user,
+      href: DATA.contact.social.GitHub.url,
     },
     {
       icon: IconBrandX,
       text: DATA.contact.social.X.user,
       href: DATA.contact.social.X.url,
-    },
-    {
-      icon: IconPaperclip,
-      text: "Resume",
-      href: DATA.resumeUrl,
-      download: true,
     },
   ];
 
@@ -162,17 +161,7 @@ export default function Home() {
 
         {/* Contact & Details Grid */}
         <div className="border-t border-dotted border-border/80 pt-2.5">
-          <div className="pb-[5px]">
-            <DetailRow
-              detail={{
-                icon: IconMail,
-                text: DATA.contact.email,
-                href: `mailto:${DATA.contact.email}`,
-              }}
-            />
-          </div>
-
-          <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 pt-[5px] relative">
+          <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 relative">
             <div className="flex flex-col gap-2.5">
               {leftDetails.map((detail, idx) => (
                 <DetailRow key={idx} detail={detail} />

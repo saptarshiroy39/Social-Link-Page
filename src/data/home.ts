@@ -11,9 +11,6 @@ export default {
   location: "Kolkata, India",
   locationLink: "https://maps.google.com/?q=Kolkata,+India",
 
-  pronouns: "he/him",
-  pronounsLink: "https://www.wikihow.com/He-Him-Meaning",
-
   timezone: "Asia/Kolkata",
   timezoneLink: "https://time.is/India",
 
