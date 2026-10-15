@@ -6,6 +6,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
+  IconCheck,
   IconClockHour4,
   IconMail,
   IconMapPin,
@@ -24,16 +25,34 @@ interface DetailItem {
   text: string;
   href?: string;
   download?: boolean;
+  copyValue: string;
 }
 
 function DetailRow({ detail }: { detail: DetailItem }) {
   const Icon = detail.icon;
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    haptic();
+    navigator.clipboard?.writeText(detail.copyValue).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="group/row flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-mono min-w-0">
-      <div className="flex items-center justify-center size-7 rounded-md bg-muted/30 border border-border/80 text-foreground/80 group-hover/row:bg-amber group-hover/row:border-amber group-hover/row:text-background transition-colors shrink-0">
-        <Icon className="size-4" />
-      </div>
+      <button
+        type="button"
+        onClick={handleCopy}
+        title={copied ? "Copied!" : "Copy"}
+        className="flex items-center justify-center size-7 rounded-md bg-muted/30 border border-border/80 text-foreground/80 group-hover/row:bg-amber group-hover/row:border-amber group-hover/row:text-background transition-colors shrink-0 cursor-pointer"
+      >
+        {copied ? (
+          <IconCheck className="size-4 stroke-[2.5]" />
+        ) : (
+          <Icon className="size-4" />
+        )}
+      </button>
       <div className="min-w-0 truncate">
         {detail.href ? (
           <a
@@ -80,13 +99,25 @@ export default function Home() {
       icon: IconMail,
       text: DATA.contact.email,
       href: `mailto:${DATA.contact.email}`,
+      copyValue: DATA.contact.email,
     },
-    { icon: IconMapPin, text: DATA.location, href: DATA.locationLink },
-    { icon: IconWorld, text: DATA.displayUrl, href: DATA.url },
+    {
+      icon: IconMapPin,
+      text: DATA.location,
+      href: DATA.locationLink,
+      copyValue: DATA.location,
+    },
+    {
+      icon: IconWorld,
+      text: DATA.displayUrl,
+      href: DATA.url,
+      copyValue: DATA.url,
+    },
     {
       icon: IconBrandLinkedin,
       text: DATA.contact.social.LinkedIn.user,
       href: DATA.contact.social.LinkedIn.url,
+      copyValue: DATA.contact.social.LinkedIn.url,
     },
   ];
 
@@ -96,6 +127,7 @@ export default function Home() {
       text: "Resume",
       href: DATA.resumeUrl,
       download: true,
+      copyValue: `${DATA.url}${DATA.resumeUrl}`,
     },
     {
       icon: IconClockHour4,
@@ -103,16 +135,21 @@ export default function Home() {
         ? `${time} [${DATA.timezoneOffset}]`
         : `--:--:-- [${DATA.timezoneOffset}]`,
       href: DATA.timezoneLink,
+      copyValue: time
+        ? `${time} [${DATA.timezoneOffset}]`
+        : `${DATA.timezone} [${DATA.timezoneOffset}]`,
     },
     {
       icon: IconBrandGithub,
       text: DATA.contact.social.GitHub.user,
       href: DATA.contact.social.GitHub.url,
+      copyValue: DATA.contact.social.GitHub.url,
     },
     {
       icon: IconBrandX,
       text: DATA.contact.social.X.user,
       href: DATA.contact.social.X.url,
+      copyValue: DATA.contact.social.X.url,
     },
   ];
 
