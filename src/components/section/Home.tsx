@@ -23,7 +23,7 @@ import { Typewriter } from "@/components/ui/typewriter";
 interface DetailItem {
   icon: React.ComponentType<{ className?: string }>;
   text: string;
-  href?: string;
+  href: string;
   download?: boolean;
   copyValue: string;
 }
@@ -45,7 +45,11 @@ function DetailRow({ detail }: { detail: DetailItem }) {
         type="button"
         onClick={handleCopy}
         title={copied ? "Copied!" : "Copy"}
-        className="flex items-center justify-center size-7 rounded-md bg-muted/30 border border-border/80 text-foreground/80 group-hover/row:bg-amber group-hover/row:border-amber group-hover/row:text-background transition-colors shrink-0 cursor-pointer"
+        className={`flex items-center justify-center size-7 rounded-md border transition-colors shrink-0 cursor-pointer ${
+          copied
+            ? "bg-primary border-primary text-background"
+            : "bg-muted/30 border-border/80 text-foreground/80 group-hover/row:bg-amber group-hover/row:border-amber group-hover/row:text-background"
+        }`}
       >
         {copied ? (
           <IconCheck className="size-4 stroke-[2.5]" />
@@ -54,20 +58,16 @@ function DetailRow({ detail }: { detail: DetailItem }) {
         )}
       </button>
       <div className="min-w-0 truncate">
-        {detail.href ? (
-          <a
-            href={detail.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => haptic()}
-            download={detail.download ? "Saptarshi-Roy_CV.pdf" : undefined}
-            className="link-underline block truncate"
-          >
-            {detail.text}
-          </a>
-        ) : (
-          <span className="block truncate text-foreground">{detail.text}</span>
-        )}
+        <a
+          href={detail.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => haptic()}
+          download={detail.download ? "Saptarshi-Roy_CV.pdf" : undefined}
+          className="link-underline block truncate"
+        >
+          {detail.text}
+        </a>
       </div>
     </div>
   );
@@ -83,16 +83,18 @@ export default function Home() {
       setTime(formatTimeInTimezone(now, DATA.timezone));
 
       const hour = getHourInTimezone(now, DATA.timezone);
-      const bannerIndex =
-        Math.floor(hour / 3) % (DATA.bannerImages.length || 1);
-      const newBanner = DATA.bannerImages[bannerIndex] ?? DATA.bannerImages[0];
-      setBannerSrc(newBanner);
+      const bannerIndex = Math.floor(hour / 3) % DATA.bannerImages.length;
+      setBannerSrc(DATA.bannerImages[bannerIndex]);
     };
 
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
+
+  const timeDisplay = time
+    ? `${time} [${DATA.timezoneOffset}]`
+    : `--:--:-- [${DATA.timezoneOffset}]`;
 
   const leftDetails: DetailItem[] = [
     {
@@ -131,13 +133,9 @@ export default function Home() {
     },
     {
       icon: IconClockHour4,
-      text: time
-        ? `${time} [${DATA.timezoneOffset}]`
-        : `--:--:-- [${DATA.timezoneOffset}]`,
+      text: timeDisplay,
       href: DATA.timezoneLink,
-      copyValue: time
-        ? `${time} [${DATA.timezoneOffset}]`
-        : `${DATA.timezone} [${DATA.timezoneOffset}]`,
+      copyValue: timeDisplay,
     },
     {
       icon: IconBrandGithub,
