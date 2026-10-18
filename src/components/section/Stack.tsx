@@ -9,9 +9,9 @@ export default function Stack() {
         {DATA.stack.map((category, catIdx) => (
           <div
             key={category.category}
-            className="flex flex-col sm:flex-row sm:items-start py-3 first:pt-0 border-b border-dotted border-border/80 gap-y-3 sm:gap-y-0 gap-x-6"
+            className="flex flex-col sm:flex-row sm:items-start py-2 sm:py-3 first:pt-0 border-b border-dotted border-border/80 gap-y-1.5 sm:gap-y-0 gap-x-6"
           >
-            <div className="w-full sm:w-[195px] flex-shrink-0 flex items-center gap-2 py-1">
+            <div className="w-full sm:w-[195px] flex-shrink-0 flex items-center gap-2 py-0 sm:py-1">
               <span className="text-muted-foreground font-mono text-xs tabular-nums">
                 {String(catIdx + 1).padStart(2, "0")}
               </span>
