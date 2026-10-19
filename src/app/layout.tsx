@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://hirishi.in"),
   title: {
-    default: "Saptarshi Roy",
+    default: "Saptarshi Roy (saptarshiroy39)",
     template: "%s | SR",
   },
   description:
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://hirishi.in",
-    title: "Saptarshi Roy",
+    title: "Saptarshi Roy (saptarshiroy39)",
     description:
       "Gen AI & Agentic AI Developer crafting intelligent AI agents and automated workflows.",
     siteName: "Saptarshi Roy",
@@ -120,7 +120,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saptarshi Roy",
+    title: "Saptarshi Roy (saptarshiroy39)",
     description:
       "Gen AI & Agentic AI Developer crafting intelligent AI agents and automated workflows.",
     images: ["https://hirishi.in/OG.png"],
